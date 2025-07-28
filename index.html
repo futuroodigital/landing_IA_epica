@@ -1,21 +1,2052 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De 0 a Programador Contratado con IA</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport"/>
+  <title>FUTURO DIGITAL - Tu Transformación Épica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding: 0 20px;
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 193, 7, 0.03) 0%, transparent 50%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+    }
+
+    .logo-section {
+      margin-bottom: 40px;
+    }
+
+    .main-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 50%, #ffc107 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      text-shadow: 0 0 30px rgba(255, 193, 7, 0.3);
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 20px rgba(255, 193, 7, 0.3)); }
+      to { filter: drop-shadow(0 0 30px rgba(255, 193, 7, 0.6)); }
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      color: #ffc107;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #cccccc;
+      margin-bottom: 50px;
+      font-weight: 400;
+    }
+
+    .warning-box {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 100%);
+      backdrop-filter: blur(10px);
+      border: 2px solid #ffc107;
+      border-radius: 20px;
+      padding: 40px;
+      margin: 40px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .warning-box::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 193, 7, 0.1), transparent);
+      transform: rotate(45deg);
+      animation: shine 3s linear infinite;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    .warning-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffc107;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .warning-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ffffff;
+      font-weight: 500;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* NAVEGACIÓN STICKY MEJORADA */
+    .nav-menu {
+      background: rgba(10, 10, 10, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      z-index: 9999;
+      border-bottom: 1px solid rgba(255, 193, 7, 0.3);
+      width: 100%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .nav-logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ffc107;
+      text-decoration: none;
+      z-index: 10000;
+      position: relative;
+      left: -40px;
+    }
+
+    /* Botón Hamburguesa MEJORADO */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+      padding: 0;
+      background: none;
+      border: none;
+      z-index: 10001;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger:hover {
+      transform: scale(1.1);
+    }
+
+    .hamburger:active {
+      transform: scale(0.95);
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: #ffc107;
+      border-radius: 2px;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transform-origin: center;
+    }
+
+    .hamburger:active .hamburger-line:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger:active .hamburger-line:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Estilos para los íconos del menú */
+    .nav-icon {
+      display: inline-block;
+      margin-right: 8px;
+      transition: all 0.3s ease;
+      transform: scale(1);
+    }
+
+    .nav-item:hover .nav-icon {
+      transform: scale(1.2) rotate(10deg);
+      animation: bounce 0.5s ease infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0) scale(1); }
+      to { transform: translateY(-3px) scale(1.1); }
+    }
+
+    /* Menú Desktop */
+    .nav-items {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-item {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 100%);
+      color: #ffc107;
+      padding: 12px 20px 12px 15px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 193, 7, 0.3);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-item::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ffeb3b;
+      transition: width 0.3s ease;
+    }
+
+    .nav-item:hover::after {
+      width: 100%;
+    }
+
+    .nav-item:hover,
+    .nav-item:focus {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.2) 0%, rgba(255, 235, 59, 0.15) 100%);
+      color: #ffeb3b;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(255, 193, 7, 0.4);
+      border-color: rgba(255, 193, 7, 0.6);
+    }
+
+    /* Menú Móvil MEJORADO */
+    .nav-mobile {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      background: rgba(10, 10, 10, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      z-index: 9998;
+      border-left: 1px solid rgba(255, 193, 7, 0.3);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-top: 80px;
+      overscroll-behavior: contain;
+    }
+
+    .nav-mobile.active {
+      right: 0;
+    }
+
+    .nav-mobile-items {
+      padding: 40px 20px 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .nav-mobile .nav-item {
+      width: 100%;
+      text-align: center;
+      padding: 18px 24px;
+      font-size: 1.1rem;
+      border-radius: 15px;
+      display: block;
+      transform: translateX(50px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .nav-mobile.active .nav-item {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .nav-mobile .nav-item:nth-child(1) { transition-delay: 0.1s; }
+    .nav-mobile .nav-item:nth-child(2) { transition-delay: 0.2s; }
+    .nav-mobile .nav-item:nth-child(3) { transition-delay: 0.3s; }
+    .nav-mobile .nav-item:nth-child(4) { transition-delay: 0.4s; }
+    .nav-mobile .nav-item:nth-child(5) { transition-delay: 0.5s; }
+    .nav-mobile .nav-item:nth-child(6) { transition-delay: 0.6s; }
+    .nav-mobile .nav-item:nth-child(7) { transition-delay: 0.7s; }
+
+    .nav-mobile .nav-item:hover,
+    .nav-mobile .nav-item:active {
+      transform: translateX(-5px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
+    }
+
+    /* Overlay para cerrar el menú */
+    .nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 9997;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Lock body scroll cuando el menú está abierto */
+    body.menu-open {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-bg-1 {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    }
+
+    .section-bg-2 {
+      background: linear-gradient(135deg, #111111 0%, #0a0a0a 100%);
+    }
+
+    .section-bg-3 {
+      background: linear-gradient(135deg, #0a0a0a 0%, #151515 100%);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #cccccc;
+      font-weight: 400;
+    }
+
+    /* CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
+    }
+
+    .card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      border: 1px solid rgba(255, 193, 7, 0.2);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 193, 7, 0.1), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .card:hover::before {
+      left: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(255, 193, 7, 0.5);
+      box-shadow: 0 20px 40px rgba(255, 193, 7, 0.1);
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .card-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffc107;
+      margin-bottom: 15px;
+    }
+
+    .card-description {
+      color: #cccccc;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* AVATAR CARDS */
+    .avatar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 50px 0;
+    }
+
+    .avatar-card {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.05) 0%, rgba(255, 193, 7, 0.02) 100%);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 25px;
+      border: 2px solid rgba(255, 193, 7, 0.3);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      text-align: center;
+      min-height: 350px;
+    }
+
+    .avatar-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      border-color: #ffc107;
+      box-shadow: 0 25px 50px rgba(255, 193, 7, 0.2);
+    }
+
+    .avatar-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .avatar-name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffc107;
+      margin-bottom: 8px;
+    }
+
+    .avatar-title {
+      font-size: 0.9rem;
+      color: #cccccc;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .avatar-stats {
+      list-style: none;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .avatar-stats li {
+      margin: 8px 0;
+      padding-left: 20px;
+      position: relative;
+      color: #ffffff;
+      font-size: 0.85rem;
+    }
+
+    .avatar-stats li::before {
+      content: "*";
+      position: absolute;
+      left: 0;
+      color: #ffc107;
+      font-size: 0.7rem;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .custom-checkbox {
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      cursor: pointer;
+      accent-color: #ffc107;
+      transform: scale(1.2);
+    }
+
+    /* FORMS */
+    .form-group {
+      margin: 30px 0;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 600;
+      color: #ffc107;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 193, 7, 0.3);
+      border-radius: 12px;
+      color: #ffffff;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #ffc107;
+      box-shadow: 0 0 20px rgba(255, 193, 7, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .form-input::placeholder {
+      color: #888888;
+    }
+
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* BUTTONS */
+    .btn-primary {
+      background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+      border: none;
+      padding: 18px 40px;
+      border-radius: 50px;
+      color: #000000;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+      position: relative;
+      overflow: hidden;
+      -webkit-appearance: none;
+      appearance: none;
+      touch-action: manipulation;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:active {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255, 193, 7, 0.4);
+    }
+
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    /* STATS */
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 60px 0;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.08) 0%, rgba(255, 193, 7, 0.03) 100%);
+      backdrop-filter: blur(15px);
+      border-radius: 25px;
+      padding: 50px 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 193, 7, 0.2);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 193, 7, 0.5);
+    }
+
+    .stat-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #ffc107;
+      margin-bottom: 15px;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 1.1rem;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .stat-description {
+      color: #cccccc;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* SESSIONS */
+    .session-container {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 100%);
+      backdrop-filter: blur(20px);
+      border-radius: 30px;
+      padding: 60px;
+      margin: 50px 0;
+      border: 2px solid rgba(255, 193, 7, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .session-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8rem;
+      font-weight: 900;
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      opacity: 0.1;
+      color: #ffc107;
+      line-height: 1;
+    }
+
+    .session-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ffc107;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .session-subtitle {
+      font-size: 1.2rem;
+      color: #cccccc;
+      margin-bottom: 40px;
+      font-style: italic;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-container {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.05) 0%, rgba(255, 193, 7, 0.02) 100%);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      margin: 40px 0;
+      border-left: 4px solid #ffc107;
+      position: relative;
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ffffff;
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      color: #ffc107;
+      font-size: 1.1rem;
+    }
+
+    .testimonial-role {
+      color: #cccccc;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+
+    /* SPECIAL SECTIONS */
+    .special-section {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 100%);
+      backdrop-filter: blur(15px);
+      border-radius: 30px;
+      padding: 50px;
+      margin: 50px 0;
+      border: 2px solid rgba(255, 193, 7, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .special-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.8rem;
+      color: #ffc107;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 25%, #ffc107 50%, #ffab00 75%, #ffc107 100%);
+      background-size: 400% 400%;
+      animation: gradient-flow 6s ease-in-out infinite;
+      padding: 100px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes gradient-flow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .final-cta::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+    }
+
+    .final-cta-content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .final-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 3rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .final-subtitle {
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-bottom: 50px;
+      font-weight: 400;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 60px 0;
+    }
+
+    .contact-card {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      border: 1px solid rgba(255, 193, 7, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-10px);
+      border-color: #ffc107;
+      box-shadow: 0 20px 40px rgba(255, 193, 7, 0.2);
+    }
+
+    .contact-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ffc107;
+    }
+
+    .contact-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      font-size: 1.1rem;
+      color: #ffc107;
+      font-weight: 600;
+    }
+
+    .contact-description {
+      color: #cccccc;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+
+    /* GRID LAYOUTS */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .three-column {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    /* TABLE STYLES */
+    .comparison-table {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 40px 0;
+      border: 1px solid rgba(255, 193, 7, 0.3);
+    }
+
+    .table-header {
+      background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+      color: #000000;
+      padding: 20px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .comparison-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 193, 7, 0.1);
+    }
+
+    .comparison-table th {
+      background: rgba(255, 193, 7, 0.1);
+      color: #ffc107;
+      font-weight: 600;
+    }
+
+    .comparison-table td input {
+      background: transparent;
+      border: 1px solid rgba(255, 193, 7, 0.3);
+      color: #ffffff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+
+    .comparison-table td input:focus {
+      outline: none;
+      border-color: #ffc107;
+    }
+
+    /* RESPONSIVE MOBILE FIRST */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      .nav-items {
+        display: none;
+      }
+      .nav-logo {
+        font-size: 1rem;
+        left: 10px !important;
+      }
+      .nav-mobile {
+        width: 100%;
+      }
+      .main-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+      }
+      .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+      .tagline {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+      }
+      .hero-section {
+        padding: 40px 15px;
+        min-height: 80vh;
+      }
+      .section {
+        padding: 40px 15px;
+      }
+      .section-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
+      }
+      .section-subtitle {
+        font-size: 1rem;
+      }
+      .warning-box {
+        padding: 25px 20px;
+        margin: 25px 0;
+      }
+      .warning-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+      }
+      .warning-text {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      .session-container {
+        padding: 30px 20px;
+        margin: 30px 0;
+      }
+      .session-number {
+        font-size: 4rem;
+        top: 15px;
+        right: 20px;
+      }
+      .session-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+      .session-subtitle {
+        font-size: 1rem;
+        margin-bottom: 25px;
+      }
+      .final-title {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+      .final-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .stat-card {
+        padding: 30px 20px;
+      }
+      .stat-number {
+        font-size: 2.5rem;
+      }
+      .stat-label {
+        font-size: 1rem;
+      }
+      .testimonial-container {
+        padding: 25px 20px;
+        margin: 25px 0;
+      }
+      .testimonial-text {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+      .card {
+        padding: 25px 20px;
+      }
+      .card-title {
+        font-size: 1.1rem;
+      }
+      .card-description {
+        font-size: 0.9rem;
+      }
+      .special-section {
+        padding: 30px 20px;
+        margin: 30px 0;
+      }
+      .special-title {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+      }
+      .form-input {
+        padding: 12px 16px;
+        font-size: 1rem;
+      }
+      .form-label {
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+      .btn-primary {
+        padding: 15px 25px;
+        font-size: 1rem;
+        width: 100%;
+        margin: 20px 0;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .contact-card {
+        padding: 25px 20px;
+      }
+      .final-cta {
+        padding: 60px 20px;
+      }
+      .two-column { grid-template-columns: 1fr; }
+      .three-column { grid-template-columns: 1fr; }
+      .avatar-card {
+        min-height: auto;
+        padding: 25px 20px;
+      }
+      .avatar-emoji {
+        font-size: 2.5rem;
+      }
+      .avatar-name {
+        font-size: 1.2rem;
+      }
+      .avatar-title {
+        font-size: 0.9rem;
+      }
+      .avatar-stats li {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-title {
+        font-size: 1.8rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+      .tagline {
+        font-size: 0.9rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+      .hero-section {
+        padding: 30px 10px;
+      }
+      .section {
+        padding: 30px 10px;
+      }
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+      .session-number {
+        font-size: 3rem;
+      }
+      .session-title {
+        font-size: 1.3rem;
+      }
+      .warning-box {
+        padding: 20px 15px;
+      }
+      .special-section {
+        padding: 25px 15px;
+      }
+      .form-input {
+        padding: 14px 16px;
+      }
+      .btn-primary {
+        padding: 18px 25px;
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Estilos para el logo */
+    .nav-logo {
+      position: absolute !important;
+      left: -40px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      display: flex !important;
+      align-items: center !important;
+      z-index: 10000 !important;
+      padding-left: 20px;
+    }
+
+    .nav-logo img {
+      height: 88px;
+      max-height: 90px;
+      object-fit: contain;
+    }
+
+    /* Media queries para el logo en móvil */
+    @media (max-width: 768px) {
+      .nav-logo {
+        left: 10px !important;
+        top: 60% !important;
+        transform: translateY(-50%) !important;
+      }
+
+      .nav-logo img {
+        height: 50px !important;
+        max-height: 52px !important;
+      }
+    }
+
+    /* Estilos para el botón de descarga y el mensaje de advertencia */
+    #descargarPDF:active {
+      background: linear-gradient(135deg, #ffeb3b 0%, #ffc107 100%);
+      box-shadow: 0 5px 15px rgba(255, 193, 7, 0.6);
+      transform: translateY(1px);
+    }
+
+    .download-warning-message {
+      color: #ffc107;
+      font-size: 1rem;
+      margin-top: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .download-warning-message.show {
+      opacity: 1;
+    }
+
+    /* Sección de descarga mejorada */
+    .download-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+      border-top: 1px solid rgba(255, 193, 7, 0.3);
+    }
+
+    .download-message {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #cccccc;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .device-warning {
+      background: rgba(255, 193, 7, 0.1);
+      border: 1px solid rgba(255, 193, 7, 0.3);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 500px;
+      color: #ffc107;
+    }
+
+    .device-warning strong {
+      color: #ffeb3b;
+    }
+  </style>
 </head>
 <body>
+  <!-- HERO SECTION -->
+  <div class="hero-section" id="heroSection">
     <div class="container">
-        <img src="assets/images/logo.png" alt="Logo Futuro Digital" class="logo">
-        <h1>🚀 De 0 a Programador Contratado con IA</h1>
-        <p>Descubre el método para conseguir empleo garantizado combinando programación e inteligencia artificial.</p>
-        <form action="https://script.google.com/macros/s/AKfycbxkHPslqo4gNSUsubGTdYbGJwD0pYVt3RM9YnSkEaNONBLKgiK4dr1qlt80V6csBeGZ/exec" method="POST">
-            <input type="email" name="email" placeholder="Tu correo electrónico" required>
-            <button type="submit">Registrarme</button>
-        </form>
+      <div class="hero-content">
+        <div class="logo-section"></div>
+        <div class="warning-box" id="warningBox">
+          <div class="warning-title">ADVERTENCIA IMPORTANTE</div>
+          <div class="warning-text">
+            Este NO es un workbook convencional. Es una <strong>HERRAMIENTA DE TRANSFORMACIÓN</strong> diseñada para convertir personas con potencial en <strong>DESARROLLADORES FULLSTACK PROFESIONALES</strong>. Una vez que empiezas este proceso, tu perspectiva sobre tu futuro cambiará para siempre.
+          </div>
+          <div style="margin-top: 50px;">
+            <button class="btn-primary" id="startTransformationBtn" onclick="document.getElementById('beneficios').scrollIntoView({ behavior: 'smooth', block: 'start' });">
+              COMENZAR MI TRANSFORMACIÓN
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="fullNameLabel">Mi nombre completo:</label>
+          <input class="form-input" id="fullName" oninput="localStorage.setItem('fullName', this.value)" placeholder="Nombre completo" type="text"/>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- NAVEGACIÓN STICKY MEJORADA -->
+  <nav class="nav-menu" id="navbar">
+    <div class="nav-container" style="display: flex; justify-content: center; flex-wrap: wrap;">
+      <!-- Logo reinsertado en su posición original dentro de la navegación -->
+      <a class="nav-logo" href="#inicio" id="navLogo">
+        <img alt="Future Digital Logo" id="logoImg" src="futuro_digital_logo_correcto.png"/>
+      </a>
+      <!-- Menú Desktop - Versión mejorada -->
+      <div class="nav-items" id="desktopNavItems">
+        <a class="nav-item" href="#beneficios" id="navBeneficios">
+          <span class="nav-icon">☺</span> Beneficios
+        </a>
+        <a class="nav-item" href="#avatars" id="navAvatars">
+          <span class="nav-icon">👤</span> Avatares
+        </a>
+        <a class="nav-item" href="#vision" id="navVision">
+          <span class="nav-icon">💸</span> Visión
+        </a>
+        <a class="nav-item" href="#diagnostico" id="navDiagnostico">
+          <span class="nav-icon">💹</span> Diagnóstico
+        </a>
+        <a class="nav-item" href="#sesiones" id="navSesiones">
+          <span class="nav-icon">⚡</span> Sesiones
+        </a>
+        <a class="nav-item" href="#stats" id="navStats">
+          <span class="nav-icon">📊</span> Estadísticas
+        </a>
+        <a class="nav-item" href="#descargarPDF" id="navActuar">
+          <span class="nav-icon">☺</span> Actuar
+        </a>
+      </div>
+      <!-- Botón Hamburguesa MEJORADO -->
+      <button aria-label="Menú" class="hamburger" id="hamburger" type="button">
+        <span class="hamburger-line" id="hamburgerLine1"></span>
+        <span class="hamburger-line" id="hamburgerLine2"></span>
+        <span class="hamburger-line" id="hamburgerLine3"></span>
+      </button>
+    </div>
+    <!-- Menú Móvil -->
+    <div class="nav-mobile" id="navMobile">
+      <div class="nav-mobile-items" id="mobileNavItems">
+        <a class="nav-item" href="#beneficios" id="mobileNavBeneficios"> ☺ Beneficios</a>
+        <a class="nav-item" href="#avatars" id="mobileNavAvatars"> 👤 Avatares</a>
+        <a class="nav-item" href="#vision" id="mobileNavVision"> 💸 Vision</a>
+        <a class="nav-item" href="#diagnostico" id="mobileNavDiagnostico"> 💹 Diagnóstico</a>
+        <a class="nav-item" href="#sesiones" id="mobileNavSesiones"> ⚡ Sesiones</a>
+        <a class="nav-item" href="#stats" id="mobileNavStats"> 📊 Estadísticas</a>
+        <a class="nav-item" href="#descargarPDF" id="mobileNavActuar"> ☺ Actuar</a>
+      </div>
+    </div>
+    <!-- Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- BENEFICIOS -->
+  <div class="section section-bg-1" id="beneficios">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"> ☺ ESTO ES LO QUE VAS A LOGRAR</h2>
+        <p class="section-subtitle">Tu nueva realidad como desarrollador FullStack</p>
+      </div>
+      <div class="card-grid" id="benefitsGrid">
+        <div class="card" id="benefitCard1">
+          <div class="card-icon"> 💶 </div>
+          <div class="card-title">INGRESOS</div>
+          <div class="card-description">
+            <strong>$15,000 - $50,000 MXN mensuales</strong><br/>
+            Trabajando desde cualquier lugar
+          </div>
+        </div>
+        <div class="card" id="benefitCard2">
+          <div class="card-icon"> 🪽 </div>
+          <div class="card-title">LIBERTAD</div>
+          <div class="card-description">
+            <strong>Libertad geográfica total</strong><br/>
+            Trabaja para empresas de todo el mundo
+          </div>
+        </div>
+        <div class="card" id="benefitCard3">
+          <div class="card-icon"> 👏 </div>
+          <div class="card-title">HABILIDADES</div>
+          <div class="card-description">
+            <strong>Habilidades del futuro, pero reales</strong><br/>
+            Pensamiento lógico-matemático<br/>
+            Habilidades sociales y de comunicación<br/>
+            Seguridad al hablar en público<br/>
+            Manejo de tecnicismos del mundo tech<br/>
+            Aprende a resolver problemas reales con lógica, creatividad y claridad.
+          </div>
+        </div>
+        <div class="card" id="benefitCard4">
+          <div class="card-icon"> 🏆 </div>
+          <div class="card-title">RECONOCIMIENTO</div>
+          <div class="card-description">
+            <strong>Sé leyenda en tu círculo</strong><br/>
+            ☧ El primero en tu familia en programar<br/>
+            💡 El que puede crear una web para su emprendimiento<br/>
+            📞 El que programa algo especial para su pareja o amigos<br/>
+            Lo que sabes hacer empieza a hablar por ti.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AVATARES -->
+  <div class="section section-bg-2" id="avatars">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">👤 ELIGE TU AVATAR DIGITAL</h2>
+        <p class="section-subtitle">Cada transformación tiene un punto de partida. ¿Cuál es el tuyo?</p>
+      </div>
+      <div class="avatar-grid" id="avatarSelectionGrid">
+        <div class="avatar-card" id="avatarCard1">
+          <span class="avatar-emoji"> 💆</span>
+          <h3 class="avatar-name">KEVIN "EL DECIDIDO"</h3>
+          <p class="avatar-title">23 años • Busca Independencia Profesional</p>
+          <ul class="avatar-stats">
+            <li><strong>Fortaleza:</strong> Ambición y determinación</li>
+            <li><strong>Objetivo:</strong> Ganar $15K+ y ser independiente</li>
+            <li><strong>Desafío:</strong> Falta de dirección clara</li>
+            <li><strong>Motivación:</strong> "Quiero construir mi futuro"</li>
+          </ul>
+          <div class="checkbox-container">
+            <input class="custom-checkbox" id="avatar1" type="checkbox"/>
+            <label for="avatar1" style="color: #ffc107; font-weight: 600;">Soy Kevin</label>
+          </div>
+        </div>
+        <div class="avatar-card" id="avatarCard2">
+          <span class="avatar-emoji">🤑</span>
+          <h3 class="avatar-name">LUIS "EL PERSISTENTE"</h3>
+          <p class="avatar-title">28 años • Con Experiencia Previa</p>
+          <ul class="avatar-stats">
+            <li><strong>Fortaleza:</strong> Experiencia en aprendizaje</li>
+            <li><strong>Objetivo:</strong> Convertir habilidades en ingresos</li>
+            <li><strong>Desafío:</strong> Resultados inconsistentes</li>
+            <li><strong>Motivación:</strong> "Esta vez será diferente"</li>
+          </ul>
+          <div class="checkbox-container">
+            <input class="custom-checkbox" id="avatar2" type="checkbox"/>
+            <label for="avatar2" style="color: #ffc107; font-weight: 600;">Soy Luis</label>
+          </div>
+        </div>
+        <div class="avatar-card" id="avatarCard3">
+          <span class="avatar-emoji">😎</span>
+          <h3 class="avatar-name">JAVIER "EL ESTRATEGA"</h3>
+          <p class="avatar-title">35 años • Profesional Experimentado</p>
+          <ul class="avatar-stats">
+            <li><strong>Fortaleza:</strong> Disciplina y experiencia laboral</li>
+            <li><strong>Objetivo:</strong> Cambio de carrera antes de los 40</li>
+            <li><strong>Desafío:</strong> Resistencia al cambio</li>
+            <li><strong>Motivación:</strong> "Es mi momento decisivo"</li>
+          </ul>
+          <div class="checkbox-container">
+            <input class="custom-checkbox" id="avatar3" type="checkbox"/>
+            <label for="avatar3" style="color: #ffc107; font-weight: 600;">Soy Javier</label>
+          </div>
+        </div>
+        <div class="avatar-card" id="avatarCard4">
+          <span class="avatar-emoji">👩‍💻</span>
+          <h3 class="avatar-name">PAOLA "LA VISIONARIA"</h3>
+          <p class="avatar-title">22 años • Perfil Creativo-Digital</p>
+          <ul class="avatar-stats">
+            <li><strong>Fortaleza:</strong> Creatividad digital natural</li>
+            <li><strong>Objetivo:</strong> Crear su propio camino profesional</li>
+            <li><strong>Desafío:</strong> Presión por opciones tradicionales</li>
+            <li><strong>Motivación:</strong> "Voy a innovar mi futuro"</li>
+          </ul>
+          <div class="checkbox-container">
+            <input class="custom-checkbox" id="avatar4" type="checkbox"/>
+            <label for="avatar4" style="color: #ffc107; font-weight: 600;">Soy Paola</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISIÓN DEL FUTURO -->
+  <div class="section section-bg-3" id="vision">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"> MÁQUINA DEL TIEMPO ACTIVADA</h2>
+        <p class="section-subtitle">Destino: Junio de 2026 • Tu nueva realidad como FullStack Developer</p>
+      </div>
+      <div class="special-section" id="futureVisionSection">
+        <h3 class="special-title"> HAS VIAJADO 12 MESES AL FUTURO </h3>
+        <div class="form-group">
+          <label class="form-label" id="futureLocationLabel"> ¿Dónde despiertas en tu nueva vida?</label>
+          <textarea class="form-input form-textarea" id="futureLocation" placeholder="Describe tu nuevo hogar, tu habitación, la vista desde tu ventana..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="futureRoutineLabel"> ¿Cuál es tu nueva rutina matutina de libertad?</label>
+          <textarea class="form-input form-textarea" id="futureRoutine" placeholder="Ya no tienes jefe ni horarios... ¿Cómo empiezas tu día?"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="futureProjectLabel"> ¿En qué proyecto épico estás trabajando?</label>
+          <textarea class="form-input form-textarea" id="futureProject" placeholder="¿Qué aplicación, web o sistema estás desarrollando?"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="futureSalaryLabel"> Tu salario mensual como FullStack Developer:</label>
+          <input class="form-input" id="futureSalary" placeholder="$____ MXN mensuales" style="font-size: 1.2em; text-align: center; font-weight: bold;" type="text"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="familyReactionLabel"> ¿Cómo reacciona tu familia a tu transformación?</label>
+          <textarea class="form-input form-textarea" id="familyReaction" placeholder="¿Qué te dicen? ¿Cómo te ven ahora?"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="firstPurchaseLabel"> ¿Qué fue lo primero que compraste con tu nuevo salario?</label>
+          <textarea class="form-input form-textarea" id="firstPurchase" placeholder="Esa compra especial que simboliza tu nueva vida..."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIAGNÓSTICO BRUTAL -->
+  <div class="section section-bg-1" id="diagnostico">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"> DIAGNÓSTICO BRUTAL</h2>
+        <p class="section-subtitle">La cruda realidad de tu situación actual (sin filtros)</p>
+      </div>
+      <div class="special-section" id="currentSituationSection">
+        <div style="background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%); color: #000; padding: 20px; border-radius: 15px; text-align: center; font-weight: 700; margin-bottom: 40px;">  
+          ZONA DE HONESTIDAD BRUTAL - Es hora de ser 100% real contigo mismo  
+        </div>
+        <div class="two-column">
+          <div class="form-group">
+            <label class="form-label" id="currentJobLabel"> 💬 ¿En qué trabajas actualmente?</label>
+            <input class="form-input" id="currentJob" placeholder="Mi trabajo actual es..." type="text"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="currentSalaryLabel"> 💬 ¿Cuánto ganas al mes? (sin mentiras)</label>
+            <input class="form-input" id="currentSalary" placeholder="$_____ MXN" type="text"/>
+          </div>
+        </div>
+        <div class="two-column">
+          <div class="form-group">
+            <label class="form-label" id="programmingKnowledgeLabel"> 💬 Del 1 al 10, ¿cuánto sabes de programación?</label>
+            <input class="form-input" id="programmingKnowledge" max="10" min="1" placeholder="_/10" type="number"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="freeTimeLabel"> 💬 ¿Cuántas horas REALES tienes libres al día?</label>
+            <input class="form-input" id="freeTime" placeholder="_horas" type="text"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="livingSituationLabel"> 💬 ¿Cuál es tu situación de vivienda actual?</label>
+          <input class="form-input" id="livingSituation" placeholder="Vivo en... (con padres, solo, pareja, etc.)" type="text"/>
+        </div>
+        <div style="background: rgba(255, 193, 7, 0.05); border-radius: 20px; padding: 40px; margin: 40px 0; border: 1px solid rgba(255, 193, 7, 0.2);">
+          <h4 style="color: #ffc107; margin-bottom: 30px; text-align: center; font-size: 1.3em;">  
+            ANÁLISIS PROFUNDO (La honestidad es clave para el cambio)
+          </h4>
+          <div class="form-group">
+            <label class="form-label" id="frustrationLabel"> 💬 ¿Qué es lo que MÁS te frustra de tu vida actual?</label>
+            <textarea class="form-input form-textarea" id="frustration" placeholder="Sé brutalmente honesto... ¿Qué te tiene harto?"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="worstNightmareLabel"> 💬 ¿Cuál es tu PEOR pesadilla sobre tu futuro?</label>
+            <textarea class="form-input form-textarea" id="worstNightmare" placeholder="Si nada cambia... ¿Qué es lo peor que podría pasar?"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="noChangeLabel"> •• Si en 2 años sigues exactamente igual... ¿Cómo te sentirías?</label>
+            <textarea class="form-input form-textarea" id="noChange" placeholder="Imagina que absolutamente nada cambia en tu vida..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="proudMomentLabel"> 💤 ¿Qué te haría sentir VERDADERAMENTE orgulloso de ti mismo?</label>
+            <textarea class="form-input form-textarea" id="proudMoment" placeholder="Tu mayor aspiración... ¿Qué te llenaría de orgullo?"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESTADÍSTICAS -->
+  <div class="section section-bg-2" id="stats">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🖢 ESTADÍSTICAS QUE IMPACTAN</h2>
+        <p class="section-subtitle">Los números no mienten: Esta es tu oportunidad dorada</p>
+      </div>
+      <div class="stats-container" id="statsContainer">
+        <div class="stat-card" id="statCard1">
+          <div class="stat-number">95%</div>
+          <div class="stat-label">EMPLEABILIDAD</div>
+          <div class="stat-description">De nuestros egresados consiguen trabajo como FullStack</div>
+        </div>
+        <div class="stat-card" id="statCard2">
+          <div class="stat-number">$25K</div>
+          <div class="stat-label">SALARIO PROMEDIO</div>
+          <div class="stat-description">MXN mensuales de nuestros desarrolladores</div>
+        </div>
+        <div class="stat-card" id="statCard3">
+          <div class="stat-number">6</div>
+          <div class="stat-label">MESES PROMEDIO</div>
+          <div class="stat-description">Para conseguir su primer empleo tech</div>
+        </div>
+        <div class="stat-card" id="statCard4">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">POTENCIAL</div>
+          <div class="stat-description">Las oportunidades en tech no tienen límite</div>
+        </div>
+      </div>
+      <!-- Testimonios -->
+      <div id="testimonialsSection" style="margin-top: 80px;">
+        <h3 style="text-align: center; color: #ffc107; font-size: 2rem; margin-bottom: 50px; font-family: 'JetBrains Mono', monospace;">
+          📌 HISTORIAS DE TRANSFORMACIÓN REAL
+        </h3>
+        <div class="testimonial-container" id="testimonial1">
+          <div class="testimonial-text">
+            "Nunca imaginé que yo, sin experiencia alguna en programación, pudiera crear algo desde cero. Estudié Administración de empresas de entretenimiento y comunicación, y buscaba solo complementar mi formación... pero en Futuro Digital encontré mucho más. Hoy tengo mi propia página web para mi emprendimiento. Aprendí, me sentí acompañada, y lo logré. No sabes lo que significa para mí poder decir eso con orgullo."
+          </div>
+          <div class="testimonial-author">— Abigail Salinas Peña</div>
+          <div class="testimonial-role">Estudiante de Administración de Empresas de Entretenimiento y Comunicación</div>
+        </div>
+        <div class="testimonial-container" id="testimonial2">
+          <div class="testimonial-text">
+            "Después de salir de la universidad, pasé meses sin encontrar trabajo. Sentía que lo que había estudiado no era suficiente, y que nadie me estaba esperando allá afuera. Futuro Digital cambió todo eso. Me dieron estructura, práctica, guía y comunidad. Hoy trabajo en tecnología, con personas que conocí en el curso y que ahora son parte de mi equipo. Encontré un lugar donde me sentí visto y preparado para avanzar."
+          </div>
+          <div class="testimonial-author">— Jorge Armando Muñoz de la Cruz</div>
+          <div class="testimonial-role">Especialista en Desarrollo Backend</div>
+        </div>
+        <div class="testimonial-container" id="testimonial3">
+          <div class="testimonial-text">
+            "A los 24 años estaba perdido sin dirección clara. Futuro Digital no solo me enseñó programación, me dio una profesión con futuro. Ahora trabajo como freelancer para clientes internacionales y tengo la libertad que siempre busqué. Fue la mejor inversión de mi vida."
+          </div>
+          <div class="testimonial-author">— Jesús Abraham Ramírez Rodríguez</div>
+          <div class="testimonial-role">Frontend Developer &amp; Freelancer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAS 3 SESIONES -->
+  <div class="section section-bg-3" id="sesiones">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">✓ LAS 3 SESIONES LEGENDARIAS</h2>
+        <p class="section-subtitle">Tu journey de transformación comienza aquí</p>
+      </div>
+      <!-- SESIÓN 1: DESTINO -->
+      <div class="session-container" id="session1Container">
+        <div class="session-number">1</div>
+        <h3 class="session-title">SESIÓN DESTINO</h3>
+        <p class="session-subtitle">"¿Qué vas a lograr? El poder de la visión clara"</p>
+        <div class="form-group">
+          <label class="form-label" id="session1NotesLabel">Notas de la Sesión Destino:</label>
+          <textarea class="form-input form-textarea" id="session1Notes" placeholder="Escribe aquí los insights más poderosos que recibiste..." style="min-height: 120px;"></textarea>
+        </div>
+        <div class="two-column">
+          <div class="form-group">
+            <label class="form-label" id="session1InsightLabel">¿Qué aprendizaje te cambió la perspectiva?</label>
+            <textarea class="form-input form-textarea" id="session1Insight" placeholder="¿Qué descubrimiento cambió tu perspectiva?"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="session1ExcitementLabel">Lo que más te emocionó:</label>
+            <textarea class="form-input form-textarea" id="session1Excitement" placeholder="¿Qué te llenó de energía y esperanza?"></textarea>
+          </div>
+        </div>
+        <div style="background: rgba(255, 193, 7, 0.08); border-radius: 20px; padding: 40px; margin: 40px 0; border: 2px solid rgba(255, 193, 7, 0.3);">
+          <h4 style="color: #ffc107; text-align: center; margin-bottom: 25px; font-size: 1.4em; font-family: 'JetBrains Mono', monospace;"> @ RITUAL DE COMPROMISO</h4>
+          <p style="color: #cccccc; margin-bottom: 30px; font-style: italic; text-align: center;">"Los verdaderos guerreros digitales hacen juramentos sagrados..."</p>
+          <p style="color: #ffffff; margin: 30px 0; text-align: center; font-size: 1.1em;">Juro convertirme en desarrollador FullStack porque:</p>
+          <div class="form-group">
+            <label class="form-label" id="reason1Label">Mi razón más poderosa:</label>
+            <input class="form-input" id="reason1" placeholder="La razón que te mueve más profundamente..." type="text"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="reason2Label">Mi segunda razón:</label>
+            <input class="form-input" id="reason2" placeholder="Otra razón fundamental..." type="text"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="reason3Label">Mi tercera razón:</label>
+            <input class="form-input" id="reason3" placeholder="Una razón más que te impulsa..." type="text"/>
+          </div>
+          <div class="two-column" style="margin-top: 30px;">
+            <div class="form-group">
+              <label class="form-label" id="commitmentDateLabel">Fecha de mi compromiso:</label>
+              <input class="form-input" id="commitmentDate" type="date"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SESIÓN 2: MAPA -->
+      <div class="session-container" id="session2Container">
+        <div class="session-number">2</div>
+        <h3 class="session-title">SESIÓN MAPA</h3>
+        <p class="session-subtitle">"¿Cómo lo vas a lograr? La estrategia maestra revelada"</p>
+        <div class="form-group">
+          <label class="form-label" id="session2NotesLabel"> Notas de la Sesión Mapa: </label>
+          <textarea class="form-input form-textarea" id="session2Notes" placeholder="Anota aquí toda la metodología y estrategias que aprendiste..." style="min-height: 120px;"></textarea>
+        </div>
+        <div style="background: rgba(255, 193, 7, 0.08); border-radius: 20px; padding: 40px; margin: 40px 0; border: 2px solid rgba(255, 193, 7, 0.3);">
+          <h4 style="color: #ffc107; margin-bottom: 25px; font-family: 'JetBrains Mono', monospace;"> LOS 3 PASOS MAESTROS DEL ÉXITO:</h4>
+          <div class="form-group">
+            <label class="form-label" id="step1Label">1. Primer paso fundamental: </label>
+            <input class="form-input" id="step1" placeholder="El primer paso de tu journey..." type="text"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="step2Label">2. Segundo paso clave: </label>
+            <input class="form-input" id="step2" placeholder="El segundo paso crítico..." type="text"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="step3Label">3. Tercer paso definitivo: </label>
+            <input class="form-input" id="step3" placeholder="El paso que te lleva al éxito..." type="text"/>
+          </div>
+        </div>
+        <div class="two-column">
+          <div class="form-group">
+            <label class="form-label" id="surpriseMethodLabel"> Lo que te sorprendió de la metodología: </label>
+            <textarea class="form-input form-textarea" id="surpriseMethod" placeholder="¿Qué no esperabas escuchar?"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="confidenceReasonLabel"> Por qué ahora tienes más confianza: </label>
+            <textarea class="form-input form-textarea" id="confidenceReason" placeholder="¿Qué te tranquilizó y motivó?"></textarea>
+          </div>
+        </div>
+        <!-- Tabla de Comparación -->
+        <div class="comparison-table" id="comparisonTable">
+          <div class="table-header">🔥 TEST DE CONFIANZA FULLSTACK: ¿Le darías el 10 a Futuro Digital?</div><p style="color: #ffc107; text-align: center; font-style: italic; margin-top: 10px;">🎯 ¡Del 1 al 10! Evalúa qué tan confiable y emocionante te parece Futuro Digital en estos puntos clave.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>CRITERIO</th>
+                <th>FUTURO DIGITAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: #cccccc; font-weight: 600;">Acompañamiento Real</td>
+                <td><input id="fdSupport" max="10" min="1" placeholder="1-10" type="number"/></td>
+              </tr>
+              <tr>
+                <td style="color: #cccccc; font-weight: 600;">Garantía de Empleo</td>
+                <td><input id="fdJobGuarantee" max="10" min="1" placeholder="1-10" type="number"/></td>
+              </tr>
+              <tr>
+                <td style="color: #cccccc; font-weight: 600;">Valor/Precios</td>
+                <td><input id="fdValue" max="10" min="1" placeholder="1-10" type="number"/></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- SESIÓN 3: VEHÍCULO -->
+      <div class="session-container" id="session3Container">
+        <div class="session-number">3</div>
+        <h3 class="session-title">SESIÓN VEHÍCULO</h3>
+        <p class="session-subtitle">"Tu arma secreta: El programa que lo cambia todo"</p>
+        <div class="form-group">
+          <label class="form-label" id="session3NotesLabel"> [ ] Notas de la Sesión Vehículo:</label>
+          <textarea class="form-input form-textarea" id="session3Notes" placeholder="Todo lo que aprendiste sobre el programa FullStack..." style="min-height: 120px;"></textarea>
+        </div>
+        <!-- Calculadora de ROI -->
+        <div style="background: rgba(255, 193, 7, 0.1); border-radius: 20px; padding: 40px; margin: 40px 0; border: 2px solid #ffc107;">
+          <h4 style="color: #ffc107; text-align: center; margin-bottom: 30px; font-size: 1.4em; font-family: 'JetBrains Mono', monospace;">💰 CALCULADORA DE TRANSFORMACIÓN</h4>
+          <div class="two-column">
+            <div class="form-group">
+              <label class="form-label" id="investmentLabel">🏦 Mi inversión en el programa:</label>
+              <input class="form-input" id="investment" placeholder="$_____ MXN" style="font-size: 1.2em; text-align: center;" type="text"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" id="projectedIncomeLabel">📈 Mis ingresos proyectados año 1:</label>
+              <input class="form-input" id="projectedIncome" placeholder="$_____ MXN" style="font-size: 1.2em; text-align: center;" type="text"/>
+            </div>
+          </div>
+          <div class="two-column">
+            <div class="form-group">
+              <label class="form-label" id="moneyMultiplierLabel">🚀 Mi multiplicador de dinero:</label>
+              <input class="form-input" id="moneyMultiplier" placeholder="____x" style="text-align: center;" type="text"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" id="roiTimeLabel">⚡ Meses para recuperar inversión:</label>
+              <input class="form-input" id="roiTime" placeholder="__ meses" style="text-align: center;" type="text"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN DE DESCARGA MEJORADA -->
+  <section class="download-section" id="downloadSection">
+    <h2 style="font-size: 1.8rem; color: #ffc107; margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace;">
+      📥 Guarda tu Workbook Completo
+    </h2>
+    
+    <p class="download-message">
+      Descarga un PDF con todas tus respuestas para llevar registro de tu transformación.
+    </p>
+    
+    <button id="descargarPDF" class="btn-primary" style="margin: 0 auto;">
+      🖨 Descargar Workbook Completo
+    </button>
+    
+    <div class="device-warning">
+      <p><strong>¿Estás en un celular?</strong></p>
+      <p>Puedes abrir este workbook en una computadora y todos tus datos se habrán guardado automáticamente. Solo ingresa tu nombre exactamente igual y podrás continuar donde lo dejaste.</p>
+    </div>
+    
+    <div class="download-warning-message" id="downloadWarning">
+      Generando tu Workbook... Esto puede tardar unos segundos.
+    </div>
+  </section>
+
+  <!-- FOOTER ACTUALIZADO -->
+  <div id="footerSection" style="text-align: center; margin-top: 60px; margin-bottom: 60px; padding: 0 20px;">
+    <p style="font-family: 'JetBrains Mono', monospace;"><strong>"En Futuro Digital no solo enseñamos programación..."</strong></p>
+    <p style="font-size: 1.8rem; color: #ffc107; font-weight: 700; margin: 25px 0; font-family: 'JetBrains Mono', monospace;">
+      "¡TRANSFORMAMOS PROFESIONALES!"
+    </p>
+    <p style="margin-top: 30px; font-style: italic;">
+      Tu futuro coach te está esperando 🟠✨
+    </p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script>
+    // Manejo del menú móvil
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const navMobile = document.getElementById("navMobile");
+      const navOverlay = document.getElementById("navOverlay");
+      const body = document.body;
+
+      function toggleMenu() {
+        const isOpen = hamburger.classList.contains("active");
+
+        if (isOpen) {
+          hamburger.classList.remove("active");
+          navMobile.classList.remove("active");
+          navOverlay.classList.remove("active");
+          body.classList.remove("menu-open");
+        } else {
+          hamburger.classList.add("active");
+          navMobile.classList.add("active");
+          navOverlay.classList.add("active");
+          body.classList.add("menu-open");
+        }
+      }
+
+      function closeMenu() {
+        hamburger.classList.remove("active");
+        navMobile.classList.remove("active");
+        navOverlay.classList.remove("active");
+        body.classList.remove("menu-open");
+      }
+
+      if (hamburger) hamburger.addEventListener("click", toggleMenu);
+      if (navOverlay) navOverlay.addEventListener("click", closeMenu);
+
+      document.querySelectorAll(".nav-mobile .nav-item").forEach(link => {
+        link.addEventListener("click", () => {
+          closeMenu();
+          const targetId = link.getAttribute("href").replace("#", "");
+          scrollToSection(targetId);
+        });
+      });
+
+      function scrollToSection(id, offsetExtra = 0) {
+        const el = document.getElementById(id);
+        if (el) {
+          const offset = 80 + offsetExtra;
+          const top = el.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({
+            top, behavior: "smooth"
+          });
+        }
+      }
+
+      // Guardar y cargar datos de LocalStorage
+      const inputs = document.querySelectorAll("input, textarea");
+      const saveNotification = document.createElement("div");
+
+      saveNotification.style.position = "fixed";
+      saveNotification.style.bottom = "20px";
+      saveNotification.style.right = "20px";
+      saveNotification.style.padding = "10px 20px";
+      saveNotification.style.background = "#ffc107";
+      saveNotification.style.color = "#000";
+      saveNotification.style.fontWeight = "700";
+      saveNotification.style.borderRadius = "10px";
+      saveNotification.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
+      saveNotification.style.display = "none";
+      saveNotification.innerText = "¡Tus respuestas se han guardado!";
+      document.body.appendChild(saveNotification);
+
+      function showSaveNotification() {
+        saveNotification.style.display = "block";
+        setTimeout(() => {
+          saveNotification.style.display = "none";
+        }, 1500);
+      }
+
+      inputs.forEach(input => {
+        const key = input.id || input.name;
+        if (!key) return;
+
+        // Cargar dato si existe
+        const storedValue = localStorage.getItem(key);
+        if (storedValue) input.value = storedValue;
+
+        // Guardar al escribir
+        input.addEventListener("input", () => {
+          localStorage.setItem(key, input.value);
+          showSaveNotification();
+        });
+      });
+
+      // Manejo de selección de avatar
+      document.querySelectorAll('.avatar-card input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+          if (this.checked) {
+            // Desmarcar otros avatares
+            document.querySelectorAll('.avatar-card input[type="checkbox"]').forEach(cb => {
+              if (cb !== this) cb.checked = false;
+            });
+            
+            // Guardar selección en localStorage
+            const avatarName = this.closest('.avatar-card').querySelector('.avatar-name').textContent.trim();
+            localStorage.setItem('avatar', avatarName);
+          }
+        });
+      });
+
+      // Cargar avatar seleccionado al inicio
+      const savedAvatar = localStorage.getItem('avatar');
+      if (savedAvatar) {
+        const avatarCards = document.querySelectorAll('.avatar-card');
+        for (const card of avatarCards) {
+          const nameElement = card.querySelector('.avatar-name');
+          if (nameElement && nameElement.textContent.trim() === savedAvatar) {
+            const checkbox = card.querySelector('input[type="checkbox"]');
+            if (checkbox) checkbox.checked = true;
+            break;
+          }
+        }
+      }
+    });
+
+    // MEJORADO: Script para generación de PDF sin cortes
+    document.getElementById("descargarPDF").addEventListener("click", async function() {
+      const downloadWarning = document.getElementById("downloadWarning");
+      downloadWarning.classList.add("show");
+      
+      try {
+        // Ocultar elementos no necesarios en el PDF
+        const elementsToHide = document.querySelectorAll('.nav-menu, #downloadWarning, #downloadSection .btn-primary');
+        elementsToHide.forEach(el => el.style.visibility = 'hidden');
+        
+        // Configuración mejorada para html2canvas
+        const options = {
+          scale: 2,
+          useCORS: true,
+          allowTaint: true,
+          scrollX: 0,
+          scrollY: -window.scrollY,
+          windowWidth: document.documentElement.scrollWidth,
+          windowHeight: document.documentElement.scrollHeight,
+          logging: true,
+          backgroundColor: '#0a0a0a'
+        };
+        
+        const canvas = await html2canvas(document.body, options);
+        
+        // Restaurar elementos ocultos
+        elementsToHide.forEach(el => el.style.visibility = 'visible');
+        
+        const imgData = canvas.toDataURL('image/jpeg', 0.95);
+        const pdf = new jspdf.jsPDF({
+          orientation: 'portrait',
+          unit: 'mm',
+          format: 'a4'
+        });
+        
+        const imgProps = pdf.getImageProperties(imgData);
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+        
+        // Ajuste para evitar cortes entre páginas
+        let heightLeft = pdfHeight;
+        let position = 0;
+        const pageHeight = pdf.internal.pageSize.getHeight() - 10; // Margen pequeño
+        
+        pdf.addImage(imgData, 'JPEG', 0, position, pdfWidth, pdfHeight);
+        heightLeft -= pageHeight;
+        
+        while (heightLeft >= 0) {
+          position = heightLeft - pdfHeight;
+          pdf.addPage();
+          pdf.addImage(imgData, 'JPEG', 0, position, pdfWidth, pdfHeight);
+          heightLeft -= pageHeight;
+        }
+        
+        pdf.save('Workbook_Futuro_Digital.pdf');
+        
+      } catch (error) {
+        console.error("Error al generar PDF:", error);
+        alert("Ocurrió un error al generar el PDF. Por favor intenta nuevamente.");
+      } finally {
+        setTimeout(() => {
+          downloadWarning.classList.remove("show");
+        }, 3000);
+      }
+    });
+
+    // MEJORADO: Script para guardado en Google Sheets
+    function saveToGoogleSheets() {
+      const formData = {};
+      const inputs = document.querySelectorAll('input, textarea');
+      
+      // Recopilar todos los datos del formulario
+      inputs.forEach(input => {
+        const key = input.id || input.name;
+        if (key) {
+          formData[key] = input.value;
+        }
+      });
+      
+      // Añadir el avatar seleccionado
+      const avatarCards = document.querySelectorAll('.avatar-card');
+      for (const card of avatarCards) {
+        const checkbox = card.querySelector('input[type="checkbox"]');
+        if (checkbox && checkbox.checked) {
+          const nameElement = card.querySelector('.avatar-name');
+          formData['avatar'] = nameElement ? nameElement.textContent.trim() : "";
+          break;
+        }
+      }
+      
+      // Validar nombre (requerido)
+      if (!formData['fullName'] || formData['fullName'].trim() === "") {
+        console.log("No se guarda - Nombre vacío");
+        return;
+      }
+      
+      // Enviar a Google Sheets
+      fetch("https://script.google.com/macros/s/AKfycbwvHGGiNhFNPKk3Or54jHmEa_B9KwSalVKbOTdKOeZcT-F3ff8hzDWUVhhCIaL76owU4A/exec", {
+        method: "POST",
+        body: new URLSearchParams(formData),
+      })
+      .then(response => {
+        if (!response.ok) throw new Error("Error en la respuesta");
+        return response.text();
+      })
+      .then(data => {
+        console.log("Datos guardados exitosamente:", data);
+      })
+      .catch(error => {
+        console.error("Error al guardar datos:", error);
+      });
+    }
+
+    // Guardado automático cada minuto
+    setInterval(saveToGoogleSheets, 60000);
+
+    // Guardado cuando se selecciona un avatar
+    document.querySelectorAll('.avatar-card input[type="checkbox"]').forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          saveToGoogleSheets();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
