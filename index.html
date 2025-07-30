@@ -68,6 +68,10 @@
       z-index: 3;
     }
 
+    .spacer {
+      height: 160px;
+    }
+
     form {
       display: flex;
       flex-direction: column;
@@ -76,7 +80,7 @@
       background-color: rgba(0, 0, 0, 0.6);
       padding: 20px;
       border-radius: 12px;
-      margin-top: 20px;
+      margin-top: 40px;
     }
 
     input[type="email"] {
@@ -102,15 +106,6 @@
       background-color: #f5c842;
     }
 
-    .fechas {
-      font-size: 16px;
-      margin-top: 30px;
-      color: #ffd700;
-      background-color: rgba(0,0,0,0.6);
-      padding: 10px 20px;
-      border-radius: 8px;
-    }
-
     @media (max-width: 600px) {
       .logo {
         width: 120px;
@@ -123,10 +118,6 @@
         font-size: 14px;
         padding: 10px 18px;
       }
-      .fechas {
-        font-size: 14px;
-        margin-top: 20px;
-      }
     }
   </style>
 </head>
@@ -134,15 +125,11 @@
   <div class="background"></div>
   <div class="overlay">
     <img src="futuro_digital_logo_correcto.png" alt="Futuro Digital" class="logo">
+    <div class="spacer"></div>
     <form action="https://script.google.com/macros/s/AKfycbxkHPslqo4gNSUsubGTdYbGJwD0pYVt3RM9YnSkEaNONBLKgiK4dr1qlt80V6csBeGZ/exec" method="POST">
       <input type="email" name="email" placeholder="Tu correo electrónico" required>
       <button type="submit">Inscribirme</button>
     </form>
-    <p class="fechas">
-      📅 Evento introductorio: <strong>4 de septiembre</strong><br>
-      🚀 Inicio del diplomado: <strong>22 de septiembre</strong>
-    </p>
   </div>
 </body>
 </html>
-
