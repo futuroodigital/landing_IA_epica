@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 ¡ACCESO EXCLUSIVO DESBLOQUEADO! - Futuro Digital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            min-height: 100vh;
+            background: radial-gradient(ellipse at center, #1a1a1a 0%, #000 70%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Efectos de fondo dorados idénticos a la landing - OPTIMIZADOS */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at 80% 50%, rgba(255, 193, 7, 0.4) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+            will-change: transform;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(ellipse at 100% 100%, rgba(255, 152, 0, 0.5) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+            will-change: transform;
+        }
+
+        /* Patrón de puntos dorado - OPTIMIZADO */
+        .dots-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(255, 193, 7, 0.15) 1px, transparent 1px);
+            background-size: 25px 25px;
+            animation: floatDots 30s ease-in-out infinite; /* Más lento y suave */
+            z-index: 2;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        /* Icono de estado impactante */
+        .alert-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            animation: urgentPulse 1.5s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(255, 193, 7, 0.8));
+        }
+
+        /* Título principal espectacular */
+        .main-title {
+            background: linear-gradient(45deg, #ffc107 0%, #ff9800 25%, #ffc107 50%, #ff6b00 75%, #ffc107 100%);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 30px rgba(255, 193, 7, 0.5);
+            letter-spacing: -2px;
+            animation: titleWave 8s ease-in-out infinite, titleGlow 12s ease-in-out infinite alternate; /* Más lento */
+        }
+
+        /* Subtítulo espectacular */
+        .subtitle {
+            color: #fff;
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            margin-bottom: 3rem;
+            font-weight: 700;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            line-height: 1.3;
+        }
+
+        .highlight-text {
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .checkmark {
+            color: #25D366;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-left: 0.5rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        /* Contenedor del logo WhatsApp ÉPICO - POSICIONADO PERFECTAMENTE */
+        .whatsapp-container {
+            position: relative;
+            margin: 3rem auto 4rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .whatsapp-3d {
+            width: 280px;
+            height: 280px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: epicRotate 12s linear infinite;
+            margin: 0 auto;
+        }
+
+        .whatsapp-logo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #25D366, #128C7E, #075E54);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 0 60px rgba(37, 211, 102, 0.6),
+                0 0 120px rgba(37, 211, 102, 0.3),
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                inset 0 4px 8px rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            border: 4px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .whatsapp-logo::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 193, 7, 0.3), transparent);
+            animation: goldenShine 8s ease-in-out infinite; /* Más lento */
+        }
+
+        .whatsapp-icon {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+            /* Imagen optimizada con lazy loading */
+            loading: lazy;
+        }
+
+        /* Móvil 3D - POSICIONADO PARA NO ENCIMAR */
+        .phone-3d {
+            position: absolute;
+            right: -80px;
+            top: 50%;
+            transform: translateY(-50%) rotateY(-25deg) rotateX(5deg);
+            width: 120px;
+            height: 240px;
+            background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+            border-radius: 25px;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(255, 193, 7, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: phoneFloatEpic 12s ease-in-out infinite; /* Más lento */
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            z-index: 5;
+        }
+
+        .phone-screen {
+            width: 85%;
+            height: 88%;
+            background: #000;
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phone-content {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #075E54 0%, #128C7E 50%, #25D366 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            color: white;
+            font-size: 9px;
+            font-weight: bold;
+        }
+
+        /* Botón MEGA ÉPICO */
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 50%, #075E54 100%);
+            background-size: 300% 300%;
+            border: none;
+            border-radius: 20px;
+            padding: 2.5rem 4rem;
+            color: white;
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            font-weight: 900;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 2rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 
+                0 20px 40px rgba(37, 211, 102, 0.5),
+                0 10px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid rgba(255, 193, 7, 0.8);
+            animation: btnMegaPulse 6s ease-in-out infinite; /* Más lento */
+            width: 100%;
+            max-width: 500px;
+            justify-content: center;
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 193, 7, 0.6), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .whatsapp-btn:hover::before {
+            left: 100%;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 
+                0 35px 70px rgba(37, 211, 102, 0.7),
+                0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .whatsapp-btn-icon {
+            font-size: 2.5rem;
+            animation: iconMegaSpin 10s ease-in-out infinite; /* Mucho más lento */
+        }
+
+        /* Lista de beneficios ÉPICA - ESPACIADO PERFECTO */
+        .benefits-title {
+            background: linear-gradient(45deg, #ffc107 0%, #ff9800 25%, #ffc107 50%, #ff6b00 75%, #ffc107 100%);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 3rem;
+            text-shadow: 0 0 30px rgba(255, 193, 7, 0.4);
+            letter-spacing: -2px;
+            animation: titleWave 10s ease-in-out infinite; /* Más lento */
+        }
+
+        .benefits-list {
+            list-style: none;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+            font-weight: 700;
+            padding: 2rem 2.5rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, 
+                rgba(255, 193, 7, 0.15) 0%, 
+                rgba(0, 0, 0, 0.4) 50%, 
+                rgba(255, 152, 0, 0.15) 100%);
+            backdrop-filter: blur(15px);
+            border: 3px solid rgba(255, 193, 7, 0.4);
+            transition: all 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 193, 7, 0.3), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .benefit-item:hover::before {
+            left: 100%;
+        }
+
+        .benefit-item:hover {
+            background: linear-gradient(135deg, 
+                rgba(255, 193, 7, 0.25) 0%, 
+                rgba(0, 0, 0, 0.5) 50%, 
+                rgba(255, 152, 0, 0.25) 100%);
+            transform: translateX(15px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+        }
+
+        .benefit-check {
+            color: #25D366;
+            font-size: 2.5rem;
+            font-weight: bold;
+            min-width: 50px;
+            animation: checkMegaPulse 5s ease-in-out infinite; /* Más lento */
+            text-shadow: 0 0 15px rgba(37, 211, 102, 0.8);
+        }
+
+        .benefit-text {
+            line-height: 1.5;
+        }
+
+        .benefit-highlight {
+            color: #ffc107;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(255, 193, 7, 0.8);
+        }
+
+        /* ANIMACIONES OPTIMIZADAS */
+        @keyframes floatDots {
+            0%, 100% { transform: translateX(0px) translateY(0px); }
+            25% { transform: translateX(5px) translateY(-5px); }
+            50% { transform: translateX(0px) translateY(-10px); }
+            75% { transform: translateX(-5px) translateY(-5px); }
+        }
+
+        @keyframes urgentPulse {
+            0%, 100% { 
+                transform: scale(1); 
+                filter: drop-shadow(0 0 20px rgba(255, 193, 7, 0.8));
+            }
+            50% { 
+                transform: scale(1.1); 
+                filter: drop-shadow(0 0 40px rgba(255, 193, 7, 1));
+            }
+        }
+
+        @keyframes titleWave {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 30px rgba(255, 193, 7, 0.5); }
+            100% { text-shadow: 0 0 60px rgba(255, 193, 7, 0.8), 0 0 90px rgba(255, 152, 0, 0.4); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes epicRotate {
+            0% { transform: rotateY(0deg) rotateX(10deg) rotateZ(0deg); }
+            25% { transform: rotateY(90deg) rotateX(15deg) rotateZ(2deg); }
+            50% { transform: rotateY(180deg) rotateX(10deg) rotateZ(0deg); }
+            75% { transform: rotateY(270deg) rotateX(15deg) rotateZ(-2deg); }
+            100% { transform: rotateY(360deg) rotateX(10deg) rotateZ(0deg); }
+        }
+
+        @keyframes goldenShine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        }
+
+        @keyframes phoneFloatEpic {
+            0%, 100% { 
+                transform: translateY(-50%) rotateY(-25deg) rotateX(5deg) translateY(0px); 
+            }
+            50% { 
+                transform: translateY(-50%) rotateY(-25deg) rotateX(5deg) translateY(-10px); 
+            }
+        }
+
+        @keyframes btnMegaPulse {
+            0%, 100% { 
+                box-shadow: 0 20px 40px rgba(37, 211, 102, 0.5), 0 10px 20px rgba(0, 0, 0, 0.3);
+            }
+            50% { 
+                box-shadow: 0 20px 40px rgba(37, 211, 102, 0.8), 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 30px 15px rgba(255, 193, 7, 0.8);
+            }
+        }
+
+        @keyframes iconMegaSpin {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(-15deg) scale(1.1); }
+            75% { transform: rotate(15deg) scale(1.1); }
+        }
+
+        @keyframes checkMegaPulse {
+            0%, 100% { 
+                transform: scale(1); 
+                text-shadow: 0 0 15px rgba(37, 211, 102, 0.8);
+            }
+            50% { 
+                transform: scale(1.1); 
+                text-shadow: 0 0 25px rgba(37, 211, 102, 1);
+            }
+        }
+
+        /* Responsive optimizado */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .whatsapp-3d {
+                width: 220px;
+                height: 220px;
+            }
+
+            .phone-3d {
+                display: none; /* Ocultar en móvil para evitar problemas */
+            }
+
+            .whatsapp-btn {
+                padding: 2rem 3rem;
+                gap: 1.5rem;
+                max-width: 350px;
+            }
+
+            .benefits-list {
+                max-width: 100%;
+            }
+
+            .benefit-item {
+                padding: 1.5rem 2rem;
+                gap: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .benefit-check {
+                font-size: 2rem;
+                min-width: 40px;
+            }
+        }
+
+        /* Progreso de carga RÁPIDO */
+        .loading-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #ffc107, #ff9800, #25D366);
+            width: 0%;
+            animation: loadProgress 1s ease-out forwards; /* Mucho más rápido */
+            box-shadow: 0 0 15px rgba(255, 193, 7, 1);
+        }
+
+        @keyframes loadProgress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        /* Optimizaciones de performance */
+        .whatsapp-3d,
+        .whatsapp-logo,
+        .phone-3d,
+        .whatsapp-btn {
+            will-change: transform;
+        }
+
+        /* Preload de imágenes críticas */
+        .whatsapp-icon {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+    </style>
+    <!-- Preload de imagen crítica -->
+    <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%202%20ago%202025%2C%2004_49_47%20p.m..png">
+</head>
+<body>
+    <div class="loading-bar">
+        <div class="loading-progress"></div>
+    </div>
+
+    <div class="container">
+        <div class="dots-pattern"></div>
+        
+        <div class="content">
+            <div class="alert-icon">🚨</div>
+            
+            <h1 class="main-title">
+                ¡ACCESO<br>
+                DESBLOQUEADO!
+            </h1>
+
+            <div class="subtitle">
+                Tu lugar VIP está confirmado
+                <span class="highlight-text">ÚNETE AL GRUPO EXCLUSIVO</span>
+                <span class="checkmark">✅</span>
+            </div>
+
+            <div class="whatsapp-container">
+                <div class="whatsapp-3d">
+                    <div class="whatsapp-logo">
+                        <img 
+                            src="https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%202%20ago%202025%2C%2004_49_47%20p.m..png" 
+                            alt="WhatsApp" 
+                            class="whatsapp-icon"
+                            loading="eager"
+                        >
+                    </div>
+                </div>
+                
+                <div class="phone-3d">
+                    <div class="phone-screen">
+                        <div class="phone-content">
+                            <div style="font-weight: bold; margin-bottom: 8px; font-size: 11px;">🚀 FUTURO DIGITAL</div>
+                            <div style="font-size: 8px; opacity: 0.9; margin-bottom: 12px;">Masterclass IA Premium</div>
+                            <div style="font-size: 8px; line-height: 1.3;">
+                                🎯 <strong>Acceso VIP</strong><br>
+                                💎 <strong>Contenido Exclusivo</strong><br>
+                                🚀 <strong>Training Completo</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://chat.whatsapp.com/Dh8bRstWYHKDmm84vxyNZq" 
+               class="whatsapp-btn"
+               target="_blank">
+                <span class="whatsapp-btn-icon">🚀</span>
+                INGRESAR AL GRUPO VIP
+            </a>
+
+            <h2 class="benefits-title">⚡ ACCESO INSTANTÁNEO A:</h2>
+
+            <ul class="benefits-list">
+                <li class="benefit-item">
+                    <span class="benefit-check">🎯</span>
+                    <div class="benefit-text">
+                        <span class="benefit-highlight">MASTERCLASS EXCLUSIVA</span> con contenido premium y avanzado
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <span class="benefit-check">💎</span>
+                    <div class="benefit-text">
+                        Material <span class="benefit-highlight">VIP GRATUITO</span> de valor incalculable
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <span class="benefit-check">🚀</span>
+                    <div class="benefit-text">
+                        <span class="benefit-highlight">ENTRENAMIENTO COMPLETO</span> + recursos adicionales exclusivos
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Carga ULTRA RÁPIDA
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.querySelector('.loading-bar').style.opacity = '0';
+                setTimeout(() => {
+                    document.querySelector('.loading-bar').style.display = 'none';
+                }, 200);
+            }, 1000); /* Mucho más rápido - solo 1 segundo */
+        });
+
+        // Tracking optimizado
+        document.querySelector('.whatsapp-btn').addEventListener('click', function() {
+            console.log('🚀 Usuario accedió al grupo VIP - Conversión exitosa');
+        });
+
+        // Verificar si las imágenes cargan correctamente
+        const whatsappIcon = document.querySelector('.whatsapp-icon');
+        
+        whatsappIcon.onerror = function() {
+            console.log('⚠️ Error cargando logo WhatsApp - Usando fallback');
+            // Fallback elegante si no carga la imagen
+            const fallback = document.createElement('div');
+            fallback.style.cssText = `
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(145deg, #25D366, #128C7E);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 6rem;
+                color: white;
+            `;
+            fallback.innerHTML = '📱';
+            this.parentNode.replaceChild(fallback, this);
+        };
+
+        whatsappIcon.onload = function() {
+            console.log('✅ Logo WhatsApp cargado correctamente');
+        };
+
+        // Verificar conectividad a GitHub
+        fetch('https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%202%20ago%202025%2C%2004_49_47%20p.m..png', {
+            method: 'HEAD'
+        }).then(response => {
+            if (response.ok) {
+                console.log('✅ Conexión a GitHub OK');
+            } else {
+                console.log('⚠️ Problema de conexión a GitHub');
+            }
+        }).catch(error => {
+            console.log('⚠️ Error de red:', error);
+        });
+    </script>
+</body>
+</html>
