@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Futuro Digital - No voy a ser reemplazado</title>
     <!-- Preload de imagen crítica -->
-    <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%202%20ago%202025%2C%2003_53_27%20p.m..png">
-    <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%201%20ago%202025%2C%2003_45_51%20p.m..png">
+    <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_50%20p.m..png">
+    <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2007_08_03%20p.m..png">
+    <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_59%20p.m..png">
     <style>
         * {
             margin: 0;
@@ -22,20 +23,39 @@
 
         .container {
             position: relative;
-            min-height: 200vh; /* Permitir scroll para posicionamiento perfecto */
+            min-height: 180vh; /* Más altura para acomodar la continuación */
             background-size: cover;
             background-position: center top;
             background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-image: url('https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%202%20ago%202025%2C%2003_53_27%20p.m..png');
+            background-attachment: scroll;
+            /* Imagen principal de desktop */
+            background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_50%20p.m..png');
+        }
+
+        /* Continuación del fondo para desktop */
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50vh; /* Altura para la continuación */
+            background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_59%20p.m..png');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            z-index: 1;
         }
 
         /* Imagen para móvil */
         @media (max-width: 768px) {
             .container {
-                background-image: url('https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%201%20ago%202025%2C%2003_45_51%20p.m..png');
-                background-attachment: scroll;
-                min-height: 150vh;
+                background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2007_08_03%20p.m..png');
+                min-height: 120vh;
+            }
+            
+            .container::after {
+                display: none; /* No necesitamos continuación en móvil */
             }
         }
 
@@ -43,19 +63,19 @@
             position: relative;
             z-index: 10;
             width: 100%;
-            height: 100vh;
+            height: 180vh; /* Ajustado para la nueva altura */
         }
 
-        /* POSICIONAMIENTO PERFECTO BASADO EN EL DISEÑO ORIGINAL */
+        /* POSICIONAMIENTO EN EL ESPACIO INFERIOR PREPARADO */
         
-        /* Para Desktop */
+        /* Para Desktop - Posicionado en la parte inferior */
         .video-container {
             position: absolute;
-            width: 60%;
-            max-width: 800px;
+            width: 55%;
+            max-width: 700px;
             left: 50%;
             transform: translateX(-50%);
-            top: 40vh; /* Posicionado exactamente donde está el rectángulo en la imagen */
+            bottom: 35vh; /* Posicionado en la parte inferior donde dejaste espacio */
             border-radius: 15px;
             overflow: hidden;
             background: rgba(0, 0, 0, 0.9);
@@ -71,14 +91,14 @@
             border-radius: 12px;
         }
 
-        /* Formulario perfectamente posicionado */
+        /* Formulario en la parte más inferior */
         .form-container {
             position: absolute;
-            width: 50%;
-            max-width: 500px;
+            width: 45%;
+            max-width: 450px;
             left: 50%;
             transform: translateX(-50%);
-            top: 65vh; /* Debajo del video con espacio perfecto */
+            bottom: 15vh; /* En la parte más baja del espacio preparado */
             z-index: 20;
         }
 
@@ -132,22 +152,27 @@
             transform: translateY(-2px);
         }
 
-        /* Responsive PERFECTO */
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive PERFECTO para las nuevas imágenes */
         @media (max-width: 768px) {
-            .container {
-                min-height: 120vh;
+            .content {
+                height: 120vh;
             }
 
             .video-container {
                 width: 85%;
-                max-width: 400px;
-                top: 45vh; /* Ajustado para móvil */
+                max-width: 380px;
+                bottom: 25vh; /* Posicionado en el espacio inferior de la imagen móvil */
             }
 
             .form-container {
                 width: 85%;
-                max-width: 400px;
-                top: 68vh; /* Perfecto spacing en móvil */
+                max-width: 380px;
+                bottom: 8vh; /* En la parte más baja del espacio móvil */
             }
 
             .email-input {
@@ -162,20 +187,16 @@
         }
 
         @media (max-width: 480px) {
-            .container {
-                min-height: 110vh;
-            }
-
             .video-container {
                 width: 90%;
                 max-width: 350px;
-                top: 42vh;
+                bottom: 22vh;
             }
 
             .form-container {
                 width: 90%;
                 max-width: 350px;
-                top: 65vh;
+                bottom: 5vh;
             }
         }
 
@@ -183,37 +204,26 @@
         @media (min-width: 1400px) {
             .video-container {
                 width: 50%;
-                max-width: 900px;
-                top: 42vh;
+                max-width: 800px;
+                bottom: 40vh;
             }
 
             .form-container {
                 width: 40%;
-                max-width: 600px;
-                top: 67vh;
+                max-width: 500px;
+                bottom: 20vh;
             }
         }
 
-        /* Animaciones suaves */
+        /* Animaciones ajustadas para posicionamiento bottom */
         .video-container {
-            animation: slideInFromTop 1.2s ease-out;
+            animation: slideInFromBottom 1.2s ease-out;
             will-change: transform, opacity;
         }
 
         .form-container {
             animation: slideInFromBottom 1.2s ease-out 0.3s both;
             will-change: transform, opacity;
-        }
-
-        @keyframes slideInFromTop {
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(-50%) translateY(0);
-            }
         }
 
         @keyframes slideInFromBottom {
@@ -227,29 +237,22 @@
             }
         }
 
-        /* Scroll suave */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Overlay para mejor contraste si es necesario */
-        .content-overlay {
-            position: absolute;
-            top: 35vh;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70%;
-            height: 40vh;
-            background: radial-gradient(ellipse, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
-            z-index: 5;
-            pointer-events: none;
-        }
-
-        @media (max-width: 768px) {
-            .content-overlay {
-                top: 40vh;
-                width: 90%;
-                height: 35vh;
+        /* Optimización para diferentes tamaños de pantalla */
+        function optimizeForScreen() {
+            const videoContainer = document.querySelector('.video-container');
+            const formContainer = document.querySelector('.form-container');
+            const windowHeight = window.innerHeight;
+            const windowWidth = window.innerWidth;
+            
+            // Ajustar si la pantalla es muy baja
+            if (windowHeight < 700) {
+                if (windowWidth <= 768) {
+                    videoContainer.style.bottom = '20vh';
+                    formContainer.style.bottom = '3vh';
+                } else {
+                    videoContainer.style.bottom = '30vh';
+                    formContainer.style.bottom = '10vh';
+                }
             }
         }
     </style>
@@ -257,10 +260,7 @@
 <body>
     <div class="container">
         <div class="content">
-            <!-- Overlay sutil para mejor contraste -->
-            <div class="content-overlay"></div>
-            
-            <!-- Video posicionado exactamente donde debe ir -->
+            <!-- Video posicionado en el espacio inferior preparado -->
             <div class="video-container">
                 <iframe 
                     width="100%" 
@@ -274,7 +274,7 @@
                 </iframe>
             </div>
 
-            <!-- Formulario posicionado perfectamente -->
+            <!-- Formulario en la parte más inferior -->
             <div class="form-container">
                 <form id="reservationForm">
                     <input 
