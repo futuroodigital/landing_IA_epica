@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuro Digital - No voy a ser reemplazado</title>
+    <!-- Preload de imagen crítica -->
+    <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%202%20ago%202025%2C%2003_53_27%20p.m..png">
+    <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%201%20ago%202025%2C%2003_45_51%20p.m..png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            min-height: 200vh; /* Permitir scroll para posicionamiento perfecto */
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-image: url('https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%202%20ago%202025%2C%2003_53_27%20p.m..png');
+        }
+
+        /* Imagen para móvil */
+        @media (max-width: 768px) {
+            .container {
+                background-image: url('https://github.com/futuroodigital/landing_IA/raw/main/ChatGPT%20Image%201%20ago%202025%2C%2003_45_51%20p.m..png');
+                background-attachment: scroll;
+                min-height: 150vh;
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* POSICIONAMIENTO PERFECTO BASADO EN EL DISEÑO ORIGINAL */
+        
+        /* Para Desktop */
+        .video-container {
+            position: absolute;
+            width: 60%;
+            max-width: 800px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 40vh; /* Posicionado exactamente donde está el rectángulo en la imagen */
+            border-radius: 15px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.9);
+            border: 3px solid #ffc107;
+            box-shadow: 0 0 40px rgba(255, 193, 7, 0.4);
+            aspect-ratio: 16/9;
+            z-index: 20;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+
+        /* Formulario perfectamente posicionado */
+        .form-container {
+            position: absolute;
+            width: 50%;
+            max-width: 500px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 65vh; /* Debajo del video con espacio perfecto */
+            z-index: 20;
+        }
+
+        .email-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            outline: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .email-input::placeholder {
+            color: rgba(255, 193, 7, 0.7);
+        }
+
+        .email-input:focus {
+            box-shadow: 0 0 25px rgba(255, 193, 7, 0.6);
+            background: rgba(0, 0, 0, 0.9);
+            border-color: #ff9800;
+        }
+
+        .reserve-btn {
+            width: 100%;
+            padding: 1.3rem 2rem;
+            background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+            border: none;
+            border-radius: 12px;
+            color: #000;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+        }
+
+        .reserve-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(255, 193, 7, 0.6);
+            background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+        }
+
+        .reserve-btn:active {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive PERFECTO */
+        @media (max-width: 768px) {
+            .container {
+                min-height: 120vh;
+            }
+
+            .video-container {
+                width: 85%;
+                max-width: 400px;
+                top: 45vh; /* Ajustado para móvil */
+            }
+
+            .form-container {
+                width: 85%;
+                max-width: 400px;
+                top: 68vh; /* Perfecto spacing en móvil */
+            }
+
+            .email-input {
+                padding: 0.9rem 1.3rem;
+                font-size: 1rem;
+            }
+
+            .reserve-btn {
+                padding: 1.1rem 1.8rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                min-height: 110vh;
+            }
+
+            .video-container {
+                width: 90%;
+                max-width: 350px;
+                top: 42vh;
+            }
+
+            .form-container {
+                width: 90%;
+                max-width: 350px;
+                top: 65vh;
+            }
+        }
+
+        /* Para pantallas muy grandes */
+        @media (min-width: 1400px) {
+            .video-container {
+                width: 50%;
+                max-width: 900px;
+                top: 42vh;
+            }
+
+            .form-container {
+                width: 40%;
+                max-width: 600px;
+                top: 67vh;
+            }
+        }
+
+        /* Animaciones suaves */
+        .video-container {
+            animation: slideInFromTop 1.2s ease-out;
+            will-change: transform, opacity;
+        }
+
+        .form-container {
+            animation: slideInFromBottom 1.2s ease-out 0.3s both;
+            will-change: transform, opacity;
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Overlay para mejor contraste si es necesario */
+        .content-overlay {
+            position: absolute;
+            top: 35vh;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            height: 40vh;
+            background: radial-gradient(ellipse, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .content-overlay {
+                top: 40vh;
+                width: 90%;
+                height: 35vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <!-- Overlay sutil para mejor contraste -->
+            <div class="content-overlay"></div>
+            
+            <!-- Video posicionado exactamente donde debe ir -->
+            <div class="video-container">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/zJCC1U_QoAg?rel=0&modestbranding=1&showinfo=0" 
+                    title="Futuro Digital - No voy a ser reemplazado"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    style="border-radius: 15px;">
+                </iframe>
+            </div>
+
+            <!-- Formulario posicionado perfectamente -->
+            <div class="form-container">
+                <form id="reservationForm">
+                    <input 
+                        type="email" 
+                        class="email-input" 
+                        placeholder="Tu email"
+                        required
+                        id="userEmail"
+                    >
+                    <button type="submit" class="reserve-btn">
+                        Reserva tu lugar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Manejo del formulario - REDIRECCIÓN INMEDIATA
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('userEmail').value;
+            
+            if (email) {
+                // Guardar email y redirigir INMEDIATAMENTE
+                console.log('Email capturado:', email);
+                
+                // Redirección INSTANTÁNEA sin mensajes
+                window.location.href = 'gracias.html';
+            }
+        });
+
+        // Validación en tiempo real con feedback visual
+        document.getElementById('userEmail').addEventListener('input', function(e) {
+            const email = e.target.value;
+            const btn = document.querySelector('.reserve-btn');
+            
+            if (email.includes('@') && email.includes('.')) {
+                btn.style.opacity = '1';
+                btn.style.transform = 'scale(1)';
+                btn.style.background = 'linear-gradient(135deg, #ffc107 0%, #ff9800 100%)';
+            } else {
+                btn.style.opacity = '0.8';
+                btn.style.transform = 'scale(0.98)';
+                btn.style.background = 'linear-gradient(135deg, #ffc107 0%, #ff9800 100%)';
+            }
+        });
+
+        // Efecto de carga optimizado
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.8s ease';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Verificar carga de imagen de fondo con mejor feedback
+        function checkBackgroundImage() {
+            const container = document.querySelector('.container');
+            const style = window.getComputedStyle(container);
+            const bgImage = style.backgroundImage;
+            
+            if (bgImage && bgImage !== 'none') {
+                console.log('✅ Imagen de fondo cargada correctamente');
+                container.style.opacity = '1';
+            } else {
+                console.log('⚠️ Aplicando fallback de imagen...');
+                // Fallback elegante con gradiente que simula el diseño
+                container.style.background = `
+                    radial-gradient(ellipse at 80% 50%, rgba(255, 193, 7, 0.4) 0%, transparent 50%),
+                    radial-gradient(ellipse at 100% 100%, rgba(255, 152, 0, 0.5) 0%, transparent 70%),
+                    radial-gradient(ellipse at center, #1a1a1a 0%, #000 70%)
+                `;
+            }
+        }
+
+        // Verificar después de cargar
+        setTimeout(checkBackgroundImage, 500);
+
+        // Optimización para diferentes tamaños de pantalla
+        function optimizeForScreen() {
+            const videoContainer = document.querySelector('.video-container');
+            const formContainer = document.querySelector('.form-container');
+            const windowHeight = window.innerHeight;
+            const windowWidth = window.innerWidth;
+            
+            // Ajustar si la pantalla es muy baja
+            if (windowHeight < 700) {
+                if (windowWidth <= 768) {
+                    videoContainer.style.top = '35vh';
+                    formContainer.style.top = '58vh';
+                } else {
+                    videoContainer.style.top = '35vh';
+                    formContainer.style.top = '60vh';
+                }
+            }
+        }
+
+        // Ejecutar optimización
+        window.addEventListener('load', optimizeForScreen);
+        window.addEventListener('resize', optimizeForScreen);
+    </script>
+</body>
+</html>
