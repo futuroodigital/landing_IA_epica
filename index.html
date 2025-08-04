@@ -122,7 +122,7 @@
             max-width: 650px;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 35vh; /* POSICIÓN CORREGIDA - MÁS ARRIBA */
+            bottom: 2vh; /* POSICIÓN ULTRA ABAJO - CASI AL BORDE INFERIOR */
             border-radius: 25px;
             overflow: hidden;
             background: rgba(0, 0, 0, 0.95);
@@ -179,7 +179,7 @@
             max-width: 500px;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 15vh; /* POSICIÓN CORREGIDA - MÁS ARRIBA */
+            bottom: -20vh; /* POSICIÓN ULTRA ABAJO - FUERA DE VISTA INICIAL */
             z-index: 20;
         }
 
@@ -309,7 +309,7 @@
             .video-container {
                 width: 90%;
                 max-width: 380px;
-                bottom: 40vh; /* Posición corregida para móvil - MÁS ARRIBA */
+                bottom: 5vh; /* Posición ULTRA ABAJO para móvil */
                 border-radius: 20px;
                 border: 3px solid transparent;
             }
@@ -321,7 +321,7 @@
             .form-container {
                 width: 90%;
                 max-width: 380px;
-                bottom: 18vh; /* Posición corregida para móvil - MÁS ARRIBA */
+                bottom: -15vh; /* Posición ULTRA ABAJO para móvil */
             }
 
             .email-input {
@@ -342,7 +342,7 @@
             .video-container {
                 width: 95%;
                 max-width: 350px;
-                bottom: 38vh;
+                bottom: 3vh; /* ULTRA ABAJO para móvil pequeño */
                 border-radius: 18px;
             }
 
@@ -353,7 +353,7 @@
             .form-container {
                 width: 95%;
                 max-width: 350px;
-                bottom: 16vh;
+                bottom: -18vh; /* ULTRA ABAJO para móvil pequeño */
             }
 
             .email-input {
@@ -480,12 +480,12 @@
         /* OPTIMIZACIONES PARA LANDSCAPE EN MÓVIL */
         @media (max-width: 768px) and (orientation: landscape) {
             .video-container {
-                bottom: 45vh;
+                bottom: 8vh; /* ULTRA ABAJO en landscape */
                 width: 60%;
             }
             
             .form-container {
-                bottom: 20vh;
+                bottom: -12vh; /* ULTRA ABAJO en landscape */
                 width: 50%;
             }
         }
@@ -677,11 +677,11 @@
             
             // Ajustes dinámicos premium según el dispositivo
             if (windowHeight < 700 && windowWidth <= 768) {
-                video.style.bottom = '42vh';
-                form.style.bottom = '20vh';
+                video.style.bottom = '8vh';
+                form.style.bottom = '-12vh';
             } else if (windowHeight > 900 && windowWidth > 1200) {
-                video.style.bottom = '38vh';
-                form.style.bottom = '18vh';
+                video.style.bottom = '1vh';
+                form.style.bottom = '-25vh';
             }
             
             // Ajustes especiales para pantallas ultra anchas
