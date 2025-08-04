@@ -23,35 +23,38 @@
 
         .container {
             position: relative;
-            min-height: 180vh; /* Más altura para acomodar la continuación */
-            background-size: cover;
+            min-height: 100vh; /* Altura normal para mejor control */
+            background-size: contain; /* Cambio de cover a contain para que se vea completa */
             background-position: center top;
             background-repeat: no-repeat;
             background-attachment: scroll;
             /* Imagen principal de desktop actualizada */
             background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_50%20p.m..png');
+            background-color: #000; /* Fondo negro para complementar la imagen */
         }
 
         /* Continuación del fondo para desktop */
         .container::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            top: 70vh; /* Posicionado donde debe ir la continuación */
             left: 0;
             width: 100%;
-            height: 50vh; /* Altura para la continuación */
+            height: 40vh; /* Altura para la continuación */
             background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_59%20p.m..png');
-            background-size: cover;
+            background-size: contain;
             background-position: center top;
             background-repeat: no-repeat;
             z-index: 1;
         }
 
-        /* Imagen para móvil actualizada */
+        /* Imagen para móvil actualizada - MÁS PEQUEÑA Y CENTRADA */
         @media (max-width: 768px) {
             .container {
                 background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2007_08_03%20p.m..png');
-                min-height: 120vh;
+                min-height: 100vh;
+                background-size: contain; /* Para que se vea la imagen completa */
+                background-position: center center; /* Centrada perfectamente */
             }
             
             .container::after {
@@ -160,43 +163,55 @@
         /* Responsive PERFECTO para las nuevas imágenes */
         @media (max-width: 768px) {
             .content {
-                height: 120vh;
+                height: 100vh;
             }
 
             .video-container {
                 width: 85%;
-                max-width: 380px;
-                bottom: 25vh; /* Posicionado en el espacio inferior de la imagen móvil */
+                max-width: 320px;
+                top: 60vh; /* Posicionado en el espacio inferior de la imagen móvil */
+                border: 2px solid #ffc107;
             }
 
             .form-container {
                 width: 85%;
-                max-width: 380px;
-                bottom: 8vh; /* En la parte más baja del espacio móvil */
+                max-width: 320px;
+                top: 78vh; /* Debajo del video en móvil */
             }
 
             .email-input {
-                padding: 0.9rem 1.3rem;
-                font-size: 1rem;
+                padding: 0.8rem 1.2rem;
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
             }
 
             .reserve-btn {
-                padding: 1.1rem 1.8rem;
-                font-size: 1.1rem;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
             }
         }
 
         @media (max-width: 480px) {
             .video-container {
                 width: 90%;
-                max-width: 350px;
-                bottom: 22vh;
+                max-width: 300px;
+                top: 58vh;
             }
 
             .form-container {
                 width: 90%;
-                max-width: 350px;
-                bottom: 5vh;
+                max-width: 300px;
+                top: 75vh;
+            }
+
+            .email-input {
+                padding: 0.7rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .reserve-btn {
+                padding: 0.9rem 1.3rem;
+                font-size: 0.95rem;
             }
         }
 
@@ -351,15 +366,10 @@
             const windowHeight = window.innerHeight;
             const windowWidth = window.innerWidth;
             
-            // Ajustar si la pantalla es muy baja
-            if (windowHeight < 700) {
-                if (windowWidth <= 768) {
-                    videoContainer.style.bottom = '20vh';
-                    formContainer.style.bottom = '3vh';
-                } else {
-                    videoContainer.style.bottom = '30vh';
-                    formContainer.style.bottom = '10vh';
-                }
+            // Ajustar posición si la pantalla es muy pequeña
+            if (windowHeight < 600 && windowWidth <= 768) {
+                videoContainer.style.top = '55vh';
+                formContainer.style.top = '72vh';
             }
         }
 
