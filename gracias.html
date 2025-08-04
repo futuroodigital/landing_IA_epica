@@ -220,7 +220,7 @@
             animation: premiumReflectionShimmer 6s ease-in-out infinite;
         }
 
-        /* Subtítulo cursivo premium CLICKEABLE - SIN RECUADRO FEO */
+        /* Subtítulo cursivo premium CLICKEABLE - SIN RECUADRO FEO - CON INDICADOR */
         .subtitle {
             font-family: 'Playfair Display', serif;
             font-style: italic;
@@ -229,23 +229,37 @@
             margin-bottom: 3.5rem;
             font-weight: 600;
             position: relative;
-            padding: 0; /* SIN PADDING - sin recuadro */
-            border-radius: 0; /* SIN BORDER RADIUS */
-            background: transparent; /* SIN FONDO */
-            backdrop-filter: none; /* SIN BLUR */
-            border: none; /* SIN BORDE */
-            box-shadow: none; /* SIN SOMBRA DE CAJA */
+            padding: 0;
+            border-radius: 0;
+            background: transparent;
+            backdrop-filter: none;
+            border: none;
+            box-shadow: none;
             text-shadow: 
                 0 2px 15px rgba(0, 0, 0, 0.6),
                 0 0 30px rgba(218, 165, 32, 0.3),
                 0 0 50px rgba(255, 215, 0, 0.2);
             line-height: 1.6;
             animation: premiumSubtitleFloat 8s ease-in-out infinite;
-            cursor: pointer; /* CLICKEABLE */
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+            transition: all 0.3s ease; /* MÁS RÁPIDO */
         }
 
-        /* Efecto hover para el subtítulo clickeable */
+        /* Indicador visual de que es clickeable */
+        .subtitle::after {
+            content: '👆 Haz clic aquí';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            color: rgba(218, 165, 32, 0.8);
+            font-style: normal;
+            font-weight: 400;
+            animation: clickIndicator 2s ease-in-out infinite;
+        }
+
+        /* Efecto hover RÁPIDO para el subtítulo clickeable */
         .subtitle:hover {
             transform: scale(1.05);
             text-shadow: 
@@ -253,6 +267,17 @@
                 0 0 40px rgba(218, 165, 32, 0.5),
                 0 0 60px rgba(255, 215, 0, 0.3);
             filter: brightness(1.2);
+        }
+
+        @keyframes clickIndicator {
+            0%, 100% { 
+                opacity: 0.6;
+                transform: translateX(-50%) translateY(0px);
+            }
+            50% { 
+                opacity: 1;
+                transform: translateX(-50%) translateY(-3px);
+            }
         }
 
         /* Eliminar los pseudo-elementos del subtítulo */
@@ -985,31 +1010,47 @@
             }
         }
 
+        /* Animaciones simplificadas para mejor performance */
+        @keyframes premiumCrystalFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @keyframes holographicGlow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.6; }
+        }
+
+        @keyframes premiumCrystalDrift {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+        }
+
+        @keyframes premiumHolographicPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes premiumReflection {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Simplificar animaciones del título */
+        @keyframes premiumCursiveTitleWave {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes premiumCursiveTitleGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.1); }
+        }
+
+        /* El resto de animaciones simplificadas... */
         @keyframes premiumBtnAttention {
-            0%, 100% { 
-                transform: translateY(-6px) scale(1.03);
-                box-shadow: 
-                    0 25px 70px rgba(37, 211, 102, 0.35),
-                    0 15px 40px rgba(0, 0, 0, 0.25);
-            }
-            25% { 
-                transform: translateY(-10px) scale(1.08);
-                box-shadow: 
-                    0 35px 90px rgba(37, 211, 102, 0.5),
-                    0 20px 60px rgba(218, 165, 32, 0.4);
-            }
-            50% { 
-                transform: translateY(-8px) scale(1.05);
-                box-shadow: 
-                    0 30px 80px rgba(37, 211, 102, 0.4),
-                    0 0 60px rgba(255, 215, 0, 0.3);
-            }
-            75% { 
-                transform: translateY(-12px) scale(1.1);
-                box-shadow: 
-                    0 40px 100px rgba(37, 211, 102, 0.6),
-                    0 25px 70px rgba(218, 165, 32, 0.5);
-            }
+            0%, 100% { transform: translateY(-6px) scale(1.03); }
+            50% { transform: translateY(-10px) scale(1.08); }
         }
 
         @keyframes premiumHighlightShimmer {
@@ -1285,7 +1326,7 @@
                 Desbloqueado!
             </h1>
 
-            <div class="subtitle">
+            <div class="subtitle" onclick="goToWhatsApp()">
                 Tu lugar VIP está confirmado
                 <span class="highlight-text">ÚNETE AL GRUPO EXCLUSIVO</span>
                 <span class="checkmark">✅</span>
@@ -1351,240 +1392,102 @@
     </div>
 
     <script>
-        // Hacer el subtítulo CLICKEABLE para ir al botón WhatsApp
-        document.querySelector('.subtitle').addEventListener('click', function() {
-            // Efecto visual premium
-            this.style.transform = 'scale(0.98)';
-            this.style.transition = 'transform 0.15s ease';
-            
-            setTimeout(() => {
-                this.style.transform = 'scale(1.05)';
-                this.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                
-                // Scroll suave al botón de WhatsApp
-                const whatsappBtn = document.querySelector('.whatsapp-btn');
-                whatsappBtn.scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'center' 
-                });
-                
-                // Efecto de llamada de atención en el botón
-                setTimeout(() => {
-                    whatsappBtn.style.animation = 'premiumBtnAttention 1s ease-in-out';
-                    setTimeout(() => {
-                        whatsappBtn.style.animation = 'premiumBtnHolographicPulse 8s ease-in-out infinite';
-                    }, 1000);
-                }, 500);
-            }, 150);
-        });
+    <script>
+        // FUNCIÓN DIRECTA AL BOTÓN WHATSAPP - ULTRA RÁPIDA
+        function goToWhatsApp() {
+            // Ir DIRECTO al enlace de WhatsApp SIN scroll
+            window.open('https://chat.whatsapp.com/Dh8bRstWYHKDmm84vxyNZq', '_blank');
+        }
 
-        // Carga SÚPER PREMIUM con efectos holográficos
+        // CARGA ULTRA RÁPIDA - OPTIMIZADA
         window.addEventListener('load', function() {
-            // Efecto de aparición ultra premium
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            // Carga instantánea sin efectos pesados
+            document.body.style.opacity = '1';
             
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-                
-                // Ocultar loading bar con transición holográfica
-                setTimeout(() => {
-                    const loadingBar = document.querySelector('.loading-bar');
-                    loadingBar.style.transform = 'translateY(-100%) scale(0.8)';
-                    loadingBar.style.opacity = '0';
-                    loadingBar.style.transition = 'all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                    loadingBar.style.filter = 'blur(10px)';
-                    setTimeout(() => {
-                        loadingBar.style.display = 'none';
-                    }, 1200);
-                }, 1200);
-            }, 400);
+            // Ocultar loading bar INMEDIATAMENTE
+            const loadingBar = document.querySelector('.loading-bar');
+            if (loadingBar) {
+                loadingBar.style.display = 'none';
+            }
         });
 
-        // Tracking súper premium con efectos holográficos
+        // Tracking SIMPLIFICADO
         document.querySelector('.whatsapp-btn').addEventListener('click', function(e) {
-            console.log('🚀 Usuario accedió al grupo VIP - Conversión SÚPER PREMIUM exitosa');
-            
-            // Efecto de click holográfico
-            const btn = e.currentTarget;
-            btn.style.transform = 'translateY(-4px) scale(0.97)';
-            btn.style.transition = 'transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            btn.style.filter = 'brightness(1.2) hue-rotate(15deg)';
-            
-            setTimeout(() => {
-                btn.style.transform = 'translateY(-8px) scale(1.05)';
-                btn.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                btn.style.filter = 'brightness(1) hue-rotate(0deg)';
-            }, 200);
+            console.log('🚀 Usuario accedió al grupo VIP - Conversión RÁPIDA exitosa');
         });
 
-        // Verificar imágenes con fallback súper premium
+        // HACER TODO MÁS RÁPIDO - Eliminar animaciones pesadas
+        document.querySelectorAll('.benefit-item').forEach((item, index) => {
+            // Entrada inmediata sin delays
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0px) scale(1)';
+            
+            // Hover simple y rápido
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(15px) scale(1.02)';
+                this.style.transition = 'transform 0.2s ease'; // MÁS RÁPIDO
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0px) scale(1)';
+                this.style.transition = 'transform 0.2s ease'; // MÁS RÁPIDO
+            });
+        });
+
+        // Verificar imágenes RÁPIDO
         const whatsappIcon = document.querySelector('.whatsapp-icon');
         
         whatsappIcon.onerror = function() {
-            console.log('⚠️ Aplicando fallback SÚPER PREMIUM para logo WhatsApp');
+            console.log('⚠️ Fallback rápido para logo WhatsApp');
             const fallback = document.createElement('div');
             fallback.style.cssText = `
                 width: 100%;
                 height: 100%;
-                background: 
-                    radial-gradient(ellipse at 30% 30%, #25D366 20%, #128C7E 60%, #075E54 100%),
-                    conic-gradient(from 0deg, rgba(218, 165, 32, 0.3) 0deg, transparent 120deg, rgba(255, 215, 0, 0.2) 240deg, transparent 360deg);
+                background: linear-gradient(145deg, #25D366, #128C7E);
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 4.5rem;
+                font-size: 4rem;
                 color: white;
-                animation: elegantRotate 20s linear infinite;
-                box-shadow: 
-                    0 0 60px rgba(37, 211, 102, 0.4),
-                    0 20px 50px rgba(0, 0, 0, 0.3),
-                    inset 0 8px 16px rgba(255, 255, 255, 0.15);
-                border: 3px solid rgba(218, 165, 32, 0.3);
             `;
             fallback.innerHTML = '📱';
             this.parentNode.replaceChild(fallback, this);
         };
 
         whatsappIcon.onload = function() {
-            console.log('✅ Logo WhatsApp cargado con EXCELENCIA PREMIUM');
-            this.style.animation = 'premiumHolographicFadeIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            console.log('✅ Logo WhatsApp cargado RÁPIDO');
         };
 
-        // Efectos de hover súper premium para beneficios
-        document.querySelectorAll('.benefit-item').forEach((item, index) => {
-            // Efecto de entrada escalonado
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(30px) scale(0.95)';
-            
-            setTimeout(() => {
-                item.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0px) scale(1)';
-            }, 500 + (index * 200));
-
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(25px) scale(1.03)';
-                this.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.2), 0 15px 40px rgba(218, 165, 32, 0.25)';
-                this.style.transition = 'all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                this.style.filter = 'brightness(1.05)';
-                
-                // Efecto holográfico en el check
-                const check = this.querySelector('.benefit-check');
-                if (check) {
-                    check.style.transform = 'scale(1.1) rotate(5deg)';
-                    check.style.filter = 'hue-rotate(20deg) brightness(1.2)';
-                }
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(0px) scale(1)';
-                this.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.25)';
-                this.style.transition = 'all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                this.style.filter = 'brightness(1)';
-                
-                // Restaurar check
-                const check = this.querySelector('.benefit-check');
-                if (check) {
-                    check.style.transform = 'scale(1) rotate(0deg)';
-                    check.style.filter = 'hue-rotate(0deg) brightness(1)';
-                }
-            });
-        });
-
-        // Efecto de parallax holográfico avanzado
-        let ticking = false;
-        
-        function updatePremiumParallax() {
+        // Parallax SIMPLIFICADO y más rápido
+        window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
             const parallax = document.querySelector('.dots-pattern');
-            const container = document.querySelector('.container');
-            const speed = scrolled * 0.2;
-            const rotation = scrolled * 0.005;
             
-            if (parallax) {
-                parallax.style.transform = `translateY(${speed}px) rotate(${rotation}deg) scale(${1 + scrolled * 0.0001})`;
-                parallax.style.filter = `hue-rotate(${scrolled * 0.1}deg)`;
+            if (parallax && scrolled < 1000) { // Solo hasta cierto punto
+                parallax.style.transform = `translateY(${scrolled * 0.1}px)`;
             }
-            
-            // Efecto holográfico en el fondo
-            if (container) {
-                container.style.filter = `hue-rotate(${scrolled * 0.05}deg)`;
-            }
-            
-            ticking = false;
+        }, { passive: true }); // Passive para mejor performance
+
+        // Eliminar efectos pesados en móvil
+        if (window.innerWidth <= 768) {
+            // Desactivar animaciones pesadas en móvil
+            const style = document.createElement('style');
+            style.innerHTML = `
+                * {
+                    animation-duration: 0.1s !important;
+                    transition-duration: 0.1s !important;
+                }
+                .dots-pattern {
+                    display: none; /* Ocultar partículas en móvil */
+                }
+                .container::before,
+                .container::after {
+                    animation: none !important;
+                }
+            `;
+            document.head.appendChild(style);
         }
-
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                requestAnimationFrame(updatePremiumParallax);
-                ticking = true;
-            }
-        });
-
-        // Verificar conectividad con mensaje holográfico
-        fetch('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2005_02_33%20p.m..png', {
-            method: 'HEAD'
-        }).then(response => {
-            if (response.ok) {
-                console.log('✅ Conexión SÚPER PREMIUM establecida');
-            } else {
-                console.log('⚠️ Optimizando experiencia PREMIUM...');
-            }
-        }).catch(error => {
-            console.log('⚠️ Modo PREMIUM offline activado');
-        });
-
-        // Micro-interacciones holográficas en el título
-        const title = document.querySelector('.main-title');
-        if (title) {
-            title.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.03) skew(-1deg)';
-                this.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                this.style.filter = 'brightness(1.1) hue-rotate(10deg)';
-            });
-            
-            title.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1) skew(0deg)';
-                this.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                this.style.filter = 'brightness(1) hue-rotate(0deg)';
-            });
-        }
-
-        // Efecto cursor holográfico personalizado
-        document.addEventListener('mousemove', function(e) {
-            // Solo en desktop
-            if (window.innerWidth <= 768) return;
-
-            const cursor = document.querySelector('.premium-cursor');
-            if (!cursor) {
-                const newCursor = document.createElement('div');
-                newCursor.className = 'premium-cursor';
-                newCursor.style.cssText = `
-                    position: fixed;
-                    width: 20px;
-                    height: 20px;
-                    background: radial-gradient(circle, rgba(218, 165, 32, 0.8) 0%, transparent 70%);
-                    border-radius: 50%;
-                    pointer-events: none;
-                    mix-blend-mode: difference;
-                    z-index: 9999;
-                    transition: transform 0.1s ease;
-                `;
-                document.body.appendChild(newCursor);
-            }
-            
-            const premiumCursor = document.querySelector('.premium-cursor');
-            premiumCursor.style.left = e.clientX - 10 + 'px';
-            premiumCursor.style.top = e.clientY - 10 + 'px';
-        });
-
-        // Limpiar cursor al salir
-        document.addEventListener('mouseleave', function() {
-            const cursor = document.querySelector('.premium-cursor');
-            if (cursor) cursor.remove();
-        });
     </script>
 
     <style>
@@ -1601,44 +1504,60 @@
             }
         }
 
-        /* Loading bar SÚPER PREMIUM */
+        /* Loading bar ULTRA RÁPIDO */
         .loading-progress {
             height: 100%;
-            background: conic-gradient(from 0deg, 
-                #daa520 0deg,
-                #ffd700 60deg,
-                #f4d03f 120deg,
-                #25D366 180deg,
-                #128C7E 240deg,
-                #daa520 300deg,
-                #ffd700 360deg);
-            background-size: 600% 100%;
+            background: linear-gradient(90deg, #daa520, #ffd700, #25D366);
             width: 0%;
-            animation: premiumHolographicLoadProgress 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
-                       premiumHolographicLoadingShine 4s ease-in-out infinite;
-            box-shadow: 
-                0 0 30px rgba(218, 165, 32, 1),
-                0 0 60px rgba(218, 165, 32, 0.6),
-                0 0 90px rgba(255, 215, 0, 0.3);
-            border-radius: 0 3px 3px 0;
+            animation: fastLoadProgress 0.8s ease-out forwards; /* MÁS RÁPIDO */
+            box-shadow: 0 0 20px rgba(218, 165, 32, 0.8);
         }
 
-        @keyframes premiumHolographicLoadProgress {
+        @keyframes fastLoadProgress {
             0% { width: 0%; }
             100% { width: 100%; }
         }
 
-        @keyframes premiumHolographicLoadingShine {
-            0% { 
-                background-position: -600% 0; 
-                filter: hue-rotate(0deg);
+        /* Responsive MÁS RÁPIDO para móvil */
+        @media (max-width: 768px) {
+            /* Desactivar animaciones pesadas en móvil */
+            .dots-pattern {
+                animation: none !important;
+                opacity: 0.3;
             }
-            50% {
-                filter: hue-rotate(30deg);
+            
+            .container::before,
+            .container::after {
+                animation: none !important;
             }
-            100% { 
-                background-position: 600% 0; 
-                filter: hue-rotate(0deg);
+            
+            .whatsapp-3d {
+                animation: none !important;
+            }
+            
+            .whatsapp-logo {
+                animation: none !important;
+            }
+            
+            .whatsapp-btn {
+                animation: none !important;
+            }
+            
+            .benefit-check {
+                animation: none !important;
+            }
+            
+            .main-title {
+                animation: none !important;
+            }
+            
+            .subtitle {
+                animation: none !important;
+            }
+            
+            /* Transiciones más rápidas en móvil */
+            * {
+                transition-duration: 0.2s !important;
             }
         }
 
