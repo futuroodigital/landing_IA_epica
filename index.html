@@ -118,11 +118,11 @@
         /* VIDEO CONTAINER ULTRA PREMIUM HD 8K - POSICIONES CORREGIDAS */
         .video-container {
             position: absolute;
-            width: 52%;
-            max-width: 650px;
+            width: 48%; /* Un poco más pequeño */
+            max-width: 600px;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 2vh; /* POSICIÓN ULTRA ABAJO - CASI AL BORDE INFERIOR */
+            bottom: -5vh; /* POSICIÓN MEGA ABAJO - FUERA DE VISTA INICIAL DESKTOP */
             border-radius: 25px;
             overflow: hidden;
             background: rgba(0, 0, 0, 0.95);
@@ -175,11 +175,11 @@
         /* FORMULARIO ULTRA PREMIUM HD 8K - POSICIÓN CORREGIDA */
         .form-container {
             position: absolute;
-            width: 45%;
-            max-width: 500px;
+            width: 42%; /* Un poco más pequeño */
+            max-width: 450px;
             left: 50%;
             transform: translateX(-50%);
-            bottom: -20vh; /* POSICIÓN ULTRA ABAJO - FUERA DE VISTA INICIAL */
+            bottom: -30vh; /* POSICIÓN MEGA ABAJO PERO CON ESPACIO PARA PRESIONAR */
             z-index: 20;
         }
 
@@ -307,9 +307,9 @@
         /* RESPONSIVE PREMIUM HD para móvil - POSICIONES CORREGIDAS */
         @media (max-width: 768px) {
             .video-container {
-                width: 90%;
-                max-width: 380px;
-                bottom: 5vh; /* Posición ULTRA ABAJO para móvil */
+                width: 88%;
+                max-width: 360px;
+                bottom: 15vh; /* Posición BUENA para móvil - se ve el video */
                 border-radius: 20px;
                 border: 3px solid transparent;
             }
@@ -319,10 +319,16 @@
             }
 
             .form-container {
-                width: 90%;
-                max-width: 380px;
-                bottom: -15vh; /* Posición ULTRA ABAJO para móvil */
+                width: 88%;
+                max-width: 360px;
+                bottom: -8vh; /* Posición con espacio para presionar */
             }
+            
+            .extra-space {
+                bottom: -20vh;
+                height: 30vh;
+            }
+        }
 
             .email-input {
                 padding: 1.3rem 1.8rem;
@@ -512,6 +518,7 @@
 <body>
     <div class="container">
         <div class="holographic-aura"></div>
+        <div class="extra-space"></div>
         <div class="content">
             <!-- Video ULTRA PREMIUM HD 8K -->
             <div class="video-container">
@@ -677,11 +684,11 @@
             
             // Ajustes dinámicos premium según el dispositivo
             if (windowHeight < 700 && windowWidth <= 768) {
-                video.style.bottom = '8vh';
-                form.style.bottom = '-12vh';
+                video.style.bottom = '18vh';
+                form.style.bottom = '-5vh';
             } else if (windowHeight > 900 && windowWidth > 1200) {
-                video.style.bottom = '1vh';
-                form.style.bottom = '-25vh';
+                video.style.bottom = '-8vh'; /* MUY ABAJO en desktop grande */
+                form.style.bottom = '-35vh';
             }
             
             // Ajustes especiales para pantallas ultra anchas
