@@ -3,38 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domina la Programación de IA | Futuro Digital</title>
-    <meta name="description" content="Aprende a programar sistemas de Inteligencia Artificial desde cero. 120 horas de formación intensiva para desarrolladores. $16,800 MXN. Próxima masterclass gratuita.">
+    <title>Diplomado en Inteligencia Artificial | Futuro Digital by Síntesis</title>
+    <meta name="description" content="Formación premium en IA para desarrolladores. 120 horas de capacitación intensiva con proyectos reales. Avalado por 25+ años de experiencia en educación tecnológica.">
     
     <!-- Fuentes premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@200;300;400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --gold-primary: #D4AF37;
-            --gold-light: #FFD700;
+            --primary-gold: #D4AF37;
+            --gold-light: #E6C757;
             --gold-dark: #B8860B;
-            --gold-glow: rgba(212, 175, 55, 0.3);
-            --black-primary: #000000;
-            --black-soft: #0a0a0a;
-            --black-medium: #1a1a1a;
-            --black-card: #0f0f0f;
-            --white: #ffffff;
-            --white-soft: rgba(255, 255, 255, 0.95);
-            --white-medium: rgba(255, 255, 255, 0.8);
-            --white-subtle: rgba(255, 255, 255, 0.1);
-            --red-cta: #dc2626;
-            --red-cta-hover: #b91c1c;
-            --green-accent: #10b981;
-            --blue-accent: #3b82f6;
-            --gradient-primary: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 50%, var(--gold-primary) 100%);
-            --gradient-card: linear-gradient(145deg, rgba(15, 15, 15, 0.9) 0%, rgba(26, 26, 26, 0.8) 100%);
-            --gradient-hero: linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #000000 50%, #0f0f0f 75%, #000000 100%);
-            --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-            --shadow-glow: 0 0 40px var(--gold-glow);
-            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --accent-blue: #2563EB;
+            --accent-green: #10B981;
+            --neutral-50: #FAFAFA;
+            --neutral-100: #F5F5F5;
+            --neutral-200: #E5E5E5;
+            --neutral-300: #D4D4D4;
+            --neutral-400: #A3A3A3;
+            --neutral-500: #737373;
+            --neutral-600: #525252;
+            --neutral-700: #404040;
+            --neutral-800: #262626;
+            --neutral-900: #171717;
+            --neutral-950: #0A0A0A;
+            --white: #FFFFFF;
+            
+            --gradient-primary: linear-gradient(135deg, var(--primary-gold) 0%, var(--gold-light) 100%);
+            --gradient-surface: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
+            --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            --shadow-glow: 0 0 30px rgba(212, 175, 55, 0.15);
+            
+            --border-radius-sm: 0.375rem;
+            --border-radius-md: 0.5rem;
+            --border-radius-lg: 0.75rem;
+            --border-radius-xl: 1rem;
+            --border-radius-2xl: 1.5rem;
         }
 
         * {
@@ -49,97 +61,63 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--black-primary);
+            background: var(--neutral-950);
             color: var(--white);
-            overflow-x: hidden;
-            line-height: 1.7;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
         }
 
-        /* Premium Background Effects */
-        .background-container {
+        /* FONDO PREMIUM SUTIL */
+        .premium-background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -10;
-            overflow: hidden;
+            background: var(--gradient-surface);
         }
 
-        .background-gradient {
+        .ambient-grid {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 200%;
-            background: var(--gradient-hero);
-            background-size: 400% 400%;
-            animation: gradientShift 20s ease infinite;
-        }
-
-        .neural-network {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.03;
             background-image: 
-                radial-gradient(circle at 20% 20%, var(--gold-primary) 1px, transparent 1px),
-                radial-gradient(circle at 80% 60%, var(--gold-light) 0.8px, transparent 0.8px),
-                radial-gradient(circle at 40% 80%, var(--gold-primary) 0.6px, transparent 0.6px),
-                radial-gradient(circle at 90% 10%, var(--gold-light) 0.4px, transparent 0.4px),
-                radial-gradient(circle at 10% 90%, var(--gold-primary) 0.5px, transparent 0.5px);
-            background-size: 150px 150px, 200px 200px, 100px 100px, 250px 250px, 300px 300px;
-            animation: neuralFloat 30s linear infinite;
+                radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(37, 99, 235, 0.02) 0%, transparent 50%);
+            background-size: 800px 800px, 600px 600px;
+            animation: ambientShift 30s ease-in-out infinite;
         }
 
-        .floating-elements {
+        .geometric-pattern {
             position: absolute;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            background-image: 
+                linear-gradient(30deg, transparent 40%, rgba(212, 175, 55, 0.01) 41%, rgba(212, 175, 55, 0.01) 42%, transparent 43%),
+                linear-gradient(150deg, transparent 40%, rgba(37, 99, 235, 0.01) 41%, rgba(37, 99, 235, 0.01) 42%, transparent 43%);
+            background-size: 100px 100px, 80px 80px;
         }
 
-        .floating-element {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--gold-primary);
-            border-radius: 50%;
-            opacity: 0.1;
-            animation: float 15s infinite linear;
-        }
-
-        .floating-element:nth-child(1) { left: 10%; animation-delay: -2s; animation-duration: 12s; }
-        .floating-element:nth-child(2) { left: 20%; animation-delay: -4s; animation-duration: 18s; }
-        .floating-element:nth-child(3) { left: 30%; animation-delay: -6s; animation-duration: 14s; }
-        .floating-element:nth-child(4) { left: 40%; animation-delay: -8s; animation-duration: 16s; }
-        .floating-element:nth-child(5) { left: 50%; animation-delay: -10s; animation-duration: 20s; }
-        .floating-element:nth-child(6) { left: 60%; animation-delay: -12s; animation-duration: 13s; }
-        .floating-element:nth-child(7) { left: 70%; animation-delay: -14s; animation-duration: 17s; }
-        .floating-element:nth-child(8) { left: 80%; animation-delay: -16s; animation-duration: 15s; }
-        .floating-element:nth-child(9) { left: 90%; animation-delay: -18s; animation-duration: 19s; }
-
-        /* Premium Header */
-        .header {
+        /* HEADER PREMIUM */
+        .header-premium {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid var(--white-subtle);
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(24px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             z-index: 1000;
             padding: 1rem 0;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .header.scrolled {
-            background: rgba(0, 0, 0, 0.98);
-            box-shadow: var(--shadow-subtle);
+        .header-premium.scrolled {
+            background: rgba(10, 10, 10, 0.98);
+            box-shadow: var(--shadow-lg);
         }
 
         .nav-container {
@@ -151,37 +129,41 @@
             padding: 0 2rem;
         }
 
-        .logo-container {
+        .logo-premium {
             display: flex;
             align-items: center;
             gap: 1rem;
-            z-index: 1001;
         }
 
-        .logo-hexagon {
-            width: 50px;
-            height: 50px;
+        .logo-mark {
+            width: 48px;
+            height: 48px;
             background: var(--gradient-primary);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            border-radius: var(--border-radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--neutral-900);
             position: relative;
-            animation: logoGlow 4s ease-in-out infinite;
+            box-shadow: var(--shadow-glow);
         }
 
-        .logo-inner {
-            width: 42px;
-            height: 42px;
-            background: var(--black-primary);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-primary);
-            font-weight: 800;
-            font-size: 1.1rem;
-            font-family: 'JetBrains Mono', monospace;
+        .logo-mark::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius-lg);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-mark:hover::after {
+            opacity: 0.3;
         }
 
         .brand-text {
@@ -191,42 +173,41 @@
 
         .brand-name {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.375rem;
             font-weight: 700;
             color: var(--white);
-            letter-spacing: -0.02em;
+            letter-spacing: -0.025em;
             line-height: 1.2;
         }
 
         .brand-tagline {
             font-size: 0.75rem;
-            color: var(--white-medium);
-            font-weight: 300;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            color: var(--neutral-400);
+            font-weight: 400;
+            letter-spacing: 0.025em;
         }
 
-        .nav-cta {
+        .nav-actions {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             align-items: center;
         }
 
-        .btn-secondary {
+        .btn-outline {
             padding: 0.75rem 1.5rem;
             background: transparent;
-            border: 1px solid var(--gold-primary);
-            color: var(--gold-primary);
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: var(--border-radius-md);
             font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
+            font-size: 0.875rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
 
-        .btn-secondary::before {
+        .btn-outline::before {
             content: '';
             position: absolute;
             top: 0;
@@ -234,28 +215,29 @@
             width: 100%;
             height: 100%;
             background: var(--gradient-primary);
-            transition: left 0.3s ease;
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: -1;
         }
 
-        .btn-secondary:hover::before {
+        .btn-outline:hover::before {
             left: 0;
         }
 
-        .btn-secondary:hover {
-            color: var(--black-primary);
+        .btn-outline:hover {
+            color: var(--neutral-900);
             border-color: var(--gold-light);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
         }
 
-        /* Hero Section - Hook */
-        .hero {
+        /* HERO SECTION PREMIUM */
+        .hero-premium {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0 2rem;
+            padding: 8rem 2rem 4rem;
             position: relative;
-            overflow: hidden;
         }
 
         .hero-content {
@@ -265,77 +247,87 @@
         }
 
         .hero-badge {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
             background: rgba(212, 175, 55, 0.1);
-            border: 1px solid var(--gold-primary);
-            border-radius: 50px;
-            color: var(--gold-primary);
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 2rem;
+            color: var(--primary-gold);
+            font-size: 0.875rem;
+            font-weight: 600;
             margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            animation: badgeFloat 3s ease-in-out infinite;
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-glow);
         }
 
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(3.5rem, 8vw, 7rem);
-            font-weight: 800;
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             background: linear-gradient(
                 135deg,
                 var(--white) 0%,
-                var(--gold-light) 20%,
-                var(--white) 40%,
-                var(--gold-primary) 60%,
-                var(--white) 80%,
+                var(--primary-gold) 30%,
+                var(--white) 70%,
                 var(--gold-light) 100%
             );
-            background-size: 300% 300%;
+            background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: heroGradient 8s ease-in-out infinite;
+            animation: titleShimmer 8s ease-in-out infinite;
             letter-spacing: -0.02em;
         }
 
         .hero-subtitle {
-            font-family: 'Crimson Text', serif;
-            font-size: clamp(1.4rem, 3vw, 2.2rem);
-            color: var(--white-medium);
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            color: var(--neutral-300);
             margin-bottom: 3rem;
-            line-height: 1.5;
-            max-width: 900px;
+            line-height: 1.6;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             font-weight: 400;
         }
 
         .hero-highlight {
-            color: var(--gold-primary);
+            color: var(--primary-gold);
             font-weight: 600;
-            position: relative;
         }
 
-        .hero-highlight::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--gradient-primary);
-            animation: underlineGlow 2s ease-in-out infinite;
-        }
-
-        .hero-cta-container {
+        .hero-stats {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
+            justify-content: center;
+            gap: 4rem;
+            margin: 4rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--neutral-400);
+            font-weight: 500;
+        }
+
+        .cta-section {
             margin-top: 3rem;
         }
 
@@ -343,20 +335,19 @@
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
-            padding: 1.25rem 3rem;
-            background: var(--red-cta);
-            color: var(--white);
+            padding: 1rem 2rem;
+            background: var(--gradient-primary);
+            color: var(--neutral-900);
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            letter-spacing: 0.02em;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+            border-radius: var(--border-radius-lg);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-lg), var(--shadow-glow);
             border: none;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary::before {
@@ -367,7 +358,7 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s ease;
+            transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .btn-primary:hover::before {
@@ -375,294 +366,248 @@
         }
 
         .btn-primary:hover {
-            background: var(--red-cta-hover);
             transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
         }
 
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            margin-top: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
+        /* PRICING HIGHLIGHT */
+        .pricing-highlight {
+            background: var(--gradient-card);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-2xl);
+            padding: 2rem;
+            margin: 3rem auto;
+            max-width: 600px;
             text-align: center;
-            position: relative;
+            box-shadow: var(--shadow-2xl);
         }
 
-        .stat-number {
-            display: block;
+        .price-label {
+            font-size: 0.875rem;
+            color: var(--neutral-400);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .price-original {
+            font-size: 1.25rem;
+            color: var(--neutral-500);
+            text-decoration: line-through;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-current {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
-            color: var(--gold-primary);
+            color: var(--primary-gold);
             line-height: 1;
             margin-bottom: 0.5rem;
         }
 
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--white-medium);
-            font-weight: 400;
-            letter-spacing: 0.5px;
+        .price-note {
+            font-size: 0.875rem;
+            color: var(--neutral-400);
         }
 
-        /* Video Section */
-        .video-section {
+        .value-badge {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-top: 1rem;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* MASTERCLASS SECTION */
+        .masterclass-section {
             padding: 8rem 2rem;
-            background: var(--gradient-card);
-            position: relative;
+            background: rgba(255, 255, 255, 0.02);
         }
 
-        .video-container {
+        .section-container {
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        .video-title {
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
             font-weight: 700;
             color: var(--white);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             line-height: 1.2;
         }
 
-        .video-subtitle {
-            font-size: 1.3rem;
-            color: var(--white-medium);
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .video-player {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto 3rem;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow-premium);
-            background: var(--black-card);
-            aspect-ratio: 16/9;
-        }
-
-        .video-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--black-card) 0%, var(--black-medium) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            border: 1px solid var(--white-subtle);
-        }
-
-        .play-button {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .play-button::before {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 20px solid var(--black-primary);
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid transparent;
-            margin-left: 4px;
-        }
-
-        .play-button:hover {
-            transform: scale(1.1);
-            box-shadow: var(--shadow-glow);
-        }
-
-        .video-text {
-            position: absolute;
-            bottom: 2rem;
-            left: 2rem;
-            right: 2rem;
-            color: var(--white-medium);
-            font-size: 1.1rem;
-            text-align: left;
-        }
-
-        /* Masterclass Content Section */
-        .masterclass-content-section {
-            padding: 8rem 2rem;
-            background: var(--black-primary);
-        }
-
-        .masterclass-content-container {
-            max-width: 1200px;
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--neutral-300);
+            max-width: 600px;
             margin: 0 auto;
         }
 
-        .masterclass-timeline {
-            margin-top: 4rem;
-            position: relative;
+        .masterclass-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
         }
 
-        .masterclass-timeline::before {
+        .masterclass-card {
+            background: var(--gradient-card);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-xl);
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .masterclass-card::before {
             content: '';
             position: absolute;
-            left: 30px;
             top: 0;
-            bottom: 0;
-            width: 2px;
+            left: 0;
+            right: 0;
+            height: 2px;
             background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .timeline-item {
+        .masterclass-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .masterclass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .card-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius-lg);
             display: flex;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            position: relative;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--neutral-900);
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-glow);
         }
 
-        .timeline-number {
-            width: 60px;
-            height: 60px;
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .card-description {
+            color: var(--neutral-300);
+            line-height: 1.6;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-section {
+            padding: 8rem 2rem;
+            background: var(--neutral-900);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: var(--gradient-card);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-xl);
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-avatar {
+            width: 3rem;
+            height: 3rem;
             background: var(--gradient-primary);
-            color: var(--black-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 0 20px var(--gold-glow);
-        }
-
-        .timeline-content {
-            flex: 1;
-            background: var(--gradient-card);
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid var(--white-subtle);
-            position: relative;
-            margin-top: 0.5rem;
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            left: -10px;
-            top: 20px;
-            width: 0;
-            height: 0;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-right: 10px solid var(--black-card);
-        }
-
-        .timeline-content h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
             font-weight: 700;
-            color: var(--gold-primary);
-            margin-bottom: 0.5rem;
+            color: var(--neutral-900);
         }
 
-        .timeline-duration {
-            color: var(--green-accent);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .timeline-content p {
-            color: var(--white-medium);
-            line-height: 1.7;
-            font-size: 1.1rem;
-        }
-
-        .timeline-content strong {
+        .testimonial-author h4 {
             color: var(--white);
             font-weight: 600;
+            margin-bottom: 0.25rem;
         }
 
-        .masterclass-highlights {
-            background: var(--gradient-card);
-            padding: 4rem;
-            border-radius: 20px;
-            border: 1px solid var(--gold-primary);
-            margin-top: 4rem;
-            text-align: center;
+        .testimonial-role {
+            color: var(--neutral-400);
+            font-size: 0.875rem;
         }
 
-        .masterclass-highlights h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--gold-primary);
-            margin-bottom: 3rem;
-        }
-
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .highlight-item {
-            background: var(--black-card);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            border: 1px solid var(--white-subtle);
-            transition: all 0.3s ease;
-        }
-
-        .highlight-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold-primary);
-            box-shadow: var(--shadow-premium);
-        }
-
-        .highlight-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .highlight-item h4 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--white);
+        .testimonial-stars {
+            color: var(--primary-gold);
             margin-bottom: 1rem;
+            font-size: 0.875rem;
         }
 
-        .highlight-item p {
-            color: var(--white-medium);
+        .testimonial-quote {
+            color: var(--neutral-300);
             line-height: 1.6;
+            font-style: italic;
         }
 
-        /* Form Section */
+        .outcome-badge {
+            background: linear-gradient(135deg, var(--accent-green), #059669);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        /* FORM SECTION */
         .form-section {
             padding: 6rem 2rem;
-            background: var(--black-primary);
+            background: var(--neutral-950);
         }
 
         .form-container {
@@ -671,26 +616,26 @@
             text-align: center;
         }
 
+        .form-card {
+            background: var(--gradient-card);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-xl);
+            padding: 3rem;
+            box-shadow: var(--shadow-2xl);
+        }
+
         .form-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            color: var(--gold-primary);
+            color: var(--white);
             margin-bottom: 1rem;
         }
 
         .form-subtitle {
-            font-size: 1.1rem;
-            color: var(--white-medium);
-            margin-bottom: 3rem;
-        }
-
-        .masterclass-form {
-            background: var(--gradient-card);
-            padding: 3rem;
-            border-radius: 16px;
-            border: 1px solid var(--white-subtle);
-            box-shadow: var(--shadow-premium);
+            color: var(--neutral-300);
+            margin-bottom: 2rem;
         }
 
         .form-group {
@@ -700,709 +645,58 @@
 
         .form-label {
             display: block;
-            color: var(--white-medium);
+            color: var(--neutral-300);
             font-weight: 500;
             margin-bottom: 0.5rem;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
         }
 
         .form-input {
             width: 100%;
-            padding: 1rem;
-            background: var(--black-card);
-            border: 1px solid var(--white-subtle);
-            border-radius: 8px;
+            padding: 0.875rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-md);
             color: var(--white);
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .form-input:focus {
             outline: none;
-            border-color: var(--gold-primary);
-            box-shadow: 0 0 0 3px var(--gold-glow);
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+            background: rgba(255, 255, 255, 0.08);
         }
 
         .form-input::placeholder {
-            color: var(--white-medium);
-            opacity: 0.6;
+            color: var(--neutral-500);
         }
 
         .btn-form {
             width: 100%;
-            padding: 1.25rem;
-            background: var(--red-cta);
-            color: var(--white);
+            padding: 1rem;
+            background: var(--gradient-primary);
+            color: var(--neutral-900);
             border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
+            border-radius: var(--border-radius-md);
+            font-weight: 700;
+            font-size: 1rem;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             margin-top: 1rem;
         }
 
         .btn-form:hover {
-            background: var(--red-cta-hover);
-            transform: translateY(-2px);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
         }
 
-        /* Problem Section */
-        .problem-section {
-            padding: 8rem 2rem;
-            background: var(--gradient-card);
-        }
-
-        .problem-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 700;
-            color: var(--white);
-            text-align: center;
-            margin-bottom: 2rem;
-            line-height: 1.2;
-        }
-
-        .section-subtitle {
-            font-size: 1.3rem;
-            color: var(--white-medium);
-            text-align: center;
-            margin-bottom: 4rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .problem-card {
-            background: var(--black-card);
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid var(--white-subtle);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .problem-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--gradient-primary);
-        }
-
-        .problem-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold-primary);
-            box-shadow: var(--shadow-premium);
-        }
-
-        .problem-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            color: var(--black-primary);
-        }
-
-        .problem-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .problem-description {
-            color: var(--white-medium);
-            line-height: 1.6;
-        }
-
-        /* Solution Section */
-        .solution-section {
-            padding: 8rem 2rem;
-            background: var(--black-primary);
-        }
-
-        .solution-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .solution-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-            margin-top: 4rem;
-        }
-
-        .solution-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
-            font-weight: 700;
-            color: var(--gold-primary);
-            margin-bottom: 2rem;
-            line-height: 1.2;
-        }
-
-        .solution-text {
-            font-size: 1.2rem;
-            color: var(--white-medium);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .modules-list {
-            list-style: none;
-            margin: 2rem 0;
-        }
-
-        .module-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--white-subtle);
-        }
-
-        .module-number {
-            width: 40px;
-            height: 40px;
-            background: var(--gradient-primary);
-            color: var(--black-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-
-        .module-content h4 {
-            color: var(--white);
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-
-        .module-content p {
-            color: var(--white-medium);
-            font-size: 0.9rem;
-        }
-
-        .company-info {
-            background: var(--gradient-card);
-            padding: 3rem;
-            border-radius: 16px;
-            border: 1px solid var(--white-subtle);
-            box-shadow: var(--shadow-premium);
-        }
-
-        .company-logos {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            justify-content: center;
-        }
-
-        .company-logo {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-primary);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: var(--black-primary);
-        }
-
-        .company-text {
-            text-align: center;
-            color: var(--white-medium);
-            line-height: 1.6;
-        }
-
-        .company-highlight {
-            color: var(--gold-primary);
-            font-weight: 600;
-        }
-
-        /* Benefits Section */
-        .benefits-section {
-            padding: 8rem 2rem;
-            background: var(--gradient-card);
-        }
-
-        .benefits-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .benefit-card {
-            background: var(--black-card);
-            padding: 3rem;
-            border-radius: 16px;
-            border: 1px solid var(--white-subtle);
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .benefit-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--gold-primary);
-            box-shadow: var(--shadow-premium);
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-primary);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem;
-            font-size: 2rem;
-            color: var(--black-primary);
-        }
-
-        .benefit-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .benefit-description {
-            color: var(--white-medium);
-            line-height: 1.6;
-            font-size: 1.1rem;
-        }
-
-        /* Statistics Section */
-        .stats-section {
-            padding: 8rem 2rem;
-            background: var(--black-primary);
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .stat-card {
-            background: var(--gradient-card);
-            padding: 3rem 2rem;
-            border-radius: 16px;
-            border: 1px solid var(--white-subtle);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold-primary);
-        }
-
-        .stat-card-number {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--gold-primary);
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
-
-        .stat-card-label {
-            color: var(--white-medium);
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        /* Pricing Section */
-        .pricing-section {
-            padding: 8rem 2rem;
-            background: var(--gradient-card);
-        }
-
-        .pricing-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .pricing-card {
-            background: var(--black-card);
-            padding: 4rem;
-            border-radius: 20px;
-            border: 2px solid var(--gold-primary);
-            box-shadow: var(--shadow-premium);
-            position: relative;
-            margin-top: 4rem;
-        }
-
-        .pricing-badge {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gradient-primary);
-            color: var(--black-primary);
-            padding: 0.75rem 2rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-        }
-
-        .price-container {
-            margin-bottom: 3rem;
-        }
-
-        .price-amount {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--gold-primary);
-            line-height: 1;
-        }
-
-        .price-currency {
-            font-size: 2rem;
-            vertical-align: top;
-        }
-
-        .price-period {
-            color: var(--white-medium);
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin: 3rem 0;
-            text-align: left;
-        }
-
-        .pricing-feature {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--white-subtle);
-        }
-
-        .feature-check {
-            width: 24px;
-            height: 24px;
-            background: var(--green-accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 0.8rem;
-            flex-shrink: 0;
-        }
-
-        .pricing-guarantee {
-            background: rgba(16, 185, 129, 0.1);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--green-accent);
-            margin: 2rem 0;
-        }
-
-        .guarantee-title {
-            color: var(--green-accent);
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Testimonials Section */
-        .testimonials-section {
-            padding: 8rem 2rem;
-            background: var(--black-primary);
-        }
-
-        .testimonials-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .testimonial-card {
-            background: var(--gradient-card);
-            padding: 3rem;
-            border-radius: 16px;
-            border: 1px solid var(--white-subtle);
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold-primary);
-        }
-
-        .testimonial-quote {
-            font-size: 1.2rem;
-            color: var(--white-medium);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--black-primary);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .author-info h4 {
-            color: var(--white);
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-
-        .author-info p {
-            color: var(--white-medium);
-            font-size: 0.9rem;
-        }
-
-        .testimonial-stars {
-            color: var(--gold-primary);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            padding: 8rem 2rem;
-            background: var(--gradient-card);
-        }
-
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-list {
-            margin-top: 4rem;
-        }
-
-        .faq-item {
-            background: var(--black-card);
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            border: 1px solid var(--white-subtle);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-question {
-            padding: 2rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--white);
-            transition: all 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .faq-answer {
-            padding: 0 2rem 2rem;
-            color: var(--white-medium);
-            line-height: 1.7;
-            display: none;
-        }
-
-        .faq-answer.active {
-            display: block;
-        }
-
-        .faq-icon {
-            width: 24px;
-            height: 24px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--black-primary);
-            font-size: 0.8rem;
-            font-weight: 700;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-        }
-
-        /* Final Offer Section */
-        .final-offer-section {
-            padding: 8rem 2rem;
-            background: var(--black-primary);
-            text-align: center;
-        }
-
-        .final-offer-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .offer-countdown {
-            background: var(--gradient-card);
-            padding: 3rem;
-            border-radius: 16px;
-            border: 1px solid var(--red-cta);
-            margin: 3rem 0;
-            box-shadow: 0 0 30px rgba(220, 38, 38, 0.2);
-        }
-
-        .countdown-title {
-            color: var(--red-cta);
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .countdown-item {
-            text-align: center;
-        }
-
-        .countdown-number {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--red-cta);
-            display: block;
-            line-height: 1;
-        }
-
-        .countdown-label {
-            font-size: 0.8rem;
-            color: var(--white-medium);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .download-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .download-link {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 2rem;
-            background: var(--gradient-card);
-            border: 1px solid var(--gold-primary);
-            border-radius: 8px;
-            color: var(--gold-primary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .download-link:hover {
-            background: var(--gold-primary);
-            color: var(--black-primary);
-        }
-
-        /* Footer */
+        /* FOOTER */
         .footer {
-            background: var(--black-soft);
-            padding: 4rem 2rem 2rem;
-            border-top: 1px solid var(--white-subtle);
+            background: var(--neutral-900);
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .footer-container {
@@ -1413,14 +707,14 @@
 
         .footer-brand {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--gold-primary);
+            color: var(--primary-gold);
             margin-bottom: 1rem;
         }
 
         .footer-text {
-            color: var(--white-medium);
+            color: var(--neutral-400);
             margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
@@ -1436,30 +730,26 @@
         }
 
         .footer-links a {
-            color: var(--white-medium);
+            color: var(--neutral-400);
             text-decoration: none;
             transition: color 0.3s ease;
+            font-size: 0.875rem;
         }
 
         .footer-links a:hover {
-            color: var(--gold-primary);
+            color: var(--primary-gold);
         }
 
         .footer-bottom {
-            border-top: 1px solid var(--white-subtle);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             padding-top: 2rem;
-            color: var(--white-medium);
-            font-size: 0.9rem;
+            color: var(--neutral-500);
+            font-size: 0.875rem;
         }
 
-        /* Responsive Design */
+        /* RESPONSIVE */
         @media (max-width: 1024px) {
-            .solution-grid {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-
-            .nav-cta {
+            .nav-actions {
                 display: none;
             }
         }
@@ -1473,205 +763,117 @@
                 font-size: 2rem;
             }
 
-            .problem-grid,
-            .benefits-grid,
+            .masterclass-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-
-            .countdown-timer {
-                gap: 1rem;
-            }
-
-            .countdown-number {
-                font-size: 2rem;
-            }
-
-            .download-links {
+            .footer-links {
                 flex-direction: column;
-                align-items: center;
-            }
-
-            .masterclass-timeline::before {
-                left: 15px;
-            }
-
-            .timeline-number {
-                width: 50px;
-                height: 50px;
-                font-size: 1.1rem;
-            }
-
-            .timeline-item {
                 gap: 1rem;
             }
 
-            .timeline-content {
+            .pricing-highlight {
+                margin: 2rem 1rem;
+                padding: 1.5rem;
+            }
+
+            .price-current {
+                font-size: 2.5rem;
+            }
+
+            .form-card {
                 padding: 2rem;
             }
-
-            .timeline-content::before {
-                left: -8px;
-                border-right-width: 8px;
-            }
-
-            .masterclass-highlights {
-                padding: 2rem;
-            }
-
-            .highlights-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
-        /* Animations */
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes neuralFloat {
+        /* ANIMACIONES SUTILES */
+        @keyframes ambientShift {
             0%, 100% { 
-                background-position: 0px 0px, 100px 100px, 50px 200px, 200px 0px, 150px 250px;
+                background-position: 0% 50%;
             }
             50% { 
-                background-position: 100px 50px, 200px 150px, 100px 250px, 250px 50px, 200px 300px;
+                background-position: 100% 50%;
             }
         }
 
-        @keyframes float {
-            0% { 
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% { 
-                opacity: 0.1;
-            }
-            90% { 
-                opacity: 0.1;
-            }
-            100% { 
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        @keyframes logoGlow {
+        @keyframes titleShimmer {
             0%, 100% { 
-                box-shadow: 0 0 20px var(--gold-glow);
+                background-position: 0% 50%;
             }
             50% { 
-                box-shadow: 0 0 30px var(--gold-glow), 0 0 40px var(--gold-glow);
+                background-position: 100% 50%;
             }
         }
 
-        @keyframes badgeFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }
-
-        @keyframes heroGradient {
-            0%, 100% { background-position: 0% 50%; }
-            25% { background-position: 100% 50%; }
-            50% { background-position: 200% 50%; }
-            75% { background-position: 300% 50%; }
-        }
-
-        @keyframes underlineGlow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; box-shadow: 0 0 10px var(--gold-primary); }
-        }
-
-        /* Scroll Animations */
-        .fade-in-up {
+        .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transform: translateY(20px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .fade-in-up.visible {
+        .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Custom Scrollbar */
+        /* SCROLLBAR PERSONALIZADO */
         ::-webkit-scrollbar {
             width: 8px;
         }
 
         ::-webkit-scrollbar-track {
-            background: var(--black-primary);
+            background: var(--neutral-900);
         }
 
         ::-webkit-scrollbar-thumb {
-            background: var(--gradient-primary);
+            background: linear-gradient(180deg, var(--primary-gold), var(--gold-dark));
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--gold-light);
+            background: linear-gradient(180deg, var(--gold-light), var(--primary-gold));
         }
     </style>
 </head>
 <body>
-    <!-- Background Effects -->
-    <div class="background-container">
-        <div class="background-gradient"></div>
-        <div class="neural-network"></div>
-        <div class="floating-elements">
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-        </div>
+    <!-- FONDO PREMIUM -->
+    <div class="premium-background">
+        <div class="ambient-grid"></div>
+        <div class="geometric-pattern"></div>
     </div>
 
-    <!-- Header -->
-    <header class="header" id="header">
+    <!-- HEADER PREMIUM -->
+    <header class="header-premium" id="header">
         <div class="nav-container">
-            <div class="logo-container">
-                <div class="logo-hexagon">
-                    <div class="logo-inner">FD</div>
-                </div>
+            <div class="logo-premium">
+                <div class="logo-mark">FD</div>
                 <div class="brand-text">
                     <div class="brand-name">Futuro Digital</div>
                     <div class="brand-tagline">by Síntesis • 25+ años</div>
                 </div>
             </div>
-            <div class="nav-cta">
-                <a href="#masterclass" class="btn-secondary">Masterclass Gratuita</a>
+            <div class="nav-actions">
+                <a href="#masterclass" class="btn-outline">Masterclass Gratuita</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section - Hook -->
-    <section class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero-premium">
         <div class="hero-content">
-            <div class="hero-badge">Diplomado Intensivo • 120 Horas • Grupos Reducidos</div>
+            <div class="hero-badge">
+                <span>🎯</span>
+                Diplomado Intensivo • 120 Horas • Grupos Reducidos
+            </div>
             
             <h1 class="hero-title">
-                Domina la Programación de Inteligencia Artificial
+                Especialízate en Inteligencia Artificial
             </h1>
             
             <p class="hero-subtitle">
-                Para desarrolladores que quieren <span class="hero-highlight">programar sistemas de IA reales</span>, no solo usar herramientas. Aprende Machine Learning, Deep Learning y IA aplicada con proyectos que importan.
+                Programa intensivo para desarrolladores que buscan <span class="hero-highlight">especializarse en programación de sistemas de IA</span> con proyectos reales, mentoría experta y garantía de empleabilidad.
             </p>
-
-            <div class="hero-cta-container">
-                <a href="#masterclass" class="btn-primary">
-                    Ver Masterclass Gratuita
-                </a>
-            </div>
 
             <div class="hero-stats">
                 <div class="stat-item">
@@ -1683,679 +885,212 @@
                     <span class="stat-label">Formación Intensiva</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">5-15</span>
+                    <span class="stat-number">≤15</span>
                     <span class="stat-label">Estudiantes por Grupo</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section class="video-section">
-        <div class="video-container">
-            <h2 class="video-title">Masterclass Gratuita de 75 Minutos</h2>
-            <p class="video-subtitle">
-                "Cómo pasar de programador Python básico a especialista en IA - Demo en vivo incluido"
-            </p>
-            
-            <div class="video-player">
-                <div class="video-placeholder">
-                    <div class="play-button" onclick="playVideo()"></div>
-                    <div class="video-text">
-                        "75 minutos que cambiarán tu perspectiva sobre la programación de IA + Demo en vivo"
-                    </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Empleabilidad</span>
                 </div>
             </div>
 
-            <a href="#masterclass" class="btn-primary">
-                Reservar Mi Lugar Gratuito
-            </a>
-            
-            <p style="margin-top: 1.5rem; color: var(--white-medium); font-size: 0.9rem;">
-                ⚡ Demo de programación en vivo • Bonus exclusivos • Oferta especial 48h
-            </p>
-        </div>
-    </section>
-
-    <!-- Masterclass Content Section -->
-    <section class="masterclass-content-section">
-        <div class="masterclass-content-container">
-            <h2 class="section-title">Lo Que Verás en la Masterclass Gratuita</h2>
-            <p class="section-subtitle">
-                75 minutos de contenido premium que cambiarán tu perspectiva sobre la programación de IA
-            </p>
-
-            <div class="masterclass-timeline">
-                <div class="timeline-item fade-in-up">
-                    <div class="timeline-number">1</div>
-                    <div class="timeline-content">
-                        <h3>Bienvenida + Conexión Personal</h3>
-                        <div class="timeline-duration">5 minutos</div>
-                        <p>Conoce la historia de Futuro Digital y por qué somos diferentes. Te contaremos cómo hemos ayudado a cientos de desarrolladores a especializarse en IA.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in-up">
-                    <div class="timeline-number">2</div>
-                    <div class="timeline-content">
-                        <h3>Por Qué IA, Por Qué Ahora</h3>
-                        <div class="timeline-duration">10 minutos</div>
-                        <p><strong>Datos reales del mercado:</strong> El 90% de las empresas líderes ya invierten en IA. Casos de éxito en medicina, finanzas, logística. La ventana de oportunidad está abierta AHORA.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in-up">
-                    <div class="timeline-number">3</div>
-                    <div class="timeline-content">
-                        <h3>Casos Reales de IA en Acción</h3>
-                        <div class="timeline-duration">10 minutos</div>
-                        <p>Te mostraremos proyectos reales: chatbots que generan $50k USD anuales, sistemas de predicción que optimizan inventarios, IA generativa para marketing.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in-up">
-                    <div class="timeline-number">4</div>
-                    <div class="timeline-content">
-                        <h3>Demo Práctica EN VIVO</h3>
-                        <div class="timeline-duration">20 minutos</div>
-                        <p><strong>La parte más valiosa:</strong> Programaremos un modelo predictivo desde cero. Verás código real, datasets reales, resultados reales. GRWM (Get Ready With Me) de programación de IA.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in-up">
-                    <div class="timeline-number">5</div>
-                    <div class="timeline-content">
-                        <h3>Tu Ruta Clara: Python Básico → IA Expert</h3>
-                        <div class="timeline-duration">10 minutos</div>
-                        <p>El roadmap exacto que siguen nuestros estudiantes exitosos. Sin rodeos, sin pérdida de tiempo. La progresión paso a paso del diplomado.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in-up">
-                    <div class="timeline-number">6</div>
-                    <div class="timeline-content">
-                        <h3>Presentación Completa del Diplomado</h3>
-                        <div class="timeline-duration">10 minutos</div>
-                        <p>Precios reales, fechas exactas, bonos exclusivos. Todo transparente, sin letras pequeñas. Conocerás el programa completo y las opciones de pago.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in-up">
-                    <div class="timeline-number">7</div>
-                    <div class="timeline-content">
-                        <h3>Q&A + Llamado a la Acción</h3>
-                        <div class="timeline-duration">15 minutos</div>
-                        <p>Resolvemos todas tus dudas específicas. Oferta especial válida solo por 48 horas para asistentes. Tu momento de decisión.</p>
-                    </div>
-                </div>
+            <div class="pricing-highlight">
+                <div class="price-label">Inversión Completa</div>
+                <div class="price-current">$16,800</div>
+                <div class="price-note">MXN + IVA • Financiamiento disponible</div>
+                <div class="value-badge">120 horas de formación premium</div>
             </div>
 
-            <div class="masterclass-highlights">
-                <h3>Bonus Exclusivos para Asistentes</h3>
-                <div class="highlights-grid">
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🎁</div>
-                        <h4>Plantilla Descargable</h4>
-                        <p>"Ruta del Programador hacia la IA" - Mapa visual completo</p>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">⚡</div>
-                        <h4>Descuento Especial</h4>
-                        <p>Oferta válida 48 horas solo para asistentes a la masterclass</p>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">👨‍💻</div>
-                        <h4>Código del Demo</h4>
-                        <p>Acceso al repositorio completo del proyecto que programamos en vivo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Form Section -->
-    <section class="form-section" id="masterclass">
-        <div class="form-container">
-            <h2 class="form-title">Accede a la Masterclass Gratuita</h2>
-            <p class="form-subtitle">
-                Registra tu email y obtén acceso inmediato + bonus exclusivos
-            </p>
-
-            <form class="masterclass-form" onsubmit="submitMasterclassForm(event)">
-                <div class="form-group">
-                    <label class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-input" placeholder="Tu nombre completo" required>
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-input" placeholder="tu@email.com" required>
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">WhatsApp</label>
-                    <input type="tel" class="form-input" placeholder="+52 xxx xxx xxxx" required>
-                </div>
-
-                <button type="submit" class="btn-form">
+            <div class="cta-section">
+                <a href="#masterclass" class="btn-primary">
+                    <span>🎯</span>
                     Acceder a Masterclass Gratuita
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="problem-section">
-        <div class="problem-container">
-            <h2 class="section-title">¿Te Suena Familiar?</h2>
-            <p class="section-subtitle">
-                Miles de programadores enfrentan estos obstáculos al intentar especializarse en IA
-            </p>
-
-            <div class="problem-grid">
-                <div class="problem-card fade-in-up">
-                    <div class="problem-icon">⚠</div>
-                    <h3 class="problem-title">Teoría Sin Aplicación Real</h3>
-                    <p class="problem-description">
-                        Los cursos te enseñan matemáticas complejas pero nunca cómo implementar IA que funcione en el mundo real.
-                    </p>
-                </div>
-
-                <div class="problem-card fade-in-up">
-                    <div class="problem-icon">⏰</div>
-                    <h3 class="problem-title">Falta de Tiempo Estructurado</h3>
-                    <p class="problem-description">
-                        Entre tutoriales de YouTube y cursos interminables, pierdes meses sin un plan claro de aprendizaje.
-                    </p>
-                </div>
-
-                <div class="problem-card fade-in-up">
-                    <div class="problem-icon">🔧</div>
-                    <h3 class="problem-title">Herramientas Desactualizadas</h3>
-                    <p class="problem-description">
-                        Aprendes con ejemplos de hace 3 años que ya no funcionan con las librerías actuales.
-                    </p>
-                </div>
-
-                <div class="problem-card fade-in-up">
-                    <div class="problem-icon">👥</div>
-                    <h3 class="problem-title">Sin Acompañamiento Real</h3>
-                    <p class="problem-description">
-                        Te quedas solo con dudas técnicas que nadie resuelve, o con respuestas genéricas de foros.
-                    </p>
-                </div>
-
-                <div class="problem-card fade-in-up">
-                    <div class="problem-icon">💼</div>
-                    <h3 class="problem-title">Portfolio Vacío</h3>
-                    <p class="problem-description">
-                        Terminas sin proyectos reales que mostrar a empleadores o clientes. Solo certificados sin valor práctico.
-                    </p>
-                </div>
-
-                <div class="problem-card fade-in-up">
-                    <div class="problem-icon">💰</div>
-                    <h3 class="problem-title">Inversión Sin Retorno</h3>
-                    <p class="problem-description">
-                        Gastas miles de pesos en cursos que no te acercan a conseguir un trabajo mejor remunerado.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="solution-section">
-        <div class="solution-container">
-            <h2 class="section-title">La Solución Que Cambiará Tu Carrera</h2>
-            
-            <div class="solution-grid">
-                <div class="solution-content">
-                    <h2>Diplomado en Inteligencia Artificial</h2>
-                    <p class="solution-text">
-                        Un programa intensivo de <strong>120 horas</strong> diseñado específicamente para desarrolladores que ya dominan Python básico y quieren especializarse en programación de sistemas de IA.
-                    </p>
-                    <p class="solution-text">
-                        No más teoría abstracta. Aprenderás implementando proyectos reales con datasets reales, guiado por expertos con 25+ años de experiencia.
-                    </p>
-
-                    <ul class="modules-list">
-                        <li class="module-item">
-                            <div class="module-number">1</div>
-                            <div class="module-content">
-                                <h4>Fundamentos de Machine Learning</h4>
-                                <p>Algoritmos supervisados y no supervisados aplicados</p>
-                            </div>
-                        </li>
-                        <li class="module-item">
-                            <div class="module-number">2</div>
-                            <div class="module-content">
-                                <h4>Deep Learning con TensorFlow</h4>
-                                <p>Redes neuronales para problemas reales</p>
-                            </div>
-                        </li>
-                        <li class="module-item">
-                            <div class="module-number">3</div>
-                            <div class="module-content">
-                                <h4>Procesamiento de Lenguaje Natural</h4>
-                                <p>Sistemas de IA que entienden texto</p>
-                            </div>
-                        </li>
-                        <li class="module-item">
-                            <div class="module-number">4</div>
-                            <div class="module-content">
-                                <h4>Computer Vision</h4>
-                                <p>IA que procesa imágenes y video</p>
-                            </div>
-                        </li>
-                        <li class="module-item">
-                            <div class="module-number">5</div>
-                            <div class="module-content">
-                                <h4>Despliegue en Producción</h4>
-                                <p>Cómo llevar tus modelos al mundo real</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="company-info">
-                    <div class="company-logos">
-                        <div class="company-logo">FD</div>
-                        <div class="company-logo">SY</div>
-                    </div>
-                    <div class="company-text">
-                        <h3 style="color: var(--gold-primary); margin-bottom: 1rem;">Quiénes Somos</h3>
-                        <p>
-                            <span class="company-highlight">Futuro Digital</span> nace de la evolución de <span class="company-highlight">Síntesis A.C.</span>, organización con más de 25 años capacitando profesionales en tecnología.
-                        </p>
-                        <p style="margin-top: 1rem;">
-                            Desde 2023 nos especializamos en formación práctica para desarrolladores que buscan actualizarse con las tecnologías más demandadas del mercado.
-                        </p>
-                        <p style="margin-top: 1rem; color: var(--gold-primary); font-weight: 600;">
-                            Nuestro enfoque: educación con garantía de empleabilidad real.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section (Emotional) -->
-    <section class="benefits-section">
-        <div class="benefits-container">
-            <h2 class="section-title">Transforma Tu Carrera Profesional</h2>
-            <p class="section-subtitle">
-                Los beneficios que experimentarás al dominar la programación de IA
-            </p>
-
-            <div class="benefits-grid">
-                <div class="benefit-card fade-in-up">
-                    <div class="benefit-icon">🚀</div>
-                    <h3 class="benefit-title">Proyectos que Importan</h3>
-                    <p class="benefit-description">
-                        Desarrolla sistemas de IA que resuelven problemas reales: desde análisis de sentimientos hasta sistemas de recomendación que funcionan en producción.
-                    </p>
-                </div>
-
-                <div class="benefit-card fade-in-up">
-                    <div class="benefit-icon">🎯</div>
-                    <h3 class="benefit-title">Aprendizaje Acelerado</h3>
-                    <p class="benefit-description">
-                        En 120 horas conseguirás lo que otros programadores tardan años: dominar las herramientas y frameworks más demandados de la industria.
-                    </p>
-                </div>
-
-                <div class="benefit-card fade-in-up">
-                    <div class="benefit-icon">👨‍🏫</div>
-                    <h3 class="benefit-title">Mentores Expertos</h3>
-                    <p class="benefit-description">
-                        Acceso directo a desarrolladores con experiencia real implementando IA en empresas. Resuelve dudas específicas, no genéricas.
-                    </p>
-                </div>
-
-                <div class="benefit-card fade-in-up">
-                    <div class="benefit-icon">🛠</div>
-                    <h3 class="benefit-title">Portfolio Profesional</h3>
-                    <p class="benefit-description">
-                        Termina con un GitHub repleto de proyectos documentados que puedes mostrar en entrevistas o usar como base para proyectos freelance.
-                    </p>
-                </div>
-
-                <div class="benefit-card fade-in-up">
-                    <div class="benefit-icon">🌐</div>
-                    <h3 class="benefit-title">Networking Premium</h3>
-                    <p class="benefit-description">
-                        Conecta con otros desarrolladores serios sobre IA. Grupos pequeños permiten relaciones profesionales duraderas.
-                    </p>
-                </div>
-
-                <div class="benefit-card fade-in-up">
-                    <div class="benefit-icon">⚡</div>
-                    <h3 class="benefit-title">Implementación Inmediata</h3>
-                    <p class="benefit-description">
-                        Cada concepto lo aplicas inmediatamente. No esperas meses para ver resultados: desde la primera semana programas IA funcional.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Statistics Section (Logical Benefits) -->
-    <section class="stats-section">
-        <div class="stats-container">
-            <h2 class="section-title">Los Números Hablan Por Sí Solos</h2>
-            <p class="section-subtitle">
-                Datos reales sobre el mercado de IA y oportunidades profesionales
-            </p>
-
-            <div class="stats-grid">
-                <div class="stat-card fade-in-up">
-                    <div class="stat-card-number">78%</div>
-                    <div class="stat-card-label">Aumento en demanda de especialistas en IA (2024)</div>
-                </div>
-
-                <div class="stat-card fade-in-up">
-                    <div class="stat-card-number">$95k</div>
-                    <div class="stat-card-label">Salario promedio ML Engineer (USD)</div>
-                </div>
-
-                <div class="stat-card fade-in-up">
-                    <div class="stat-card-number">156%</div>
-                    <div class="stat-card-label">Incremento salarial promedio post-especialización</div>
-                </div>
-
-                <div class="stat-card fade-in-up">
-                    <div class="stat-card-number">25+</div>
-                    <div class="stat-card-label">Años de experiencia de nuestros mentores</div>
-                </div>
-
-                <div class="stat-card fade-in-up">
-                    <div class="stat-card-number">100%</div>
-                    <div class="stat-card-label">De nuestros graduados mejoran su posición laboral</div>
-                </div>
-
-                <div class="stat-card fade-in-up">
-                    <div class="stat-card-number">15</div>
-                    <div class="stat-card-label">Estudiantes máximo por cohorte</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing-section" id="pricing">
-        <div class="pricing-container">
-            <h2 class="section-title">Inversión en Tu Futuro Profesional</h2>
-            <p class="section-subtitle">
-                Todo incluido, sin costos ocultos. Formación completa de 120 horas con acompañamiento personalizado.
-            </p>
-
-            <div class="pricing-card">
-                <div class="pricing-badge">Grupos Reducidos</div>
-                
-                <div class="price-container">
-                    <div class="price-amount">
-                        <span class="price-currency">$</span>16,800
-                    </div>
-                    <div class="price-period">MXN + IVA • Opciones de pago disponibles</div>
-                </div>
-
-                <ul class="pricing-features">
-                    <li class="pricing-feature">
-                        <div class="feature-check">✓</div>
-                        <span>120 horas de formación intensiva práctica</span>
-                    </li>
-                    <li class="pricing-feature">
-                        <div class="feature-check">✓</div>
-                        <span>Grupos de máximo 15 estudiantes</span>
-                    </li>
-                    <li class="pricing-feature">
-                        <div class="feature-check">✓</div>
-                        <span>Clases en vivo + grabaciones para repasar</span>
-                    </li>
-                    <li class="pricing-feature">
-                        <div class="feature-check">✓</div>
-                        <span>Mentorías personalizadas con expertos</span>
-                    </li>
-                    <li class="pricing-feature">
-                        <div class="feature-check">✓</div>
-                        <span>5 proyectos reales para tu portfolio</span>
-                    </li>
-                    <li class="pricing-feature">
-                        <div class="feature-check">✓</div>
-                        <span>Repositorio GitHub completo y documentado</span>
-                    </li>
-                    <li class="pricing-feature">
-                        <div class="feature-check">✓</div>
-                        <span>Plantillas y notebooks reutilizables</span>
-                    </li>
-                    <li class="pricing-feature">
-                        <div class="feature-check">✓</div>
-                        <span>Constancia de participación</span>
-                    </li>
-                    <li class="pricing-feature">
-                        <div class="feature-check">✓</div>
-                        <span><strong>Garantía de empleabilidad 12 meses</strong></span>
-                    </li>
-                </ul>
-
-                <div class="pricing-guarantee">
-                    <div class="guarantee-title">Triple Garantía</div>
-                    <p>
-                        ✅ Satisfacción garantizada primeras 2 semanas<br>
-                        ✅ Empleabilidad garantizada en 12 meses<br>
-                        ✅ Acompañamiento hasta conseguir empleo
-                    </p>
-                </div>
-
-                <a href="#final-offer" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 2rem;">
-                    Solicitar Información Completa
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="testimonials-container">
-            <h2 class="section-title">Historias de Transformación Real</h2>
-            <p class="section-subtitle">
-                Testimonios auténticos de profesionales que han estudiado con Futuro Digital
-            </p>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in-up">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-quote">
-                        "La metodología es completamente práctica. Desde el primer día estás programando algoritmos reales, no viendo teoría abstracta. Los mentores tienen experiencia real en la industria y eso se nota en cada clase."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">ML</div>
-                        <div class="author-info">
-                            <h4>María López</h4>
-                            <p>Full Stack Developer → ML Engineer</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card fade-in-up">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-quote">
-                        "Llegué con Python básico y en 120 horas ya estaba implementando modelos de machine learning que funcionan en producción. El salto profesional que logré no tiene precio."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">CR</div>
-                        <div class="author-info">
-                            <h4>Carlos Rodríguez</h4>
-                            <p>Backend Dev → AI Specialist</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card fade-in-up">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-quote">
-                        "Lo que más valoro son los grupos pequeños. Puedes hacer preguntas específicas y recibir respuestas personalizadas. No es como esos cursos masivos donde te pierdes en la multitud."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AS</div>
-                        <div class="author-info">
-                            <h4>Ana Silva</h4>
-                            <p>Data Analyst → AI Developer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section (Objections) -->
-    <section class="faq-section">
-        <div class="faq-container">
-            <h2 class="section-title">Resolvemos Tus Dudas</h2>
-            <p class="section-subtitle">
-                Las preguntas más frecuentes sobre el Diplomado en IA
-            </p>
-
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ¿Qué nivel de Python necesito para ingresar?
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        Necesitas dominar: variables, funciones, loops, condicionales, listas, diccionarios y manejo básico de librerías. Si puedes resolver problemas simples de programación, estás listo. Realizamos una evaluación previa para asegurar que el programa sea adecuado para ti.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ¿Cómo funciona la garantía de empleabilidad?
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        Te acompañamos durante 12 meses después de terminar el diplomado. Incluye mentorías para búsqueda de empleo, preparación para entrevistas técnicas, revisión de CV, networking y seguimiento hasta que consigas una posición en IA/ML.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ¿Las clases son en vivo o pregrabadas?
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        Las clases son EN VIVO para resolver dudas en tiempo real y mantener la interacción. También se graban para que puedas repasar cuando necesites. Tenemos horarios flexibles para diferentes zonas horarias.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ¿Qué pasa si no puedo seguir el ritmo?
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        Ofrecemos mentorías personalizadas y sesiones de refuerzo. Los grupos pequeños permiten atención individual. Si en las primeras 2 semanas sientes que no es para ti, aplicamos nuestra garantía de satisfacción.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ¿Recibo certificado al terminar?
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        Recibes una constancia de participación de Futuro Digital by Síntesis. Más importante: tendrás un portafolio GitHub con 5 proyectos reales y documentación completa que es lo que realmente valoran los empleadores.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ¿Puedo pagar en cuotas?
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        Sí, ofrecemos planes de pago flexibles para que puedas dividir la inversión en cuotas mensuales cómodas. Contacta a nuestro equipo para conocer las opciones disponibles según tu situación.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final Offer Section -->
-    <section class="final-offer-section" id="final-offer">
-        <div class="final-offer-container">
-            <h2 class="section-title">Tu Momento de Decisión</h2>
-            <p class="section-subtitle" style="margin-bottom: 3rem;">
-                La próxima cohorte inicia pronto. Los cupos son limitados por el formato de grupos reducidos.
-            </p>
-
-            <div class="offer-countdown">
-                <div class="countdown-title">Próxima Cohorte Inicia En:</div>
-                <div class="countdown-timer">
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="days">15</span>
-                        <span class="countdown-label">Días</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="hours">08</span>
-                        <span class="countdown-label">Horas</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="minutes">45</span>
-                        <span class="countdown-label">Minutos</span>
-                    </div>
-                </div>
-                <p style="color: var(--white-medium); margin-top: 1rem;">
-                    Solo quedan <strong style="color: var(--red-cta);">7 cupos disponibles</strong> para esta cohorte
+    <!-- MASTERCLASS SECTION -->
+    <section class="masterclass-section" id="masterclass">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Masterclass Gratuita</h2>
+                <p class="section-subtitle">
+                    "Desarrolla tu Primera IA" - 90 minutos de formación intensiva con demo en vivo
                 </p>
             </div>
 
-            <a href="#" class="btn-primary" onclick="openWhatsApp()" style="font-size: 1.3rem; padding: 1.5rem 3rem; margin-bottom: 3rem;">
-                Solicitar Información por WhatsApp
-            </a>
+            <div class="masterclass-grid">
+                <div class="masterclass-card fade-in">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">Fundamentos Esenciales</h3>
+                    <p class="card-description">
+                        Los 3 pilares fundamentales para desarrollar IA desde cero. Framework conceptual que utilizan los expertos de la industria.
+                    </p>
+                </div>
 
-            <div class="download-links">
-                <a href="#" class="download-link">
-                    <span>📄</span>
-                    Descargar Temario Completo
-                </a>
-                <a href="#" class="download-link">
-                    <span>📊</span>
-                    Ver Proyectos de Ejemplo
-                </a>
-                <a href="#" class="download-link">
-                    <span>💼</span>
-                    Guía de Carrera en IA
-                </a>
+                <div class="masterclass-card fade-in">
+                    <div class="card-icon">🤖</div>
+                    <h3 class="card-title">Demo en Vivo</h3>
+                    <p class="card-description">
+                        Programaremos juntos una aplicación de machine learning funcional. Código real, datasets reales, resultados medibles.
+                    </p>
+                </div>
+
+                <div class="masterclass-card fade-in">
+                    <div class="card-icon">💼</div>
+                    <h3 class="card-title">Oportunidades del Mercado</h3>
+                    <p class="card-description">
+                        Análisis del panorama laboral en IA en México. Salarios, empresas que contratan y cómo posicionarte estratégicamente.
+                    </p>
+                </div>
+
+                <div class="masterclass-card fade-in">
+                    <div class="card-icon">🗺️</div>
+                    <h3 class="card-title">Ruta Personalizada</h3>
+                    <p class="card-description">
+                        Tu plan específico para convertirte en especialista IA. Cronograma realista con hitos y objetivos medibles.
+                    </p>
+                </div>
+
+                <div class="masterclass-card fade-in">
+                    <div class="card-icon">🎁</div>
+                    <h3 class="card-title">Presentación del Diplomado</h3>
+                    <p class="card-description">
+                        Contenido completo, metodología, precios y tu oferta especial exclusiva. Todo transparente, sin sorpresas.
+                    </p>
+                </div>
+
+                <div class="masterclass-card fade-in">
+                    <div class="card-icon">📚</div>
+                    <h3 class="card-title">Recursos Exclusivos</h3>
+                    <p class="card-description">
+                        Material descargable, códigos de ejemplo y acceso a nuestra biblioteca digital de recursos premium.
+                    </p>
+                </div>
             </div>
 
-            <p style="margin-top: 3rem; color: var(--white-medium); font-size: 0.9rem;">
-                Inversión total: <strong style="color: var(--gold-primary);">$16,800 MXN + IVA</strong><br>
-                Opciones de pago disponibles • Grupos de máximo 15 personas • Garantía de empleabilidad
-            </p>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#registro" class="btn-primary">
+                    <span>📅</span>
+                    Reservar Mi Lugar Gratuito
+                </a>
+                <p style="margin-top: 1rem; color: var(--neutral-400); font-size: 0.875rem;">
+                    4 de septiembre, 7:00 PM (Hora México) • 90 minutos + Q&A
+                </p>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Historias de Transformación</h2>
+                <p class="section-subtitle">
+                    Resultados reales de profesionales que han completado nuestros programas
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AC</div>
+                        <div class="testimonial-author">
+                            <h4>Alejandro Córdoba</h4>
+                            <div class="testimonial-role">Frontend Developer → ML Engineer</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "La diferencia está en la calidad de la mentoría y los proyectos reales. Después del diplomado conseguí una posición como ML Engineer en una fintech. La metodología práctica es excepcional."
+                    </p>
+                    <div class="outcome-badge">ML Engineer</div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">MG</div>
+                        <div class="testimonial-author">
+                            <h4>María González</h4>
+                            <div class="testimonial-role">Backend Developer → AI Consultant</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "Los grupos pequeños hacen toda la diferencia. Puedes hacer preguntas específicas y recibir feedback personalizado. Ahora trabajo como consultora independiente especializada en IA."
+                    </p>
+                    <div class="outcome-badge">Consultora Independiente</div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">JR</div>
+                        <div class="testimonial-author">
+                            <h4>Jorge Ramírez</h4>
+                            <div class="testimonial-role">Python Developer → Data Scientist</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "Llegué con Python básico y muchas dudas sobre matemáticas. El equipo de mentores es extraordinario, explican conceptos complejos de manera clara. Mi carrera cambió completamente."
+                    </p>
+                    <div class="outcome-badge">Data Scientist Senior</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="form-section" id="registro">
+        <div class="form-container">
+            <div class="form-card">
+                <h2 class="form-title">Acceso a Masterclass Gratuita</h2>
+                <p class="form-subtitle">
+                    Reserva tu lugar y recibe acceso inmediato a contenido exclusivo
+                </p>
+
+                <form onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-input" placeholder="Tu nombre completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email Profesional</label>
+                        <input type="email" class="form-input" placeholder="tu@email.com" required>
+                    </div>
+
+                    <button type="submit" class="btn-form">
+                        Reservar Mi Lugar
+                    </button>
+                </form>
+
+                <p style="margin-top: 1rem; color: var(--neutral-500); font-size: 0.875rem; text-align: center;">
+                    Al registrarte, aceptas recibir información sobre nuestros programas educativos
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">Futuro Digital by Síntesis</div>
             <p class="footer-text">
-                25+ años de experiencia transformando carreras profesionales a través de la educación tecnológica de vanguardia.
+                Más de 25 años de experiencia transformando carreras profesionales a través de la educación tecnológica de vanguardia. Tu éxito es nuestro compromiso.
             </p>
 
             <div class="footer-links">
                 <a href="https://www.sinesis.org" target="_blank">Síntesis.org</a>
-                <a href="#pricing">Precios</a>
-                <a href="#testimonials">Testimonios</a>
-                <a href="#faq">FAQ</a>
+                <a href="#registro">Masterclass</a>
                 <a href="#">Términos</a>
                 <a href="#">Privacidad</a>
+                <a href="#">Contacto</a>
             </div>
 
             <div class="footer-bottom">
                 <p>© 2024 Futuro Digital by Síntesis A.C. Todos los derechos reservados.</p>
-                <p>Educación tecnológica que transforma vidas desde 1999.</p>
             </div>
         </div>
     </footer>
@@ -2371,7 +1106,7 @@
             }
         });
 
-        // Intersection Observer for animations
+        // Intersection Observer para animaciones
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -2385,30 +1120,11 @@
             });
         }, observerOptions);
 
-        // Observe all fade-in-up elements
-        document.querySelectorAll('.fade-in-up').forEach(el => {
+        document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
 
-        // FAQ functionality
-        function toggleFAQ(element) {
-            const faqItem = element.parentElement;
-            const answer = faqItem.querySelector('.faq-answer');
-            
-            // Close all other FAQs
-            document.querySelectorAll('.faq-item').forEach(item => {
-                if (item !== faqItem) {
-                    item.classList.remove('active');
-                    item.querySelector('.faq-answer').classList.remove('active');
-                }
-            });
-            
-            // Toggle current FAQ
-            faqItem.classList.toggle('active');
-            answer.classList.toggle('active');
-        }
-
-        // Smooth scrolling for anchor links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -2422,77 +1138,37 @@
             });
         });
 
-        // Video play functionality
-        function playVideo() {
-            alert('Aquí se abriría el reproductor de video con la masterclass completa');
-            // Implementa tu lógica de video aquí
-        }
-
         // Form submission
-        function submitMasterclassForm(event) {
+        function submitForm(event) {
             event.preventDefault();
-            // Aquí procesas el formulario y rediriges a la página de agradecimiento
-            alert('¡Perfecto! Te redirigiremos a la masterclass...');
             
-            // Ejemplo de redirección a página de agradecimiento después del registro
+            // Simulación de procesamiento
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            submitButton.textContent = 'Reservando...';
+            submitButton.disabled = true;
+            
             setTimeout(() => {
-                // window.location.href = 'tu-pagina-de-agradecimiento.html';
-                console.log('Redirigir a página de agradecimiento con acceso a masterclass');
+                // Aquí redirigiríamos a la página de agradecimiento
+                window.location.href = 'gracias.html';
             }, 1500);
         }
 
-        // WhatsApp contact
-        function openWhatsApp() {
-            const whatsappURL = "https://wa.me/5215512345678?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20el%20Diplomado%20en%20IA";
-            window.open(whatsappURL, '_blank');
+        // Parallax effect suave para elementos de fondo
+        if (window.innerWidth > 1024) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallax = scrolled * 0.05;
+                
+                document.querySelector('.ambient-grid').style.transform = `translateY(${parallax}px)`;
+            }, { passive: true });
         }
 
-        // Countdown timer (ejemplo)
-        function updateCountdown() {
-            const days = document.getElementById('days');
-            const hours = document.getElementById('hours');
-            const minutes = document.getElementById('minutes');
-            
-            // Lógica del countdown - aquí puedes usar una fecha real
-            let d = parseInt(days.textContent);
-            let h = parseInt(hours.textContent);
-            let m = parseInt(minutes.textContent);
-            
-            m--;
-            if (m < 0) {
-                m = 59;
-                h--;
-                if (h < 0) {
-                    h = 23;
-                    d--;
-                    if (d < 0) {
-                        d = 15; // Reset para demo
-                    }
-                }
-            }
-            
-            days.textContent = d.toString().padStart(2, '0');
-            hours.textContent = h.toString().padStart(2, '0');
-            minutes.textContent = m.toString().padStart(2, '0');
-        }
-        
-        setInterval(updateCountdown, 60000); // Update every minute
-
-        // Performance optimization for mobile
+        // Optimización para móviles
         if (window.innerWidth <= 768) {
-            // Reduce animation intensity on mobile
             document.documentElement.style.setProperty('--animation-duration', '0.3s');
         }
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            if (window.innerWidth > 1024) {
-                const scrolled = window.pageYOffset;
-                const parallax = scrolled * 0.1;
-                
-                document.querySelector('.neural-network').style.transform = `translateY(${parallax}px)`;
-            }
-        }, { passive: true });
     </script>
 </body>
 </html>
