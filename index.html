@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Futuro Digital - No voy a ser reemplazado</title>
-    <!-- Preload de imagen crítica -->
+    <!-- Preload de imágenes críticas actualizadas -->
     <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_50%20p.m..png">
     <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2007_08_03%20p.m..png">
     <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_59%20p.m..png">
@@ -28,7 +28,7 @@
             background-position: center top;
             background-repeat: no-repeat;
             background-attachment: scroll;
-            /* Imagen principal de desktop */
+            /* Imagen principal de desktop actualizada */
             background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_50%20p.m..png');
         }
 
@@ -47,7 +47,7 @@
             z-index: 1;
         }
 
-        /* Imagen para móvil */
+        /* Imagen para móvil actualizada */
         @media (max-width: 768px) {
             .container {
                 background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2007_08_03%20p.m..png');
@@ -63,7 +63,7 @@
             position: relative;
             z-index: 10;
             width: 100%;
-            height: 180vh; /* Ajustado para la nueva altura */
+            height: 180vh;
         }
 
         /* POSICIONAMIENTO EN EL ESPACIO INFERIOR PREPARADO */
@@ -237,23 +237,10 @@
             }
         }
 
-        /* Optimización para diferentes tamaños de pantalla */
-        function optimizeForScreen() {
-            const videoContainer = document.querySelector('.video-container');
-            const formContainer = document.querySelector('.form-container');
-            const windowHeight = window.innerHeight;
-            const windowWidth = window.innerWidth;
-            
-            // Ajustar si la pantalla es muy baja
-            if (windowHeight < 700) {
-                if (windowWidth <= 768) {
-                    videoContainer.style.bottom = '20vh';
-                    formContainer.style.bottom = '3vh';
-                } else {
-                    videoContainer.style.bottom = '30vh';
-                    formContainer.style.bottom = '10vh';
-                }
-            }
+        /* Optimizaciones de performance */
+        .video-container,
+        .form-container {
+            will-change: transform, opacity;
         }
     </style>
 </head>
@@ -367,11 +354,11 @@
             // Ajustar si la pantalla es muy baja
             if (windowHeight < 700) {
                 if (windowWidth <= 768) {
-                    videoContainer.style.top = '35vh';
-                    formContainer.style.top = '58vh';
+                    videoContainer.style.bottom = '20vh';
+                    formContainer.style.bottom = '3vh';
                 } else {
-                    videoContainer.style.top = '35vh';
-                    formContainer.style.top = '60vh';
+                    videoContainer.style.bottom = '30vh';
+                    formContainer.style.bottom = '10vh';
                 }
             }
         }
