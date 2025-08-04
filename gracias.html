@@ -220,7 +220,7 @@
             animation: premiumReflectionShimmer 6s ease-in-out infinite;
         }
 
-        /* Subtítulo cursivo premium CLICKEABLE - SIN RECUADRO FEO - CON INDICADOR */
+        /* Subtítulo cursivo premium CLICKEABLE - CON INDICADOR */
         .subtitle {
             font-family: 'Playfair Display', serif;
             font-style: italic;
@@ -242,14 +242,14 @@
             line-height: 1.6;
             animation: premiumSubtitleFloat 8s ease-in-out infinite;
             cursor: pointer;
-            transition: all 0.3s ease; /* MÁS RÁPIDO */
+            transition: all 0.3s ease;
         }
 
         /* Indicador visual de que es clickeable */
         .subtitle::after {
-            content: '👆 Haz clic aquí';
+            content: '👆 Haz clic aquí para ir al botón VIP';
             position: absolute;
-            bottom: -30px;
+            bottom: -35px;
             left: 50%;
             transform: translateX(-50%);
             font-size: 0.9rem;
@@ -280,11 +280,6 @@
             }
         }
 
-        /* Eliminar los pseudo-elementos del subtítulo */
-        .subtitle::before {
-            display: none;
-        }
-
         .highlight-text {
             background: linear-gradient(135deg, #ffc107, #ff9800);
             -webkit-background-clip: text;
@@ -306,12 +301,12 @@
         /* Contenedor del logo WhatsApp ÉPICO - OPTIMIZADO PARA MÓVIL */
         .whatsapp-container {
             position: relative;
-            margin: 2rem auto 3rem auto; /* Márgenes más pequeños */
+            margin: 2rem auto 3rem auto;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            max-width: 400px; /* Más pequeño */
+            max-width: 400px;
         }
 
         /* WhatsApp 3D elegante y sofisticado */
@@ -365,7 +360,6 @@
             border-radius: 50%;
             object-fit: cover;
             filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
-            /* Imagen optimizada con lazy loading */
             loading: lazy;
         }
 
@@ -385,7 +379,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: phoneFloatEpic 12s ease-in-out infinite; /* Más lento */
+            animation: phoneFloatEpic 12s ease-in-out infinite;
             border: 2px solid rgba(255, 193, 7, 0.3);
             z-index: 5;
         }
@@ -514,14 +508,8 @@
         }
 
         .whatsapp-btn-icon {
-            font-size: 3rem;
-            animation: premiumIconHolographicSpin 12s ease-in-out infinite;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
-        }
-
-        .whatsapp-btn-icon {
             font-size: 2.5rem;
-            animation: iconMegaSpin 10s ease-in-out infinite; /* Mucho más lento */
+            animation: iconMegaSpin 10s ease-in-out infinite;
         }
 
         /* Lista de beneficios CURSIVA SÚPER PREMIUM */
@@ -914,17 +902,6 @@
             }
         }
 
-        @keyframes premiumSubtitleBorderGlow {
-            0%, 100% { 
-                opacity: 0.6;
-                background-position: 0% 50%; 
-            }
-            50% { 
-                opacity: 0.9;
-                background-position: 100% 50%; 
-            }
-        }
-
         @keyframes premiumBtnHolographicPulse {
             0%, 100% { 
                 box-shadow: 
@@ -951,7 +928,7 @@
             50% { left: 100%; }
         }
 
-        @keyframes premiumIconHolographicSpin {
+        @keyframes iconMegaSpin {
             0%, 100% { 
                 transform: rotate(0deg) scale(1);
                 filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) hue-rotate(0deg);
@@ -1010,49 +987,6 @@
             }
         }
 
-        /* Animaciones simplificadas para mejor performance */
-        @keyframes premiumCrystalFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }
-
-        @keyframes holographicGlow {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 0.6; }
-        }
-
-        @keyframes premiumCrystalDrift {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-3px); }
-        }
-
-        @keyframes premiumHolographicPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        @keyframes premiumReflection {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.5; }
-        }
-
-        /* Simplificar animaciones del título */
-        @keyframes premiumCursiveTitleWave {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes premiumCursiveTitleGlow {
-            0%, 100% { filter: brightness(1); }
-            50% { filter: brightness(1.1); }
-        }
-
-        /* El resto de animaciones simplificadas... */
-        @keyframes premiumBtnAttention {
-            0%, 100% { transform: translateY(-6px) scale(1.03); }
-            50% { transform: translateY(-10px) scale(1.08); }
-        }
-
         @keyframes premiumHighlightShimmer {
             0%, 100% { 
                 background-position: -100% 0;
@@ -1089,6 +1023,11 @@
                 font-size: clamp(1.15rem, 4.2vw, 1.6rem);
                 border-radius: 20px;
                 backdrop-filter: blur(25px);
+            }
+
+            .subtitle::after {
+                bottom: -30px;
+                font-size: 0.8rem;
             }
 
             .whatsapp-container {
@@ -1188,6 +1127,11 @@
                 font-size: clamp(1.1rem, 4.5vw, 1.4rem);
             }
 
+            .subtitle::after {
+                bottom: -28px;
+                font-size: 0.75rem;
+            }
+
             .whatsapp-3d {
                 width: 200px;
                 height: 200px;
@@ -1226,342 +1170,7 @@
             }
         }
 
-        /* Efectos premium adicionales para móvil */
-        @media (max-width: 768px) {
-            .dots-pattern {
-                animation: premiumMobileCrystalDrift 50s ease-in-out infinite;
-                opacity: 0.4;
-            }
-
-            .container::after {
-                animation: premiumMobileHolographicGlow 18s ease-in-out infinite alternate;
-            }
-        }
-
-        @keyframes premiumMobileCrystalDrift {
-            0%, 100% { 
-                background-position: 0px 0px, 20px 20px, 35px 35px, 0px 0px;
-                transform: translateY(0px) rotate(0deg);
-                opacity: 0.4;
-            }
-            50% { 
-                background-position: 8px -8px, 28px 12px, 43px 27px, 8px -8px;
-                transform: translateY(-6px) rotate(0.3deg);
-                opacity: 0.6;
-            }
-        }
-
-        @keyframes premiumMobileHolographicGlow {
-            0% { 
-                opacity: 0.3; 
-                transform: translate(-50%, -50%) scale(0.7) rotate(0deg);
-                filter: blur(80px) hue-rotate(0deg);
-            }
-            100% { 
-                opacity: 0.5; 
-                transform: translate(-50%, -50%) scale(1) rotate(120deg);
-                filter: blur(100px) hue-rotate(60deg);
-            }
-        }
-
-        /* Progreso de carga RÁPIDO */
-        .loading-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 10000;
-        }
-
-        .loading-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #ffc107, #ff9800, #25D366);
-            width: 0%;
-            animation: loadProgress 1s ease-out forwards; /* Mucho más rápido */
-            box-shadow: 0 0 15px rgba(255, 193, 7, 1);
-        }
-
-        @keyframes loadProgress {
-            0% { width: 0%; }
-            100% { width: 100%; }
-        }
-
-        /* Optimizaciones de performance */
-        .whatsapp-3d,
-        .whatsapp-logo,
-        .phone-3d,
-        .whatsapp-btn {
-            will-change: transform;
-        }
-
-        /* Preload de imágenes críticas */
-        .whatsapp-icon {
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-        }
-    </style>
-    <!-- Fuentes cursivas premium -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-    
-    <!-- Preload de imagen crítica actualizada -->
-    <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2005_02_33%20p.m..png">
-</head>
-<body>
-    <div class="loading-bar">
-        <div class="loading-progress"></div>
-    </div>
-
-    <div class="container">
-        <div class="dots-pattern"></div>
-        
-        <div class="content">
-            <div class="alert-icon">🚨</div>
-            
-            <h1 class="main-title" data-text="¡ACCESO DESBLOQUEADO!">
-                ¡Acceso<br>
-                Desbloqueado!
-            </h1>
-
-            <div class="subtitle" onclick="goToWhatsApp()">
-                Tu lugar VIP está confirmado
-                <span class="highlight-text">ÚNETE AL GRUPO EXCLUSIVO</span>
-                <span class="checkmark">✅</span>
-            </div>
-
-            <div class="whatsapp-container">
-                <div class="whatsapp-3d">
-                    <div class="whatsapp-logo">
-                        <img 
-                            src="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2005_02_33%20p.m..png" 
-                            alt="WhatsApp" 
-                            class="whatsapp-icon"
-                            loading="eager"
-                        >
-                    </div>
-                </div>
-                
-                <div class="phone-3d">
-                    <div class="phone-screen">
-                        <div class="phone-content">
-                            <div style="font-weight: bold; margin-bottom: 8px; font-size: 11px;">🚀 FUTURO DIGITAL</div>
-                            <div style="font-size: 8px; opacity: 0.9; margin-bottom: 12px;">Masterclass IA Premium</div>
-                            <div style="font-size: 8px; line-height: 1.3;">
-                                🎯 <strong>Acceso VIP</strong><br>
-                                💎 <strong>Contenido Exclusivo</strong><br>
-                                🚀 <strong>Training Completo</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <a href="https://chat.whatsapp.com/Dh8bRstWYHKDmm84vxyNZq" 
-               class="whatsapp-btn"
-               target="_blank">
-                <span class="whatsapp-btn-icon">🚀</span>
-                INGRESAR AL GRUPO VIP
-            </a>
-
-            <h2 class="benefits-title">⚡ ACCESO INSTANTÁNEO A:</h2>
-
-            <ul class="benefits-list">
-                <li class="benefit-item">
-                    <span class="benefit-check">🎯</span>
-                    <div class="benefit-text">
-                        <span class="benefit-highlight" data-text="MASTERCLASS EXCLUSIVA">Masterclass Exclusiva</span> con contenido premium y avanzado
-                    </div>
-                </li>
-                <li class="benefit-item">
-                    <span class="benefit-check">💎</span>
-                    <div class="benefit-text">
-                        Material <span class="benefit-highlight" data-text="VIP GRATUITO">VIP Gratuito</span> de valor incalculable
-                    </div>
-                </li>
-                <li class="benefit-item">
-                    <span class="benefit-check">🚀</span>
-                    <div class="benefit-text">
-                        <span class="benefit-highlight" data-text="ENTRENAMIENTO COMPLETO">Entrenamiento Completo</span> + recursos adicionales exclusivos
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <script>
-    <script>
-        // FUNCIÓN DIRECTA AL BOTÓN WHATSAPP - ULTRA RÁPIDA
-        function goToWhatsApp() {
-            // Ir DIRECTO al enlace de WhatsApp SIN scroll
-            window.open('https://chat.whatsapp.com/Dh8bRstWYHKDmm84vxyNZq', '_blank');
-        }
-
-        // CARGA ULTRA RÁPIDA - OPTIMIZADA
-        window.addEventListener('load', function() {
-            // Carga instantánea sin efectos pesados
-            document.body.style.opacity = '1';
-            
-            // Ocultar loading bar INMEDIATAMENTE
-            const loadingBar = document.querySelector('.loading-bar');
-            if (loadingBar) {
-                loadingBar.style.display = 'none';
-            }
-        });
-
-        // Tracking SIMPLIFICADO
-        document.querySelector('.whatsapp-btn').addEventListener('click', function(e) {
-            console.log('🚀 Usuario accedió al grupo VIP - Conversión RÁPIDA exitosa');
-        });
-
-        // HACER TODO MÁS RÁPIDO - Eliminar animaciones pesadas
-        document.querySelectorAll('.benefit-item').forEach((item, index) => {
-            // Entrada inmediata sin delays
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0px) scale(1)';
-            
-            // Hover simple y rápido
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(15px) scale(1.02)';
-                this.style.transition = 'transform 0.2s ease'; // MÁS RÁPIDO
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(0px) scale(1)';
-                this.style.transition = 'transform 0.2s ease'; // MÁS RÁPIDO
-            });
-        });
-
-        // Verificar imágenes RÁPIDO
-        const whatsappIcon = document.querySelector('.whatsapp-icon');
-        
-        whatsappIcon.onerror = function() {
-            console.log('⚠️ Fallback rápido para logo WhatsApp');
-            const fallback = document.createElement('div');
-            fallback.style.cssText = `
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(145deg, #25D366, #128C7E);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 4rem;
-                color: white;
-            `;
-            fallback.innerHTML = '📱';
-            this.parentNode.replaceChild(fallback, this);
-        };
-
-        whatsappIcon.onload = function() {
-            console.log('✅ Logo WhatsApp cargado RÁPIDO');
-        };
-
-        // Parallax SIMPLIFICADO y más rápido
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.dots-pattern');
-            
-            if (parallax && scrolled < 1000) { // Solo hasta cierto punto
-                parallax.style.transform = `translateY(${scrolled * 0.1}px)`;
-            }
-        }, { passive: true }); // Passive para mejor performance
-
-        // Eliminar efectos pesados en móvil
-        if (window.innerWidth <= 768) {
-            // Desactivar animaciones pesadas en móvil
-            const style = document.createElement('style');
-            style.innerHTML = `
-                * {
-                    animation-duration: 0.1s !important;
-                    transition-duration: 0.1s !important;
-                }
-                .dots-pattern {
-                    display: none; /* Ocultar partículas en móvil */
-                }
-                .container::before,
-                .container::after {
-                    animation: none !important;
-                }
-            `;
-            document.head.appendChild(style);
-        }
-    </script>
-
-    <style>
-        @keyframes premiumHolographicFadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8) rotate(-10deg);
-                filter: blur(5px) hue-rotate(0deg);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1) rotate(0deg);
-                filter: blur(0px) hue-rotate(0deg);
-            }
-        }
-
-        /* Loading bar ULTRA RÁPIDO */
-        .loading-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #daa520, #ffd700, #25D366);
-            width: 0%;
-            animation: fastLoadProgress 0.8s ease-out forwards; /* MÁS RÁPIDO */
-            box-shadow: 0 0 20px rgba(218, 165, 32, 0.8);
-        }
-
-        @keyframes fastLoadProgress {
-            0% { width: 0%; }
-            100% { width: 100%; }
-        }
-
-        /* Responsive MÁS RÁPIDO para móvil */
-        @media (max-width: 768px) {
-            /* Desactivar animaciones pesadas en móvil */
-            .dots-pattern {
-                animation: none !important;
-                opacity: 0.3;
-            }
-            
-            .container::before,
-            .container::after {
-                animation: none !important;
-            }
-            
-            .whatsapp-3d {
-                animation: none !important;
-            }
-            
-            .whatsapp-logo {
-                animation: none !important;
-            }
-            
-            .whatsapp-btn {
-                animation: none !important;
-            }
-            
-            .benefit-check {
-                animation: none !important;
-            }
-            
-            .main-title {
-                animation: none !important;
-            }
-            
-            .subtitle {
-                animation: none !important;
-            }
-            
-            /* Transiciones más rápidas en móvil */
-            * {
-                transition-duration: 0.2s !important;
-            }
-        }
-
-        /* Smooth scroll súper premium */
+        /* Scroll suave premium */
         html {
             scroll-behavior: smooth;
         }
@@ -1597,6 +1206,237 @@
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(180deg, #ffd700 0%, #ffeb3b 50%, #daa520 100%);
             box-shadow: 0 0 15px rgba(218, 165, 32, 0.8);
+        }
+    </style>
+    
+    <!-- Fuentes cursivas premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <!-- Preload de imagen crítica actualizada -->
+    <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2005_02_33%20p.m..png">
+</head>
+<body>
+    <div class="container">
+        <div class="dots-pattern"></div>
+        
+        <div class="content">
+            <div class="alert-icon">🚨</div>
+            
+            <h1 class="main-title" data-text="¡ACCESO DESBLOQUEADO!">
+                ¡Acceso<br>
+                Desbloqueado!
+            </h1>
+
+            <div class="subtitle" onclick="scrollToButton()">
+                Tu lugar VIP está confirmado
+                <span class="highlight-text">ÚNETE AL GRUPO EXCLUSIVO</span>
+                <span class="checkmark">✅</span>
+            </div>
+
+            <div class="whatsapp-container">
+                <div class="whatsapp-3d">
+                    <div class="whatsapp-logo">
+                        <img 
+                            src="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2005_02_33%20p.m..png" 
+                            alt="WhatsApp" 
+                            class="whatsapp-icon"
+                            loading="eager"
+                        >
+                    </div>
+                </div>
+                
+                <div class="phone-3d">
+                    <div class="phone-screen">
+                        <div class="phone-content">
+                            <div style="font-weight: bold; margin-bottom: 8px; font-size: 11px;">🚀 FUTURO DIGITAL</div>
+                            <div style="font-size: 8px; opacity: 0.9; margin-bottom: 12px;">Masterclass IA Premium</div>
+                            <div style="font-size: 8px; line-height: 1.3;">
+                                🎯 <strong>Acceso VIP</strong><br>
+                                💎 <strong>Contenido Exclusivo</strong><br>
+                                🚀 <strong>Training Completo</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://chat.whatsapp.com/Dh8bRstWYHKDmm84vxyNZq" 
+               class="whatsapp-btn"
+               target="_blank"
+               id="whatsappButton">
+                <span class="whatsapp-btn-icon">🚀</span>
+                INGRESAR AL GRUPO VIP
+            </a>
+
+            <h2 class="benefits-title">⚡ ACCESO INSTANTÁNEO A:</h2>
+
+            <ul class="benefits-list">
+                <li class="benefit-item">
+                    <span class="benefit-check">🎯</span>
+                    <div class="benefit-text">
+                        <span class="benefit-highlight" data-text="MASTERCLASS EXCLUSIVA">Masterclass Exclusiva</span> con contenido premium y avanzado
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <span class="benefit-check">💎</span>
+                    <div class="benefit-text">
+                        Material <span class="benefit-highlight" data-text="VIP GRATUITO">VIP Gratuito</span> de valor incalculable
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <span class="benefit-check">🚀</span>
+                    <div class="benefit-text">
+                        <span class="benefit-highlight" data-text="ENTRENAMIENTO COMPLETO">Entrenamiento Completo</span> + recursos adicionales exclusivos
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // FUNCIÓN PARA SCROLL AL BOTÓN VIP - ULTRA SMOOTH
+        function scrollToButton() {
+            const button = document.getElementById('whatsappButton');
+            const benefitsTitle = document.querySelector('.benefits-title');
+            
+            // Primero hacer scroll suave hacia el título de beneficios (para que quede visible)
+            benefitsTitle.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start',
+                inline: 'nearest' 
+            });
+            
+            // Después de 800ms, hacer un efecto de atención en el botón
+            setTimeout(() => {
+                // Efecto de atención premium en el botón
+                button.style.animation = 'premiumBtnAttention 2s ease-in-out infinite';
+                button.style.transform = 'translateY(-6px) scale(1.08)';
+                button.style.boxShadow = '0 40px 120px rgba(37, 211, 102, 0.6), 0 25px 80px rgba(218, 165, 32, 0.4), 0 0 80px rgba(255, 215, 0, 0.3)';
+                button.style.filter = 'brightness(1.2) saturate(1.1)';
+                
+                // Efecto de parpadeo en el texto del botón
+                const buttonText = button.innerHTML;
+                let isFlashing = true;
+                const flashInterval = setInterval(() => {
+                    if (isFlashing) {
+                        button.innerHTML = '✨ INGRESAR AL GRUPO VIP ✨';
+                        button.style.background = 'linear-gradient(135deg, #25D366 0%, #1ead5e 20%, #ffd700 40%, #ffeb3b 60%, #25D366 80%, #128C7E 100%)';
+                    } else {
+                        button.innerHTML = buttonText;
+                        button.style.background = 'linear-gradient(135deg, #25D366 0%, #1ead5e 20%, #128C7E 40%, #0f7a6b 60%, #075E54 80%, #128C7E 100%)';
+                    }
+                    isFlashing = !isFlashing;
+                }, 600);
+                
+                // Parar el parpadeo después de 6 segundos
+                setTimeout(() => {
+                    clearInterval(flashInterval);
+                    button.innerHTML = buttonText;
+                    button.style.animation = '';
+                    button.style.transform = '';
+                    button.style.boxShadow = '';
+                    button.style.filter = '';
+                    button.style.background = '';
+                }, 6000);
+                
+            }, 800);
+        }
+
+        // CARGA ULTRA PREMIUM - OPTIMIZADA
+        window.addEventListener('load', function() {
+            // Carga instantánea
+            document.body.style.opacity = '1';
+        });
+
+        // Tracking SIMPLIFICADO
+        document.querySelector('.whatsapp-btn').addEventListener('click', function(e) {
+            console.log('🚀 Usuario accedió al grupo VIP - Conversión RÁPIDA exitosa');
+        });
+
+        // HACER TODO MÁS RÁPIDO - Optimizar animaciones
+        document.querySelectorAll('.benefit-item').forEach((item, index) => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0px) scale(1)';
+            
+            // Hover simple y rápido
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(15px) scale(1.02)';
+                this.style.transition = 'transform 0.2s ease';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0px) scale(1)';
+                this.style.transition = 'transform 0.2s ease';
+            });
+        });
+
+        // Verificar imágenes RÁPIDO
+        const whatsappIcon = document.querySelector('.whatsapp-icon');
+        
+        whatsappIcon.onerror = function() {
+            console.log('⚠️ Fallback rápido para logo WhatsApp');
+            const fallback = document.createElement('div');
+            fallback.style.cssText = `
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(145deg, #25D366, #128C7E);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                color: white;
+            `;
+            fallback.innerHTML = '📱';
+            this.parentNode.replaceChild(fallback, this);
+        };
+
+        whatsappIcon.onload = function() {
+            console.log('✅ Logo WhatsApp cargado RÁPIDO');
+        };
+
+        // Parallax SIMPLIFICADO y más rápido
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.dots-pattern');
+            
+            if (parallax && scrolled < 1000) {
+                parallax.style.transform = `translateY(${scrolled * 0.1}px)`;
+            }
+        }, { passive: true });
+
+        // Eliminar efectos pesados en móvil
+        if (window.innerWidth <= 768) {
+            const style = document.createElement('style');
+            style.innerHTML = `
+                * {
+                    animation-duration: 0.5s !important;
+                    transition-duration: 0.3s !important;
+                }
+                .dots-pattern {
+                    opacity: 0.3;
+                }
+                .container::before,
+                .container::after {
+                    animation-duration: 20s !important;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Animación de atención para el botón
+        @keyframes premiumBtnAttention {
+            0%, 100% { transform: translateY(-6px) scale(1.03); }
+            50% { transform: translateY(-10px) scale(1.08); }
+        }
+    </script>
+
+    <style>
+        @keyframes premiumBtnAttention {
+            0%, 100% { transform: translateY(-6px) scale(1.03); }
+            50% { transform: translateY(-10px) scale(1.08); }
         }
     </style>
 </body>
