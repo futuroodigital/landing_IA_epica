@@ -247,7 +247,7 @@
 
         /* Indicador visual de que es clickeable */
         .subtitle::after {
-            content: '👆 Haz clic aquí para ir al botón VIP';
+            content: '👆 Haz clic aquí para ir DIRECTO al grupo';
             position: absolute;
             bottom: -35px;
             left: 50%;
@@ -1028,6 +1028,7 @@
             .subtitle::after {
                 bottom: -30px;
                 font-size: 0.8rem;
+                content: '👆 Clic para ir DIRECTO al grupo';
             }
 
             .whatsapp-container {
@@ -1130,6 +1131,7 @@
             .subtitle::after {
                 bottom: -28px;
                 font-size: 0.75rem;
+                content: '👆 Clic → Grupo directo';
             }
 
             .whatsapp-3d {
@@ -1229,7 +1231,7 @@
                 Desbloqueado!
             </h1>
 
-            <div class="subtitle" onclick="scrollToButton()">
+            <div class="subtitle" onclick="goToWhatsApp()">
                 Tu lugar VIP está confirmado
                 <span class="highlight-text">ÚNETE AL GRUPO EXCLUSIVO</span>
                 <span class="checkmark">✅</span>
@@ -1296,52 +1298,10 @@
     </div>
 
     <script>
-        // FUNCIÓN PARA SCROLL AL BOTÓN VIP - ULTRA SMOOTH
-        function scrollToButton() {
-            const button = document.getElementById('whatsappButton');
-            const benefitsTitle = document.querySelector('.benefits-title');
-            
-            // Primero hacer scroll suave hacia el título de beneficios (para que quede visible)
-            benefitsTitle.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start',
-                inline: 'nearest' 
-            });
-            
-            // Después de 800ms, hacer un efecto de atención en el botón
-            setTimeout(() => {
-                // Efecto de atención premium en el botón
-                button.style.animation = 'premiumBtnAttention 2s ease-in-out infinite';
-                button.style.transform = 'translateY(-6px) scale(1.08)';
-                button.style.boxShadow = '0 40px 120px rgba(37, 211, 102, 0.6), 0 25px 80px rgba(218, 165, 32, 0.4), 0 0 80px rgba(255, 215, 0, 0.3)';
-                button.style.filter = 'brightness(1.2) saturate(1.1)';
-                
-                // Efecto de parpadeo en el texto del botón
-                const buttonText = button.innerHTML;
-                let isFlashing = true;
-                const flashInterval = setInterval(() => {
-                    if (isFlashing) {
-                        button.innerHTML = '✨ INGRESAR AL GRUPO VIP ✨';
-                        button.style.background = 'linear-gradient(135deg, #25D366 0%, #1ead5e 20%, #ffd700 40%, #ffeb3b 60%, #25D366 80%, #128C7E 100%)';
-                    } else {
-                        button.innerHTML = buttonText;
-                        button.style.background = 'linear-gradient(135deg, #25D366 0%, #1ead5e 20%, #128C7E 40%, #0f7a6b 60%, #075E54 80%, #128C7E 100%)';
-                    }
-                    isFlashing = !isFlashing;
-                }, 600);
-                
-                // Parar el parpadeo después de 6 segundos
-                setTimeout(() => {
-                    clearInterval(flashInterval);
-                    button.innerHTML = buttonText;
-                    button.style.animation = '';
-                    button.style.transform = '';
-                    button.style.boxShadow = '';
-                    button.style.filter = '';
-                    button.style.background = '';
-                }, 6000);
-                
-            }, 800);
+        // FUNCIÓN DIRECTA AL WHATSAPP - ULTRA RÁPIDA
+        function goToWhatsApp() {
+            // Ir DIRECTO al enlace de WhatsApp SIN scroll
+            window.open('https://chat.whatsapp.com/Dh8bRstWYHKDmm84vxyNZq', '_blank');
         }
 
         // CARGA ULTRA PREMIUM - OPTIMIZADA
