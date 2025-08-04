@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Futuro Digital - No voy a ser reemplazado</title>
-    <!-- Fuentes premium elegantes -->
+    
+    <!-- Fuentes PREMIUM HD -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel:wght@400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Preload de imágenes críticas actualizadas -->
+    <!-- Preload de imágenes críticas -->
     <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_50%20p.m..png">
     <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2007_08_03%20p.m..png">
     <link rel="preload" as="image" href="https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_59%20p.m..png">
+    
     <style>
         * {
             margin: 0;
@@ -26,23 +28,25 @@
             overflow-x: hidden;
             margin: 0;
             padding: 0;
+            position: relative;
         }
 
+        /* FONDO PREMIUM HD 8K con efectos holográficos */
         .container {
             position: relative;
             min-height: 100vh;
-            background-size: contain;
-            background-position: center top;
+            background-size: cover;
+            background-position: center center;
             background-repeat: no-repeat;
-            background-attachment: scroll;
-            /* Imagen principal de desktop actualizada */
-            background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_50%20p.m..png');
-            background-color: #000;
-            /* Efectos premium de fondo */
-            background-blend-mode: normal;
+            background-attachment: fixed;
+            /* Imagen principal de desktop */
+            background-image: 
+                linear-gradient(45deg, rgba(218, 165, 32, 0.1) 0%, transparent 50%, rgba(255, 215, 0, 0.08) 100%),
+                url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_50%20p.m..png');
+            background-blend-mode: overlay, normal;
         }
 
-        /* Overlay premium con partículas doradas */
+        /* PARTÍCULAS HOLOGRÁFICAS HD 8K */
         .container::before {
             content: '';
             position: absolute;
@@ -51,45 +55,53 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 20% 80%, rgba(218, 165, 32, 0.15) 2px, transparent 2px),
-                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 1px, transparent 1px),
-                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.12) 1.5px, transparent 1.5px);
-            background-size: 200px 200px, 150px 150px, 100px 100px;
-            animation: premiumParticleFloat 25s ease-in-out infinite;
+                radial-gradient(circle at 15% 25%, rgba(218, 165, 32, 0.8) 3px, transparent 3px),
+                radial-gradient(circle at 85% 75%, rgba(255, 215, 0, 0.6) 2px, transparent 2px),
+                radial-gradient(circle at 45% 15%, rgba(212, 175, 55, 0.7) 2.5px, transparent 2.5px),
+                radial-gradient(circle at 75% 45%, rgba(184, 134, 11, 0.5) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 25% 85%, rgba(255, 223, 0, 0.4) 1px, transparent 1px);
+            background-size: 300px 300px, 200px 200px, 150px 150px, 100px 100px, 80px 80px;
+            animation: 
+                holographicParticles 20s linear infinite,
+                particleGlow 8s ease-in-out infinite alternate;
             pointer-events: none;
             z-index: 1;
-            opacity: 0.6;
+            opacity: 0.9;
         }
 
-        /* Continuación del fondo para desktop */
+        /* CONTINUACIÓN DEL FONDO HD */
         .container::after {
             content: '';
             position: absolute;
-            top: 75vh; /* Ajustado para mejor posicionamiento */
+            bottom: 0;
             left: 0;
             width: 100%;
-            height: 35vh;
-            background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_59%20p.m..png');
-            background-size: contain;
-            background-position: center top;
-            background-repeat: no-repeat;
+            height: 40vh;
+            background-image: 
+                linear-gradient(180deg, transparent 0%, rgba(218, 165, 32, 0.1) 50%, transparent 100%),
+                url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%203%20ago%202025%2C%2001_04_59%20p.m..png');
+            background-size: 100% 100%, cover;
+            background-position: center, center;
+            background-blend-mode: overlay, normal;
             z-index: 1;
         }
 
-        /* Imagen para móvil actualizada - SIN ESPACIOS EN NEGRO */
+        /* EFECTOS PREMIUM PARA MÓVIL */
         @media (max-width: 768px) {
             .container {
-                background-image: url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2007_08_03%20p.m..png');
+                background-image: 
+                    radial-gradient(ellipse at 50% 50%, rgba(218, 165, 32, 0.15) 0%, transparent 70%),
+                    linear-gradient(45deg, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                    url('https://github.com/futuroodigital/landing_IA_epica/raw/cbb2b92543f395cddab8118a03c9fc7810431b3a/ChatGPT%20Image%202%20ago%202025%2C%2007_08_03%20p.m..png');
+                background-size: 100% 100%, 100% 100%, cover;
+                background-position: center, center, center center;
+                background-attachment: scroll;
                 min-height: 100vh;
-                background-size: cover; /* Cambio importante: cover en lugar de contain */
-                background-position: center center;
-                /* Sin espacios en negro */
-                background-color: transparent;
             }
             
             .container::before {
-                background-size: 120px 120px, 80px 80px, 60px 60px;
-                opacity: 0.4;
+                background-size: 180px 180px, 120px 120px, 90px 90px, 60px 60px, 50px 50px;
+                opacity: 0.7;
             }
             
             .container::after {
@@ -101,230 +113,456 @@
             position: relative;
             z-index: 10;
             width: 100%;
-            height: 180vh;
+            height: 100vh;
         }
 
-        /* POSICIONAMIENTO EN EL ESPACIO INFERIOR PREPARADO */
-        
-        /* Para Desktop - Posicionado en la parte inferior */
+        /* VIDEO CONTAINER ULTRA PREMIUM HD 8K */
         .video-container {
             position: absolute;
-            width: 55%;
-            max-width: 700px;
+            width: 52%;
+            max-width: 650px;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 35vh; /* Posicionado en la parte inferior donde dejaste espacio */
-            border-radius: 15px;
+            bottom: 25vh; /* POSICIÓN CORREGIDA - MUY ABAJO */
+            border-radius: 25px;
             overflow: hidden;
-            background: rgba(0, 0, 0, 0.9);
-            border: 3px solid #ffc107;
-            box-shadow: 0 0 40px rgba(255, 193, 7, 0.4);
+            background: rgba(0, 0, 0, 0.95);
             aspect-ratio: 16/9;
             z-index: 20;
+            backdrop-filter: blur(30px);
+            border: 4px solid transparent;
+            background-clip: padding-box;
+            box-shadow: 
+                0 40px 120px rgba(0, 0, 0, 0.8),
+                0 20px 80px rgba(218, 165, 32, 0.4),
+                0 10px 40px rgba(255, 215, 0, 0.3),
+                inset 0 4px 0 rgba(255, 255, 255, 0.2),
+                inset 0 -4px 0 rgba(0, 0, 0, 0.3);
+            animation: 
+                premiumVideoFloat 12s ease-in-out infinite,
+                videoHolographicGlow 8s ease-in-out infinite alternate;
+        }
+
+        /* BORDE HOLOGRÁFICO ROTATIVO HD 8K */
+        .video-container::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            background: conic-gradient(from 0deg, 
+                rgba(218, 165, 32, 1) 0deg,
+                rgba(255, 215, 0, 0.8) 60deg,
+                rgba(212, 175, 55, 0.9) 120deg,
+                rgba(184, 134, 11, 0.7) 180deg,
+                rgba(255, 223, 0, 1) 240deg,
+                rgba(218, 165, 32, 0.8) 300deg,
+                rgba(218, 165, 32, 1) 360deg);
+            border-radius: 29px;
+            z-index: -1;
+            animation: holographicBorderRotate 8s linear infinite;
+            filter: blur(2px);
         }
 
         .video-container iframe {
             width: 100%;
             height: 100%;
-            border-radius: 12px;
+            border-radius: 21px;
+            position: relative;
+            z-index: 1;
         }
 
-        /* Formulario en la parte más inferior */
+        /* FORMULARIO ULTRA PREMIUM HD 8K */
         .form-container {
             position: absolute;
             width: 45%;
-            max-width: 450px;
+            max-width: 500px;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 15vh; /* En la parte más baja del espacio preparado */
+            bottom: 8vh; /* POSICIÓN CORREGIDA - MUY ABAJO */
             z-index: 20;
+        }
+
+        /* INPUT PREMIUM HD 8K */
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .input-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: conic-gradient(from 0deg, 
+                rgba(218, 165, 32, 0.9) 0deg,
+                rgba(255, 215, 0, 0.7) 90deg,
+                rgba(212, 175, 55, 0.8) 180deg,
+                rgba(184, 134, 11, 0.6) 270deg,
+                rgba(218, 165, 32, 0.9) 360deg);
+            border-radius: 20px;
+            z-index: -1;
+            animation: inputHolographicBorder 6s linear infinite;
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
         .email-input {
             width: 100%;
-            padding: 1rem 1.5rem;
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid #ffc107;
-            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid rgba(218, 165, 32, 0.4);
+            border-radius: 18px;
             color: #fff;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
             outline: none;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(25px);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.6),
+                0 10px 30px rgba(218, 165, 32, 0.3),
+                inset 0 2px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 2;
         }
 
         .email-input::placeholder {
-            color: rgba(255, 193, 7, 0.7);
+            color: rgba(218, 165, 32, 0.8);
+            font-style: italic;
+            font-weight: 500;
         }
 
-        .email-input:focus {
-            box-shadow: 0 0 25px rgba(255, 193, 7, 0.6);
-            background: rgba(0, 0, 0, 0.9);
-            border-color: #ff9800;
+        .email-input:focus,
+        .email-input:hover {
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.5),
+                0 15px 50px rgba(218, 165, 32, 0.5),
+                0 0 40px rgba(255, 215, 0, 0.4);
+            background: rgba(0, 0, 0, 0.95);
+            transform: scale(1.03);
+            border-color: rgba(218, 165, 32, 0.8);
         }
 
+        .input-wrapper:hover::before,
+        .email-input:focus + .input-wrapper::before {
+            opacity: 1;
+        }
+
+        /* BOTÓN ULTRA PREMIUM HD 8K */
         .reserve-btn {
             width: 100%;
-            padding: 1.3rem 2rem;
-            background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+            padding: 1.8rem 3rem;
+            background: linear-gradient(135deg, 
+                #daa520 0%, 
+                #ffd700 15%,
+                #ffeb3b 30%,
+                #f4d03f 45%,
+                #d4af37 60%,
+                #b8860b 75%,
+                #daa520 90%,
+                #ffd700 100%);
+            background-size: 300% 300%;
             border: none;
-            border-radius: 12px;
+            border-radius: 18px;
             color: #000;
-            font-size: 1.3rem;
-            font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-family: 'Cinzel', serif;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 3px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 
+                0 25px 80px rgba(218, 165, 32, 0.6),
+                0 15px 50px rgba(0, 0, 0, 0.4),
+                0 5px 20px rgba(255, 215, 0, 0.3),
+                inset 0 3px 0 rgba(255, 255, 255, 0.4),
+                inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            text-shadow: 
+                0 2px 4px rgba(0, 0, 0, 0.5),
+                0 0 10px rgba(218, 165, 32, 0.3);
+            animation: 
+                premiumButtonPulse 10s ease-in-out infinite,
+                buttonHolographicGlow 6s ease-in-out infinite alternate;
+        }
+
+        /* EFECTO DE BRILLO DESLIZANTE HD 8K */
+        .reserve-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.6), 
+                rgba(255, 215, 0, 0.4),
+                rgba(255, 255, 255, 0.6),
+                transparent);
+            transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: autoShine 12s ease-in-out infinite;
         }
 
         .reserve-btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 35px rgba(255, 193, 7, 0.6);
-            background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 
+                0 40px 120px rgba(218, 165, 32, 0.8),
+                0 25px 80px rgba(0, 0, 0, 0.5),
+                0 10px 40px rgba(255, 215, 0, 0.5),
+                inset 0 4px 0 rgba(255, 255, 255, 0.5);
+            background-position: 100% 100%;
+            filter: brightness(1.2) saturate(1.1);
+        }
+
+        .reserve-btn:hover::before {
+            left: 100%;
         }
 
         .reserve-btn:active {
-            transform: translateY(-2px);
+            transform: translateY(-5px) scale(1.05);
         }
 
-        /* Scroll suave */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Responsive PERFECTO para las nuevas imágenes */
+        /* RESPONSIVE PREMIUM HD para móvil */
         @media (max-width: 768px) {
-            .content {
-                height: 100vh;
+            .video-container {
+                width: 90%;
+                max-width: 380px;
+                bottom: 28vh; /* Posición corregida para móvil */
+                border-radius: 20px;
+                border: 3px solid transparent;
             }
 
-            .video-container {
-                width: 85%;
-                max-width: 320px;
-                top: 60vh; /* Posicionado en el espacio inferior de la imagen móvil */
-                border: 2px solid #ffc107;
+            .video-container::before {
+                border-radius: 23px;
             }
 
             .form-container {
-                width: 85%;
-                max-width: 320px;
-                top: 78vh; /* Debajo del video en móvil */
+                width: 90%;
+                max-width: 380px;
+                bottom: 10vh; /* Posición corregida para móvil */
             }
 
             .email-input {
-                padding: 0.8rem 1.2rem;
-                font-size: 0.95rem;
-                margin-bottom: 1rem;
+                padding: 1.3rem 1.8rem;
+                font-size: 1.1rem;
+                border-radius: 15px;
+            }
+
+            .input-wrapper::before {
+                border-radius: 18px;
             }
 
             .reserve-btn {
-                padding: 1rem 1.5rem;
-                font-size: 1rem;
+                padding: 1.5rem 2.5rem;
+                font-size: 1.2rem;
+                border-radius: 15px;
+                letter-spacing: 2px;
             }
         }
 
         @media (max-width: 480px) {
             .video-container {
-                width: 90%;
-                max-width: 300px;
-                top: 58vh;
+                width: 95%;
+                max-width: 350px;
+                bottom: 26vh;
+                border-radius: 18px;
+            }
+
+            .video-container::before {
+                border-radius: 21px;
             }
 
             .form-container {
-                width: 90%;
-                max-width: 300px;
-                top: 75vh;
+                width: 95%;
+                max-width: 350px;
+                bottom: 8vh;
             }
 
             .email-input {
-                padding: 0.7rem 1rem;
-                font-size: 0.9rem;
+                padding: 1.2rem 1.6rem;
+                font-size: 1rem;
+                border-radius: 12px;
+            }
+
+            .input-wrapper::before {
+                border-radius: 15px;
             }
 
             .reserve-btn {
-                padding: 0.9rem 1.3rem;
-                font-size: 0.95rem;
+                padding: 1.3rem 2.2rem;
+                font-size: 1.1rem;
+                border-radius: 12px;
+                letter-spacing: 1px;
             }
         }
 
-        /* Para pantallas muy grandes */
-        @media (min-width: 1400px) {
-            .video-container {
-                width: 50%;
-                max-width: 800px;
-                bottom: 40vh;
+        /* ANIMACIONES HOLOGRÁFICAS HD 8K */
+        @keyframes holographicParticles {
+            0% { 
+                background-position: 0px 0px, 100px 100px, 75px 75px, 50px 50px, 25px 25px;
+                transform: rotate(0deg);
             }
-
-            .form-container {
-                width: 40%;
-                max-width: 500px;
-                bottom: 20vh;
+            25% { 
+                background-position: 75px -25px, 175px 75px, 125px 50px, 75px 25px, 50px 0px;
+                transform: rotate(2deg);
+            }
+            50% { 
+                background-position: 0px -50px, 100px 50px, 75px 25px, 50px 0px, 25px -25px;
+                transform: rotate(0deg);
+            }
+            75% { 
+                background-position: -75px -25px, 25px 75px, 0px 50px, 25px 25px, 0px 0px;
+                transform: rotate(-2deg);
+            }
+            100% { 
+                background-position: 0px 0px, 100px 100px, 75px 75px, 50px 50px, 25px 25px;
+                transform: rotate(0deg);
             }
         }
 
-        /* Animaciones ajustadas para posicionamiento bottom */
-        .video-container {
-            animation: slideInFromBottom 1.2s ease-out;
-            will-change: transform, opacity;
-        }
-
-        .form-container {
-            animation: slideInFromBottom 1.2s ease-out 0.3s both;
-            will-change: transform, opacity;
-        }
-
-        @keyframes slideInFromBottom {
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(50px);
+        @keyframes particleGlow {
+            0% { 
+                opacity: 0.7;
+                filter: hue-rotate(0deg) brightness(1);
             }
-            to {
+            100% { 
                 opacity: 1;
-                transform: translateX(-50%) translateY(0);
+                filter: hue-rotate(30deg) brightness(1.3);
             }
         }
 
-        /* Optimizaciones de performance */
-        .video-container,
-        .form-container {
-            will-change: transform, opacity;
+        @keyframes premiumVideoFloat {
+            0%, 100% { 
+                transform: translateX(-50%) translateY(0px) rotateX(0deg);
+            }
+            25% { 
+                transform: translateX(-50%) translateY(-8px) rotateX(1deg);
+            }
+            50% { 
+                transform: translateX(-50%) translateY(-12px) rotateX(0deg);
+            }
+            75% { 
+                transform: translateX(-50%) translateY(-8px) rotateX(-1deg);
+            }
+        }
+
+        @keyframes videoHolographicGlow {
+            0% { 
+                box-shadow: 
+                    0 40px 120px rgba(0, 0, 0, 0.8),
+                    0 20px 80px rgba(218, 165, 32, 0.4),
+                    0 10px 40px rgba(255, 215, 0, 0.3);
+            }
+            100% { 
+                box-shadow: 
+                    0 50px 150px rgba(0, 0, 0, 0.7),
+                    0 30px 100px rgba(218, 165, 32, 0.6),
+                    0 15px 60px rgba(255, 215, 0, 0.5),
+                    0 0 80px rgba(255, 223, 0, 0.3);
+            }
+        }
+
+        @keyframes holographicBorderRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes inputHolographicBorder {
+            0% { transform: rotate(0deg); opacity: 0.8; }
+            100% { transform: rotate(360deg); opacity: 0.8; }
+        }
+
+        @keyframes premiumButtonPulse {
+            0%, 100% { 
+                background-position: 0% 50%;
+                transform: scale(1);
+            }
+            25% { 
+                background-position: 50% 25%;
+                transform: scale(1.02);
+            }
+            50% { 
+                background-position: 100% 50%;
+                transform: scale(1);
+            }
+            75% { 
+                background-position: 50% 75%;
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes buttonHolographicGlow {
+            0% { 
+                filter: brightness(1) saturate(1) hue-rotate(0deg);
+            }
+            100% { 
+                filter: brightness(1.1) saturate(1.2) hue-rotate(15deg);
+            }
+        }
+
+        @keyframes autoShine {
+            0%, 100% { left: -100%; }
+            50% { left: 100%; }
+        }
+
+        /* Scroll suave premium */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selección de texto premium */
+        ::selection {
+            background: rgba(218, 165, 32, 0.4);
+            color: #fff;
+            text-shadow: 0 0 15px rgba(218, 165, 32, 1);
+        }
+
+        ::-moz-selection {
+            background: rgba(218, 165, 32, 0.4);
+            color: #fff;
+            text-shadow: 0 0 15px rgba(218, 165, 32, 1);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="content">
-            <!-- Video posicionado en el espacio inferior preparado -->
+            <!-- Video ULTRA PREMIUM HD 8K -->
             <div class="video-container">
                 <iframe 
                     width="100%" 
                     height="100%" 
-                    src="https://www.youtube.com/embed/zJCC1U_QoAg?rel=0&modestbranding=1&showinfo=0" 
+                    src="https://www.youtube.com/embed/zJCC1U_QoAg?rel=0&modestbranding=1&showinfo=0&autoplay=0&mute=0" 
                     title="Futuro Digital - No voy a ser reemplazado"
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen
-                    style="border-radius: 15px;">
+                    loading="lazy">
                 </iframe>
             </div>
 
-            <!-- Formulario en la parte más inferior -->
+            <!-- Formulario ULTRA PREMIUM HD 8K -->
             <div class="form-container">
                 <form id="reservationForm">
                     <div class="input-wrapper">
                         <input 
                             type="email" 
                             class="email-input" 
-                            placeholder="Tu email"
+                            placeholder="Tu email elegante"
                             required
                             id="userEmail"
                         >
                     </div>
                     <button type="submit" class="reserve-btn">
-                        Reserva tu lugar
+                        Reserva tu Lugar VIP
                     </button>
                 </form>
             </div>
@@ -332,7 +570,46 @@
     </div>
 
     <script>
-        // Manejo del formulario - REDIRECCIÓN PREMIUM INMEDIATA
+        // CARGA ULTRA PREMIUM HD 8K
+        window.addEventListener('load', function() {
+            // Efecto de aparición cinematográfica
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 2s cubic-bezier(0.23, 1, 0.32, 1)';
+            document.body.style.filter = 'blur(10px)';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+                document.body.style.filter = 'blur(0px)';
+            }, 300);
+
+            // Animaciones de entrada premium escalonadas
+            setTimeout(() => {
+                const video = document.querySelector('.video-container');
+                const form = document.querySelector('.form-container');
+                
+                // Estado inicial
+                video.style.opacity = '0';
+                form.style.opacity = '0';
+                video.style.transform = 'translateX(-50%) translateY(50px) scale(0.9)';
+                form.style.transform = 'translateX(-50%) translateY(50px) scale(0.9)';
+                
+                // Entrada del video
+                setTimeout(() => {
+                    video.style.transition = 'all 1.2s cubic-bezier(0.23, 1, 0.32, 1)';
+                    video.style.opacity = '1';
+                    video.style.transform = 'translateX(-50%) translateY(0px) scale(1)';
+                }, 600);
+                
+                // Entrada del formulario
+                setTimeout(() => {
+                    form.style.transition = 'all 1.2s cubic-bezier(0.23, 1, 0.32, 1)';
+                    form.style.opacity = '1';
+                    form.style.transform = 'translateX(-50%) translateY(0px) scale(1)';
+                }, 1000);
+            }, 800);
+        });
+
+        // MANEJO DEL FORMULARIO ULTRA PREMIUM
         document.getElementById('reservationForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -340,138 +617,86 @@
             const btn = document.querySelector('.reserve-btn');
             
             if (email) {
-                // Efecto premium en el botón
-                btn.style.transform = 'translateY(-3px) scale(0.98)';
-                btn.style.background = 'linear-gradient(135deg, #ffd700 0%, #ffeb3b 100%)';
-                btn.innerHTML = 'Redirigiendo...';
+                // Efecto premium ultra HD en el botón
+                btn.style.transform = 'translateY(-5px) scale(0.95)';
+                btn.style.background = 'linear-gradient(135deg, #ffd700 0%, #ffeb3b 50%, #daa520 100%)';
+                btn.style.boxShadow = '0 50px 150px rgba(218, 165, 32, 0.8), 0 0 100px rgba(255, 215, 0, 0.6)';
+                btn.innerHTML = '✨ Redirigiendo...';
                 
-                // Guardar email y redirigir INSTANTÁNEAMENTE
-                console.log('✨ Email capturado con elegancia:', email);
+                console.log('🎩 Email capturado con EXCELENCIA PREMIUM:', email);
                 
+                // Efecto de transición premium
                 setTimeout(() => {
-                    // Redirección PREMIUM INSTANTÁNEA
-                    window.location.href = 'gracias.html';
-                }, 800);
+                    document.body.style.transform = 'scale(1.05)';
+                    document.body.style.opacity = '0.8';
+                    document.body.style.filter = 'blur(5px)';
+                    document.body.style.transition = 'all 0.8s cubic-bezier(0.23, 1, 0.32, 1)';
+                    
+                    setTimeout(() => {
+                        window.location.href = 'gracias.html';
+                    }, 400);
+                }, 600);
             }
         });
 
-        // Validación premium en tiempo real con efectos visuales
+        // VALIDACIÓN PREMIUM EN TIEMPO REAL
         document.getElementById('userEmail').addEventListener('input', function(e) {
             const email = e.target.value;
             const btn = document.querySelector('.reserve-btn');
             const wrapper = e.target.closest('.input-wrapper');
             
             if (email.includes('@') && email.includes('.')) {
-                btn.style.opacity = '1';
-                btn.style.transform = 'scale(1)';
-                btn.style.background = 'linear-gradient(135deg, #daa520 0%, #ffd700 50%, #d4af37 100%)';
+                btn.style.transform = 'scale(1.02)';
+                btn.style.filter = 'brightness(1.1) saturate(1.1)';
                 wrapper.style.filter = 'brightness(1.1)';
+                
+                // Activar borde holográfico
+                const borderEl = wrapper.querySelector('::before');
+                wrapper.style.setProperty('--border-opacity', '1');
             } else {
-                btn.style.opacity = '0.8';
                 btn.style.transform = 'scale(0.98)';
+                btn.style.filter = 'brightness(0.9) saturate(0.9)';
                 wrapper.style.filter = 'brightness(1)';
+                wrapper.style.setProperty('--border-opacity', '0');
             }
         });
 
-        // Efectos premium de hover para el input
+        // EFECTOS PREMIUM DE HOVER
         document.querySelector('.input-wrapper').addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.02)';
-            this.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            this.style.transform = 'scale(1.03)';
+            this.style.transition = 'transform 0.4s cubic-bezier(0.23, 1, 0.32, 1)';
+            this.querySelector('.email-input').style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.5), 0 15px 50px rgba(218, 165, 32, 0.5)';
         });
 
         document.querySelector('.input-wrapper').addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)';
+            this.querySelector('.email-input').style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.6), 0 10px 30px rgba(218, 165, 32, 0.3)';
         });
 
-        // Efecto de carga premium ultra suave
-        window.addEventListener('load', function() {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 200);
-
-            // Animaciones de entrada escalonadas
-            setTimeout(() => {
-                const video = document.querySelector('.video-container');
-                const form = document.querySelector('.form-container');
-                
-                video.style.opacity = '0';
-                form.style.opacity = '0';
-                video.style.transform = 'translateX(-50%) translateY(30px) scale(0.95)';
-                form.style.transform = 'translateX(-50%) translateY(30px) scale(0.95)';
-                
-                setTimeout(() => {
-                    video.style.transition = 'all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                    video.style.opacity = '1';
-                    video.style.transform = 'translateX(-50%) translateY(0px) scale(1)';
-                }, 500);
-                
-                setTimeout(() => {
-                    form.style.transition = 'all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                    form.style.opacity = '1';
-                    form.style.transform = 'translateX(-50%) translateY(0px) scale(1)';
-                }, 800);
-            }, 1000);
-        });
-
-        // Verificar carga de imagen de fondo con feedback premium
-        function checkBackgroundImage() {
-            const container = document.querySelector('.container');
-            const style = window.getComputedStyle(container);
-            const bgImage = style.backgroundImage;
-            
-            if (bgImage && bgImage !== 'none') {
-                console.log('✅ Imagen de fondo cargada con EXCELENCIA');
-                container.style.opacity = '1';
-            } else {
-                console.log('⚠️ Aplicando fallback premium...');
-                // Fallback elegante premium
-                container.style.background = `
-                    radial-gradient(ellipse at 25% 75%, rgba(218, 165, 32, 0.15) 0%, transparent 50%),
-                    radial-gradient(ellipse at 75% 25%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-                    linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 30%, #0a0a0a 70%, #000 100%)
-                `;
-            }
-        }
-
-        // Verificar después de cargar
-        setTimeout(checkBackgroundImage, 800);
-
-        // Optimización premium para diferentes tamaños de pantalla
-        function optimizeForScreen() {
-            const videoContainer = document.querySelector('.video-container');
-            const formContainer = document.querySelector('.form-container');
-            const windowHeight = window.innerHeight;
-            const windowWidth = window.innerWidth;
-            
-            // Ajustes dinámicos premium
-            if (windowHeight < 600 && windowWidth <= 768) {
-                videoContainer.style.top = '64vh';
-                formContainer.style.top = '78vh';
-            } else if (windowHeight > 900 && windowWidth > 1200) {
-                videoContainer.style.top = '76vh';
-                formContainer.style.top = '92vh';
-            }
-        }
-
-        // Ejecutar optimización premium
-        window.addEventListener('load', optimizeForScreen);
-        window.addEventListener('resize', optimizeForScreen);
-
-        // Efecto parallax sutil premium
+        // PARALLAX PREMIUM HD 8K
         let ticking = false;
         
         function updatePremiumParallax() {
             const scrolled = window.pageYOffset;
             const container = document.querySelector('.container');
-            const particles = document.querySelector('.container::before');
+            const video = document.querySelector('.video-container');
+            const form = document.querySelector('.form-container');
+            
+            // Efecto parallax sutil pero premium
+            const parallaxSpeed = scrolled * 0.1;
+            const rotationSpeed = scrolled * 0.02;
             
             if (container) {
-                const speed = scrolled * 0.1;
-                container.style.transform = `translateY(${speed}px)`;
-                container.style.filter = `hue-rotate(${scrolled * 0.02}deg)`;
+                container.style.transform = `translateY(${parallaxSpeed}px)`;
+                container.style.filter = `hue-rotate(${rotationSpeed}deg) brightness(${1 + scrolled * 0.0001})`;
+            }
+            
+            if (video) {
+                video.style.transform = `translateX(-50%) translateY(${-parallaxSpeed * 0.5}px)`;
+            }
+            
+            if (form) {
+                form.style.transform = `translateX(-50%) translateY(${-parallaxSpeed * 0.3}px)`;
             }
             
             ticking = false;
@@ -483,6 +708,54 @@
                 ticking = true;
             }
         });
+
+        // VERIFICACIÓN DE IMÁGENES PREMIUM
+        function checkBackgroundImage() {
+            const container = document.querySelector('.container');
+            const style = window.getComputedStyle(container);
+            const bgImage = style.backgroundImage;
+            
+            if (bgImage && bgImage !== 'none') {
+                console.log('✨ Imágenes HD 8K cargadas con EXCELENCIA SUPREMA');
+                container.style.opacity = '1';
+            } else {
+                console.log('⚠️ Aplicando fallback PREMIUM HD...');
+                container.style.background = `
+                    conic-gradient(from 0deg, rgba(218, 165, 32, 0.3) 0deg, transparent 120deg, rgba(255, 215, 0, 0.2) 240deg, transparent 360deg),
+                    radial-gradient(ellipse at 25% 75%, rgba(218, 165, 32, 0.2) 0%, transparent 50%),
+                    radial-gradient(ellipse at 75% 25%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
+                    linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 30%, #0a0a0a 70%, #000 100%)
+                `;
+            }
+        }
+
+        setTimeout(checkBackgroundImage, 1000);
+
+        // OPTIMIZACIÓN PREMIUM PARA DISPOSITIVOS
+        function optimizeForScreen() {
+            const video = document.querySelector('.video-container');
+            const form = document.querySelector('.form-container');
+            const windowHeight = window.innerHeight;
+            const windowWidth = window.innerWidth;
+            
+            // Ajustes dinámicos premium según el dispositivo
+            if (windowHeight < 700 && windowWidth <= 768) {
+                video.style.bottom = '24vh';
+                form.style.bottom = '6vh';
+            } else if (windowHeight > 900 && windowWidth > 1200) {
+                video.style.bottom = '28vh';
+                form.style.bottom = '10vh';
+            }
+            
+            // Ajustes especiales para pantallas ultra anchas
+            if (windowWidth > 1600) {
+                video.style.maxWidth = '800px';
+                form.style.maxWidth = '600px';
+            }
+        }
+
+        window.addEventListener('load', optimizeForScreen);
+        window.addEventListener('resize', optimizeForScreen);
     </script>
 </body>
 </html>
