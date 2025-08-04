@@ -118,11 +118,11 @@
         /* VIDEO CONTAINER ULTRA PREMIUM HD 8K - POSICIONES CORREGIDAS */
         .video-container {
             position: absolute;
-            width: 48%; /* Un poco más pequeño */
-            max-width: 600px;
+            width: 45%; /* Más pequeño para no tapar */
+            max-width: 550px;
             left: 50%;
             transform: translateX(-50%);
-            bottom: -15vh; /* POSICIÓN MEGA MEGA ABAJO - MUY FUERA DE VISTA DESKTOP */
+            bottom: -80vh; /* SÚPER MEGA ABAJO - QUE NO TAPE NADA */
             border-radius: 25px;
             overflow: hidden;
             background: rgba(0, 0, 0, 0.95);
@@ -175,11 +175,11 @@
         /* FORMULARIO ULTRA PREMIUM HD 8K - POSICIÓN CORREGIDA */
         .form-container {
             position: absolute;
-            width: 42%; /* Un poco más pequeño */
-            max-width: 450px;
+            width: 40%; /* Más pequeño */
+            max-width: 420px;
             left: 50%;
             transform: translateX(-50%);
-            bottom: -40vh; /* POSICIÓN CON BUEN ESPACIO PARA PRESIONAR */
+            bottom: -100vh; /* SÚPER MEGA ABAJO CON ESPACIO PARA PRESIONAR */
             z-index: 20;
         }
 
@@ -307,9 +307,9 @@
         /* RESPONSIVE PREMIUM HD para móvil - POSICIONES CORREGIDAS */
         @media (max-width: 768px) {
             .video-container {
-                width: 88%;
-                max-width: 360px;
-                bottom: 25vh; /* Posición BUENA para móvil - se ve el video */
+                width: 90%;
+                max-width: 380px;
+                bottom: 35vh; /* Posición VISIBLE para móvil */
                 border-radius: 20px;
                 border: 3px solid transparent;
             }
@@ -319,14 +319,14 @@
             }
 
             .form-container {
-                width: 88%;
-                max-width: 360px;
-                bottom: 5vh; /* Posición con BUEN espacio para presionar */
+                width: 90%;
+                max-width: 380px;
+                bottom: 15vh; /* Posición VISIBLE con espacio para presionar */
             }
             
             .extra-space {
-                bottom: -5vh;
-                height: 20vh; /* ESPACIO ADECUADO PARA MÓVIL */
+                bottom: 5vh;
+                height: 15vh; /* ESPACIO NORMAL PARA MÓVIL */
             }
         }
 
@@ -348,7 +348,7 @@
             .video-container {
                 width: 95%;
                 max-width: 350px;
-                bottom: 22vh; /* BUENA posición para móvil pequeño */
+                bottom: 32vh; /* Posición VISIBLE para móvil pequeño */
                 border-radius: 18px;
             }
 
@@ -359,7 +359,7 @@
             .form-container {
                 width: 95%;
                 max-width: 350px;
-                bottom: 2vh; /* BUEN espacio para presionar en móvil pequeño */
+                bottom: 12vh; /* Posición VISIBLE con espacio para presionar */
             }
         }
 
@@ -487,12 +487,12 @@
         /* OPTIMIZACIONES PARA LANDSCAPE EN MÓVIL */
         @media (max-width: 768px) and (orientation: landscape) {
             .video-container {
-                bottom: 20vh; /* BUENA posición en landscape */
+                bottom: 30vh; /* Posición VISIBLE en landscape */
                 width: 60%;
             }
             
             .form-container {
-                bottom: 5vh; /* BUEN espacio en landscape */
+                bottom: 10vh; /* Posición VISIBLE en landscape */
                 width: 50%;
             }
         }
@@ -685,11 +685,11 @@
             
             // Ajustes dinámicos premium según el dispositivo
             if (windowHeight < 700 && windowWidth <= 768) {
-                video.style.bottom = '28vh';
-                form.style.bottom = '8vh';
+                video.style.bottom = '38vh';
+                form.style.bottom = '18vh';
             } else if (windowHeight > 900 && windowWidth > 1200) {
-                video.style.bottom = '-20vh'; /* MUY MUY ABAJO en desktop grande */
-                form.style.bottom = '-45vh'; /* CON ESPACIO PARA PRESIONAR */
+                video.style.bottom = '-90vh'; /* SÚPER ABAJO en desktop grande */
+                form.style.bottom = '-110vh'; /* SÚPER ABAJO CON ESPACIO PARA PRESIONAR */
             }
             
             // Ajustes especiales para pantallas ultra anchas
