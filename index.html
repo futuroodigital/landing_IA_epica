@@ -122,7 +122,7 @@
             max-width: 600px;
             left: 50%;
             transform: translateX(-50%);
-            bottom: -5vh; /* POSICIÓN MEGA ABAJO - FUERA DE VISTA INICIAL DESKTOP */
+            bottom: -15vh; /* POSICIÓN MEGA MEGA ABAJO - MUY FUERA DE VISTA DESKTOP */
             border-radius: 25px;
             overflow: hidden;
             background: rgba(0, 0, 0, 0.95);
@@ -179,7 +179,7 @@
             max-width: 450px;
             left: 50%;
             transform: translateX(-50%);
-            bottom: -30vh; /* POSICIÓN MEGA ABAJO PERO CON ESPACIO PARA PRESIONAR */
+            bottom: -40vh; /* POSICIÓN CON BUEN ESPACIO PARA PRESIONAR */
             z-index: 20;
         }
 
@@ -309,7 +309,7 @@
             .video-container {
                 width: 88%;
                 max-width: 360px;
-                bottom: 15vh; /* Posición BUENA para móvil - se ve el video */
+                bottom: 25vh; /* Posición BUENA para móvil - se ve el video */
                 border-radius: 20px;
                 border: 3px solid transparent;
             }
@@ -321,12 +321,12 @@
             .form-container {
                 width: 88%;
                 max-width: 360px;
-                bottom: -8vh; /* Posición con espacio para presionar */
+                bottom: 5vh; /* Posición con BUEN espacio para presionar */
             }
             
             .extra-space {
-                bottom: -20vh;
-                height: 30vh;
+                bottom: -5vh;
+                height: 20vh; /* ESPACIO ADECUADO PARA MÓVIL */
             }
         }
 
@@ -348,7 +348,7 @@
             .video-container {
                 width: 95%;
                 max-width: 350px;
-                bottom: 3vh; /* ULTRA ABAJO para móvil pequeño */
+                bottom: 22vh; /* BUENA posición para móvil pequeño */
                 border-radius: 18px;
             }
 
@@ -359,8 +359,9 @@
             .form-container {
                 width: 95%;
                 max-width: 350px;
-                bottom: -18vh; /* ULTRA ABAJO para móvil pequeño */
+                bottom: 2vh; /* BUEN espacio para presionar en móvil pequeño */
             }
+        }
 
             .email-input {
                 padding: 1.2rem 1.6rem;
@@ -486,12 +487,12 @@
         /* OPTIMIZACIONES PARA LANDSCAPE EN MÓVIL */
         @media (max-width: 768px) and (orientation: landscape) {
             .video-container {
-                bottom: 8vh; /* ULTRA ABAJO en landscape */
+                bottom: 20vh; /* BUENA posición en landscape */
                 width: 60%;
             }
             
             .form-container {
-                bottom: -12vh; /* ULTRA ABAJO en landscape */
+                bottom: 5vh; /* BUEN espacio en landscape */
                 width: 50%;
             }
         }
@@ -684,11 +685,11 @@
             
             // Ajustes dinámicos premium según el dispositivo
             if (windowHeight < 700 && windowWidth <= 768) {
-                video.style.bottom = '18vh';
-                form.style.bottom = '-5vh';
+                video.style.bottom = '28vh';
+                form.style.bottom = '8vh';
             } else if (windowHeight > 900 && windowWidth > 1200) {
-                video.style.bottom = '-8vh'; /* MUY ABAJO en desktop grande */
-                form.style.bottom = '-35vh';
+                video.style.bottom = '-20vh'; /* MUY MUY ABAJO en desktop grande */
+                form.style.bottom = '-45vh'; /* CON ESPACIO PARA PRESIONAR */
             }
             
             // Ajustes especiales para pantallas ultra anchas
