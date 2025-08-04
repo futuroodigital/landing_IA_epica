@@ -220,7 +220,7 @@
             animation: premiumReflectionShimmer 6s ease-in-out infinite;
         }
 
-        /* Subtítulo cursivo premium CLICKEABLE - CON INDICADOR */
+        /* Subtítulo cursivo premium CLICKEABLE - PARECE BOTÓN */
         .subtitle {
             font-family: 'Playfair Display', serif;
             font-style: italic;
@@ -229,12 +229,19 @@
             margin-bottom: 3.5rem;
             font-weight: 600;
             position: relative;
-            padding: 0;
-            border-radius: 0;
-            background: transparent;
-            backdrop-filter: none;
-            border: none;
-            box-shadow: none;
+            padding: 2rem 3rem; /* PADDING COMO BOTÓN */
+            border-radius: 25px; /* BORDES REDONDEADOS COMO BOTÓN */
+            background: linear-gradient(135deg, 
+                rgba(218, 165, 32, 0.2) 0%, 
+                rgba(0, 0, 0, 0.4) 30%,
+                rgba(255, 215, 0, 0.15) 70%,
+                rgba(212, 175, 55, 0.25) 100%); /* FONDO COMO BOTÓN */
+            backdrop-filter: blur(35px); /* EFECTO CRISTAL */
+            border: 2px solid rgba(218, 165, 32, 0.6); /* BORDE DORADO */
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.3),
+                0 10px 30px rgba(218, 165, 32, 0.4),
+                inset 0 2px 0 rgba(255, 255, 255, 0.2); /* SOMBRAS PREMIUM */
             text-shadow: 
                 0 2px 15px rgba(0, 0, 0, 0.6),
                 0 0 30px rgba(218, 165, 32, 0.3),
@@ -243,11 +250,12 @@
             animation: premiumSubtitleFloat 8s ease-in-out infinite;
             cursor: pointer;
             transition: all 0.3s ease;
+            text-align: center; /* CENTRADO COMO BOTÓN */
         }
 
         /* Indicador visual de que es clickeable */
         .subtitle::after {
-            content: '👆 Haz clic aquí para ir DIRECTO al grupo';
+            content: '👆 Clic para ir al botón VIP';
             position: absolute;
             bottom: -35px;
             left: 50%;
@@ -259,9 +267,20 @@
             animation: clickIndicator 2s ease-in-out infinite;
         }
 
-        /* Efecto hover RÁPIDO para el subtítulo clickeable */
+        /* Efecto hover COMO BOTÓN para el subtítulo clickeable */
         .subtitle:hover {
-            transform: scale(1.05);
+            transform: scale(1.05) translateY(-3px);
+            background: linear-gradient(135deg, 
+                rgba(218, 165, 32, 0.3) 0%, 
+                rgba(0, 0, 0, 0.5) 30%,
+                rgba(255, 215, 0, 0.2) 70%,
+                rgba(212, 175, 55, 0.35) 100%);
+            border-color: rgba(218, 165, 32, 0.8);
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.4),
+                0 15px 50px rgba(218, 165, 32, 0.6),
+                0 0 60px rgba(255, 215, 0, 0.4),
+                inset 0 3px 0 rgba(255, 255, 255, 0.3);
             text-shadow: 
                 0 2px 20px rgba(0, 0, 0, 0.8),
                 0 0 40px rgba(218, 165, 32, 0.5),
@@ -1018,17 +1037,23 @@
             .subtitle {
                 font-family: 'Playfair Display', serif;
                 font-style: italic;
-                padding: 2rem 2.5rem;
+                padding: 1.8rem 2.5rem; /* MANTENER ESTILO BOTÓN */
                 margin-bottom: 3rem;
                 font-size: clamp(1.15rem, 4.2vw, 1.6rem);
-                border-radius: 20px;
+                border-radius: 20px; /* MANTENER BORDES REDONDEADOS */
                 backdrop-filter: blur(25px);
+                border: 2px solid rgba(218, 165, 32, 0.5); /* MANTENER BORDE */
+                background: linear-gradient(135deg, 
+                    rgba(218, 165, 32, 0.18) 0%, 
+                    rgba(0, 0, 0, 0.4) 30%,
+                    rgba(255, 215, 0, 0.15) 70%,
+                    rgba(212, 175, 55, 0.2) 100%); /* MANTENER FONDO BOTÓN */
             }
 
             .subtitle::after {
                 bottom: -30px;
                 font-size: 0.8rem;
-                content: '👆 Clic para ir DIRECTO al grupo';
+                content: '👆 Clic para ir al botón VIP';
             }
 
             .whatsapp-container {
@@ -1124,14 +1149,21 @@
             }
 
             .subtitle {
-                padding: 1.8rem 2.2rem;
+                padding: 1.6rem 2rem; /* MANTENER ESTILO BOTÓN */
                 font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+                border-radius: 18px; /* MANTENER BORDES REDONDEADOS */
+                border: 2px solid rgba(218, 165, 32, 0.4); /* MANTENER BORDE */
+                background: linear-gradient(135deg, 
+                    rgba(218, 165, 32, 0.15) 0%, 
+                    rgba(0, 0, 0, 0.35) 30%,
+                    rgba(255, 215, 0, 0.12) 70%,
+                    rgba(212, 175, 55, 0.18) 100%); /* MANTENER FONDO BOTÓN */
             }
 
             .subtitle::after {
                 bottom: -28px;
                 font-size: 0.75rem;
-                content: '👆 Clic → Grupo directo';
+                content: '👆 Clic → Botón VIP';
             }
 
             .whatsapp-3d {
@@ -1232,7 +1264,7 @@
             </h1>
 
             <div class="subtitle" onclick="goToWhatsApp()">
-                Tu lugar VIP está confirmado
+                Tu lugar VIP está confirmado<br>
                 <span class="highlight-text">ÚNETE AL GRUPO EXCLUSIVO</span>
                 <span class="checkmark">✅</span>
             </div>
@@ -1298,10 +1330,52 @@
     </div>
 
     <script>
-        // FUNCIÓN DIRECTA AL WHATSAPP - ULTRA RÁPIDA
+        // FUNCIÓN PARA SCROLL AL BOTÓN Y PONERLO ARRIBA
         function goToWhatsApp() {
-            // Ir DIRECTO al enlace de WhatsApp SIN scroll
-            window.open('https://chat.whatsapp.com/Dh8bRstWYHKDmm84vxyNZq', '_blank');
+            const button = document.getElementById('whatsappButton');
+            const benefitsTitle = document.querySelector('.benefits-title');
+            
+            // Hacer scroll suave hacia los beneficios para que el botón quede arriba
+            benefitsTitle.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start',
+                inline: 'nearest' 
+            });
+            
+            // Después de 800ms, hacer efectos de atención en el botón
+            setTimeout(() => {
+                // Efecto de atención premium en el botón
+                button.style.animation = 'premiumBtnAttention 3s ease-in-out infinite';
+                button.style.transform = 'translateY(-8px) scale(1.1)';
+                button.style.boxShadow = '0 50px 150px rgba(37, 211, 102, 0.8), 0 30px 100px rgba(218, 165, 32, 0.6), 0 0 100px rgba(255, 215, 0, 0.4)';
+                button.style.filter = 'brightness(1.3) saturate(1.2)';
+                
+                // Efecto de parpadeo en el texto del botón
+                const buttonText = button.innerHTML;
+                let isFlashing = true;
+                const flashInterval = setInterval(() => {
+                    if (isFlashing) {
+                        button.innerHTML = '🚀✨ ¡CLICK AQUÍ AHORA! ✨🚀';
+                        button.style.background = 'linear-gradient(135deg, #25D366 0%, #ffd700 20%, #ffeb3b 40%, #25D366 60%, #1ead5e 80%, #128C7E 100%)';
+                    } else {
+                        button.innerHTML = buttonText;
+                        button.style.background = 'linear-gradient(135deg, #25D366 0%, #1ead5e 20%, #128C7E 40%, #0f7a6b 60%, #075E54 80%, #128C7E 100%)';
+                    }
+                    isFlashing = !isFlashing;
+                }, 800);
+                
+                // Parar el parpadeo después de 8 segundos
+                setTimeout(() => {
+                    clearInterval(flashInterval);
+                    button.innerHTML = buttonText;
+                    button.style.animation = '';
+                    button.style.transform = '';
+                    button.style.boxShadow = '';
+                    button.style.filter = '';
+                    button.style.background = '';
+                }, 8000);
+                
+            }, 800);
         }
 
         // CARGA ULTRA PREMIUM - OPTIMIZADA
@@ -1388,8 +1462,19 @@
 
         // Animación de atención para el botón
         @keyframes premiumBtnAttention {
-            0%, 100% { transform: translateY(-6px) scale(1.03); }
-            50% { transform: translateY(-10px) scale(1.08); }
+            0%, 100% { 
+                transform: translateY(-8px) scale(1.05); 
+                box-shadow: 
+                    0 50px 150px rgba(37, 211, 102, 0.8), 
+                    0 30px 100px rgba(218, 165, 32, 0.6);
+            }
+            50% { 
+                transform: translateY(-12px) scale(1.1); 
+                box-shadow: 
+                    0 60px 180px rgba(37, 211, 102, 1), 
+                    0 40px 120px rgba(218, 165, 32, 0.8),
+                    0 0 120px rgba(255, 215, 0, 0.6);
+            }
         }
     </script>
 
