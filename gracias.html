@@ -3,27 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Bienvenido al Diplomado en IA! | Futuro Digital</title>
-    <meta name="description" content="¡Felicitaciones! Tu inscripción ha sido confirmada. Únete a nuestro grupo exclusivo de WhatsApp para comenzar tu transformación profesional.">
+    <title>Registro Confirmado - Masterclass IA | Futuro Digital</title>
+    <meta name="description" content="Tu lugar en la masterclass está confirmado. Únete a nuestro grupo VIP y prepárate para transformar tu carrera en IA.">
     
     <!-- Fuentes premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --gold-primary: #D4AF37;
-            --gold-light: #FFB300;
+            --primary-gold: #D4AF37;
+            --gold-light: #E6C757;
             --gold-dark: #B8860B;
-            --black-primary: #000000;
-            --black-soft: #0d0d0d;
-            --black-medium: #1a1a1a;
-            --white: #ffffff;
-            --white-soft: rgba(255, 255, 255, 0.9);
-            --green-success: #10b981;
-            --green-light: #34d399;
-            --blue-trust: #1e40af;
+            --accent-blue: #2563EB;
+            --accent-green: #10B981;
+            --success-green: #059669;
+            --neutral-50: #FAFAFA;
+            --neutral-100: #F5F5F5;
+            --neutral-200: #E5E5E5;
+            --neutral-300: #D4D4D4;
+            --neutral-400: #A3A3A3;
+            --neutral-500: #737373;
+            --neutral-600: #525252;
+            --neutral-700: #404040;
+            --neutral-800: #262626;
+            --neutral-900: #171717;
+            --neutral-950: #0A0A0A;
+            --white: #FFFFFF;
+            
+            --gradient-primary: linear-gradient(135deg, var(--primary-gold) 0%, var(--gold-light) 100%);
+            --gradient-success: linear-gradient(135deg, var(--accent-green) 0%, var(--success-green) 100%);
+            --gradient-surface: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
+            --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            --shadow-glow: 0 0 30px rgba(212, 175, 55, 0.15);
+            --shadow-success-glow: 0 0 30px rgba(16, 185, 129, 0.15);
+            
+            --border-radius-sm: 0.375rem;
+            --border-radius-md: 0.5rem;
+            --border-radius-lg: 0.75rem;
+            --border-radius-xl: 1rem;
+            --border-radius-2xl: 1.5rem;
         }
 
         * {
@@ -32,182 +58,239 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--black-primary);
-            color: var(--white);
-            overflow-x: hidden;
-            min-height: 100vh;
-            position: relative;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* Fondo animado premium */
-        .background-animation {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--neutral-950);
+            color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        /* FONDO PREMIUM CON EFECTOS DE CELEBRACIÓN SUTILES */
+        .premium-background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
-                radial-gradient(ellipse at 25% 25%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 75% 75%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, rgba(30, 64, 175, 0.04) 0%, transparent 60%),
-                linear-gradient(135deg, var(--black-primary) 0%, var(--black-soft) 30%, var(--black-medium) 70%, var(--black-primary) 100%);
-            z-index: -2;
+            z-index: -10;
+            background: var(--gradient-surface);
         }
 
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .celebration-grid {
+            position: absolute;
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.3) 1px, transparent 1px),
-                radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.2) 0.8px, transparent 0.8px),
-                radial-gradient(circle at 40% 80%, rgba(30, 64, 175, 0.25) 0.6px, transparent 0.6px);
-            background-size: 200px 200px, 150px 150px, 100px 100px;
-            animation: particleFloat 30s ease-in-out infinite;
-            z-index: -1;
-            opacity: 0.6;
+                radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.02) 0%, transparent 50%);
+            background-size: 600px 600px, 800px 800px, 400px 400px;
+            animation: celebrationShift 40s ease-in-out infinite;
         }
 
-        .container {
+        .success-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 75%, rgba(16, 185, 129, 0.02) 1px, transparent 1px),
+                radial-gradient(circle at 75% 25%, rgba(212, 175, 55, 0.02) 1px, transparent 1px);
+            background-size: 120px 120px, 80px 80px;
+            animation: patternFloat 30s linear infinite;
+        }
+
+        /* HEADER PREMIUM */
+        .header-premium {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(24px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        .logo-premium {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-mark {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-success);
+            border-radius: var(--border-radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--white);
+            box-shadow: var(--shadow-success-glow);
+            animation: logoSuccessPulse 4s ease-in-out infinite;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 700;
+            background: var(--gradient-success);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+        }
+
+        .brand-tagline {
+            font-size: 0.75rem;
+            color: var(--neutral-400);
+            font-weight: 400;
+            letter-spacing: 0.025em;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .main-container {
             position: relative;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 8rem 2rem 4rem;
             text-align: center;
-            z-index: 10;
         }
 
-        /* Header con logo */
-        .header-logo {
-            position: absolute;
-            top: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 100;
-        }
-
-        .logo-brand {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 2rem;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .logo-symbol {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--black-primary);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .brand-info h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--gold-primary);
-            margin-bottom: 0.2rem;
-        }
-
-        .brand-info p {
-            font-size: 0.75rem;
-            color: var(--white-soft);
-            font-weight: 300;
-        }
-
-        /* Contenido principal */
-        .content {
-            max-width: 900px;
+        .content-wrapper {
+            max-width: 1200px;
             width: 100%;
-            margin-top: 6rem;
         }
 
-        /* Icono de éxito */
+        /* ICONO DE ÉXITO ELEGANTE */
         .success-icon {
             width: 120px;
             height: 120px;
-            background: linear-gradient(135deg, var(--green-success), var(--green-light));
+            background: var(--gradient-success);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 3.5rem;
+            color: var(--white);
             margin: 0 auto 3rem auto;
-            font-size: 4rem;
-            color: white;
             box-shadow: 
-                0 20px 60px rgba(16, 185, 129, 0.3),
-                0 0 0 20px rgba(16, 185, 129, 0.1);
-            animation: successPulse 3s ease-in-out infinite;
+                var(--shadow-2xl),
+                var(--shadow-success-glow),
+                0 0 0 20px rgba(16, 185, 129, 0.05),
+                0 0 0 40px rgba(16, 185, 129, 0.02);
+            animation: successIconPulse 4s ease-in-out infinite;
+            position: relative;
         }
 
-        /* Título principal */
+        .success-icon::after {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            background: conic-gradient(from 0deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+            border-radius: 50%;
+            z-index: -1;
+            animation: iconHalo 8s linear infinite;
+        }
+
+        /* TÍTULO PRINCIPAL */
         .main-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             background: linear-gradient(
                 135deg,
-                var(--green-success) 0%,
-                var(--gold-primary) 30%,
-                var(--green-light) 60%,
-                var(--white) 100%
+                var(--white) 0%,
+                var(--accent-green) 25%,
+                var(--primary-gold) 50%,
+                var(--white) 75%,
+                var(--accent-green) 100%
             );
-            background-size: 400% 400%;
+            background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: titleGradient 8s ease-in-out infinite;
+            animation: titleSuccessShimmer 6s ease-in-out infinite;
+            letter-spacing: -0.02em;
         }
 
-        /* Subtítulo */
+        /* SUBTÍTULO */
         .subtitle {
-            font-size: clamp(1.2rem, 4vw, 1.8rem);
-            color: var(--white-soft);
-            margin-bottom: 3rem;
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            color: var(--neutral-300);
+            margin-bottom: 4rem;
             line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .highlight {
-            color: var(--gold-primary);
+        .highlight-success {
+            color: var(--accent-green);
             font-weight: 600;
         }
 
-        /* Pasos a seguir */
+        /* PASOS SIGUIENTES */
         .next-steps {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 3rem;
-            margin: 3rem 0;
+            background: var(--gradient-card);
+            backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            border-radius: var(--border-radius-2xl);
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: var(--shadow-2xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .next-steps::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-success);
         }
 
         .steps-title {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
             font-weight: 700;
-            color: var(--gold-primary);
-            margin-bottom: 2rem;
+            color: var(--white);
+            margin-bottom: 2.5rem;
+            text-align: center;
         }
 
         .step-item {
@@ -216,44 +299,47 @@
             gap: 1.5rem;
             margin-bottom: 2rem;
             padding: 1.5rem;
-            background: rgba(16, 185, 129, 0.05);
-            border-radius: 16px;
+            background: rgba(16, 185, 129, 0.03);
             border: 1px solid rgba(16, 185, 129, 0.1);
-            transition: all 0.3s ease;
+            border-radius: var(--border-radius-xl);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .step-item:hover {
-            transform: translateX(10px);
-            border-color: rgba(16, 185, 129, 0.3);
+            transform: translateY(-2px);
+            border-color: rgba(16, 185, 129, 0.2);
+            background: rgba(16, 185, 129, 0.05);
+            box-shadow: var(--shadow-lg);
         }
 
         .step-number {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--green-success), var(--green-light));
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-success);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.1rem;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.125rem;
             flex-shrink: 0;
+            box-shadow: var(--shadow-success-glow);
         }
 
         .step-content h3 {
             color: var(--white);
-            font-size: 1.2rem;
+            font-size: 1.125rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
         .step-content p {
-            color: var(--white-soft);
+            color: var(--neutral-300);
             line-height: 1.6;
         }
 
-        /* Botón de WhatsApp principal */
+        /* BOTÓN WHATSAPP PREMIUM */
         .whatsapp-section {
             margin: 4rem 0;
         }
@@ -261,43 +347,35 @@
         .whatsapp-btn {
             display: inline-flex;
             align-items: center;
-            gap: 1.5rem;
-            padding: 2rem 4rem;
+            gap: 1rem;
+            padding: 1.25rem 2.5rem;
             background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            color: white;
+            color: var(--white);
             text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.3rem;
+            border-radius: var(--border-radius-2xl);
+            font-size: 1.125rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.025em;
             box-shadow: 
-                0 20px 60px rgba(37, 211, 102, 0.4),
-                0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                var(--shadow-xl),
+                0 0 30px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            border: 3px solid transparent;
+            border: 2px solid transparent;
             background-clip: padding-box;
-            animation: whatsappPulse 4s ease-in-out infinite;
         }
 
         .whatsapp-btn::before {
             content: '';
             position: absolute;
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            background: linear-gradient(45deg, 
-                var(--gold-primary) 0%,
-                var(--green-success) 25%,
-                var(--gold-light) 50%,
-                var(--green-light) 75%,
-                var(--gold-primary) 100%);
-            border-radius: 53px;
+            inset: -2px;
+            background: var(--gradient-success);
+            border-radius: var(--border-radius-2xl);
             z-index: -1;
-            animation: borderRotate 6s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .whatsapp-btn::after {
@@ -309,38 +387,42 @@
             height: 100%;
             background: linear-gradient(90deg, 
                 transparent, 
-                rgba(255, 255, 255, 0.3), 
+                rgba(255, 255, 255, 0.2), 
                 transparent);
-            transition: left 0.8s ease;
+            transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .whatsapp-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 
-                0 30px 80px rgba(37, 211, 102, 0.5),
-                0 15px 40px rgba(0, 0, 0, 0.3);
+        .whatsapp-btn:hover::before {
+            opacity: 1;
         }
 
         .whatsapp-btn:hover::after {
             left: 100%;
         }
 
-        .whatsapp-icon {
-            font-size: 2rem;
-            animation: iconBounce 2s ease-in-out infinite;
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                var(--shadow-2xl),
+                0 0 40px rgba(37, 211, 102, 0.4);
         }
 
-        /* Lista de beneficios */
+        .whatsapp-icon {
+            font-size: 1.5rem;
+            animation: whatsappBounce 2s ease-in-out infinite;
+        }
+
+        /* BENEFICIOS INSTANTÁNEOS */
         .benefits-section {
-            margin: 4rem 0;
+            margin: 6rem 0;
         }
 
         .benefits-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-size: clamp(2rem, 4vw, 2.75rem);
             font-weight: 700;
-            color: var(--gold-primary);
-            margin-bottom: 2.5rem;
+            color: var(--white);
+            margin-bottom: 3rem;
             text-align: center;
         }
 
@@ -348,107 +430,151 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         .benefit-card {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(15px);
-            border-radius: 20px;
-            padding: 2.5rem;
+            background: var(--gradient-card);
+            backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            border-radius: var(--border-radius-xl);
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .benefit-card:hover::before {
+            transform: scaleX(1);
         }
 
         .benefit-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             border-color: rgba(212, 175, 55, 0.3);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: var(--shadow-2xl);
         }
 
         .benefit-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
-            border-radius: 16px;
+            width: 4rem;
+            height: 4rem;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            color: var(--black-primary);
+            color: var(--neutral-900);
+            box-shadow: var(--shadow-glow);
         }
 
         .benefit-card h3 {
             color: var(--white);
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 1.25rem;
+            font-weight: 700;
             margin-bottom: 1rem;
         }
 
         .benefit-card p {
-            color: var(--white-soft);
+            color: var(--neutral-300);
             line-height: 1.6;
         }
 
-        /* Información adicional */
+        /* INFORMACIÓN IMPORTANTE */
         .info-section {
-            background: rgba(30, 64, 175, 0.05);
-            border: 1px solid rgba(30, 64, 175, 0.2);
-            border-radius: 20px;
-            padding: 3rem;
+            background: rgba(37, 99, 235, 0.03);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: var(--border-radius-xl);
+            padding: 2.5rem;
             margin: 4rem 0;
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.1);
         }
 
         .info-title {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--blue-trust);
+            color: var(--accent-blue);
             margin-bottom: 1.5rem;
+            text-align: center;
         }
 
         .info-content {
-            color: var(--white-soft);
+            color: var(--neutral-300);
             line-height: 1.7;
-            font-size: 1.1rem;
         }
 
         .info-content strong {
             color: var(--white);
+            font-weight: 600;
         }
 
-        /* Footer minimalista */
+        .info-content p {
+            margin-bottom: 1rem;
+        }
+
+        /* LLAMADA FINAL */
+        .final-cta {
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius-2xl);
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+            color: var(--neutral-900);
+            box-shadow: var(--shadow-2xl), var(--shadow-glow);
+        }
+
+        .final-cta-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        /* FOOTER */
         .footer {
             margin-top: 6rem;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             text-align: center;
         }
 
         .footer-content {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
+            color: var(--neutral-400);
+            font-size: 0.875rem;
         }
 
         .footer-brand {
-            color: var(--gold-primary);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
         }
 
-        /* Responsive */
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
+            .main-container {
+                padding: 6rem 1rem 2rem;
             }
 
-            .content {
-                margin-top: 8rem;
-            }
-
-            .header-logo {
-                transform: translateX(-50%) scale(0.9);
+            .success-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 3rem;
             }
 
             .next-steps {
@@ -456,13 +582,8 @@
             }
 
             .whatsapp-btn {
-                padding: 1.5rem 3rem;
-                font-size: 1.1rem;
-                gap: 1rem;
-            }
-
-            .whatsapp-icon {
-                font-size: 1.8rem;
+                padding: 1rem 2rem;
+                font-size: 1rem;
             }
 
             .benefits-grid {
@@ -474,242 +595,270 @@
                 text-align: center;
                 gap: 1rem;
             }
+
+            .final-cta {
+                padding: 2rem;
+            }
         }
 
-        /* Animaciones */
-        @keyframes particleFloat {
+        /* ANIMACIONES ELEGANTES */
+        @keyframes celebrationShift {
             0%, 100% { 
-                background-position: 0px 0px, 50px 50px, 25px 25px;
-                transform: rotate(0deg);
+                background-position: 0% 50%, 100% 50%, 50% 0%;
             }
             50% { 
-                background-position: 100px -50px, 150px 25px, 75px 12px;
-                transform: rotate(2deg);
+                background-position: 100% 50%, 0% 50%, 50% 100%;
             }
         }
 
-        @keyframes successPulse {
+        @keyframes patternFloat {
+            0% { 
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% { 
+                transform: translateY(-20px) rotate(180deg);
+            }
+            100% { 
+                transform: translateY(0px) rotate(360deg);
+            }
+        }
+
+        @keyframes logoSuccessPulse {
+            0%, 100% { 
+                box-shadow: var(--shadow-success-glow);
+            }
+            50% { 
+                box-shadow: 
+                    var(--shadow-success-glow),
+                    0 0 50px rgba(16, 185, 129, 0.3);
+            }
+        }
+
+        @keyframes successIconPulse {
             0%, 100% { 
                 transform: scale(1);
                 box-shadow: 
-                    0 20px 60px rgba(16, 185, 129, 0.3),
-                    0 0 0 20px rgba(16, 185, 129, 0.1);
+                    var(--shadow-2xl),
+                    var(--shadow-success-glow),
+                    0 0 0 20px rgba(16, 185, 129, 0.05),
+                    0 0 0 40px rgba(16, 185, 129, 0.02);
             }
             50% { 
                 transform: scale(1.05);
                 box-shadow: 
-                    0 25px 80px rgba(16, 185, 129, 0.4),
-                    0 0 0 30px rgba(16, 185, 129, 0.15);
+                    var(--shadow-2xl),
+                    0 0 50px rgba(16, 185, 129, 0.3),
+                    0 0 0 30px rgba(16, 185, 129, 0.08),
+                    0 0 0 60px rgba(16, 185, 129, 0.04);
             }
         }
 
-        @keyframes titleGradient {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes whatsappPulse {
-            0%, 100% { 
-                transform: scale(1);
-                box-shadow: 
-                    0 20px 60px rgba(37, 211, 102, 0.4),
-                    0 10px 30px rgba(0, 0, 0, 0.2);
-            }
-            50% { 
-                transform: scale(1.02);
-                box-shadow: 
-                    0 25px 80px rgba(37, 211, 102, 0.5),
-                    0 15px 40px rgba(0, 0, 0, 0.25);
-            }
-        }
-
-        @keyframes borderRotate {
+        @keyframes iconHalo {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-        @keyframes iconBounce {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-3px) rotate(5deg); }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+        @keyframes titleSuccessShimmer {
+            0%, 100% { 
+                background-position: 0% 50%;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            50% { 
+                background-position: 100% 50%;
             }
         }
 
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
+        @keyframes whatsappBounce {
+            0%, 100% { 
+                transform: translateY(0px);
+            }
+            50% { 
+                transform: translateY(-3px);
+            }
         }
 
-        /* Scrollbar personalizado */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* SCROLLBAR PERSONALIZADO */
         ::-webkit-scrollbar {
             width: 8px;
         }
 
         ::-webkit-scrollbar-track {
-            background: var(--black-primary);
+            background: var(--neutral-900);
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--gold-primary), var(--gold-light));
+            background: var(--gradient-success);
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, var(--gold-light), var(--gold-primary));
+            background: linear-gradient(180deg, var(--accent-green), var(--success-green));
         }
     </style>
 </head>
 <body>
-    <!-- Fondo animado -->
-    <div class="background-animation"></div>
-    <div class="particles"></div>
+    <!-- FONDO PREMIUM -->
+    <div class="premium-background">
+        <div class="celebration-grid"></div>
+        <div class="success-pattern"></div>
+    </div>
 
-    <!-- Header con logo -->
-    <header class="header-logo">
-        <div class="logo-brand">
-            <div class="logo-symbol">FD</div>
-            <div class="brand-info">
-                <h1>Futuro Digital</h1>
-                <p>Educación Tecnológica Premium</p>
+    <!-- HEADER PREMIUM -->
+    <header class="header-premium">
+        <div class="nav-container">
+            <div class="logo-premium">
+                <div class="logo-mark">FD</div>
+                <div class="brand-text">
+                    <div class="brand-name">Futuro Digital</div>
+                    <div class="brand-tagline">by Síntesis • 25+ años</div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Contenido principal -->
-    <div class="container">
-        <div class="content">
-            <!-- Icono de éxito -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-container">
+        <div class="content-wrapper">
+            <!-- ICONO DE ÉXITO -->
             <div class="success-icon">
-                ✅
+                ✓
             </div>
 
-            <!-- Título principal -->
+            <!-- TÍTULO PRINCIPAL -->
             <h1 class="main-title">
-                ¡Inscripción Confirmada!
+                ¡Registro Confirmado!
             </h1>
 
-            <!-- Subtítulo -->
+            <!-- SUBTÍTULO -->
             <p class="subtitle">
-                Bienvenido al <span class="highlight">Diplomado en Inteligencia Artificial</span>. 
-                Tu transformación profesional comienza ahora.
+                Excelente decisión. Tu lugar en la <span class="highlight-success">Masterclass "Desarrolla tu Primera IA"</span> está asegurado. Ahora únete a nuestro grupo VIP para acceder a contenido exclusivo.
             </p>
 
-            <!-- Próximos pasos -->
-            <div class="next-steps fade-in-up">
-                <h2 class="steps-title">Próximos Pasos</h2>
+            <!-- PRÓXIMOS PASOS -->
+            <div class="next-steps fade-in">
+                <h2 class="steps-title">Tus Próximos Pasos</h2>
                 
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h3>Únete a Nuestro Grupo Exclusivo</h3>
-                        <p>Accede al grupo privado de WhatsApp donde compartiremos información importante, fechas de inicio, y te conectarás con otros estudiantes.</p>
+                        <h3>Únete al Grupo VIP de WhatsApp</h3>
+                        <p>Acceso inmediato a la comunidad exclusiva de futuros especialistas en IA. Aquí recibirás el enlace directo a la masterclass, material premium y networking de alto valor.</p>
                     </div>
                 </div>
 
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>Recibe tu Kit de Bienvenida</h3>
-                        <p>En las próximas 24 horas recibirás un email con todos los recursos necesarios para comenzar el programa, incluyendo acceso a la plataforma.</p>
+                        <h3>Revisa tu Email de Confirmación</h3>
+                        <p>En los próximos 15 minutos recibirás tu kit de bienvenida completo: enlace de acceso, agenda detallada, recursos descargables y tu código de descuento especial.</p>
                     </div>
                 </div>
 
                 <div class="step-item">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h3>Prepárate para el Éxito</h3>
-                        <p>Nuestro equipo se pondrá en contacto contigo para programar una sesión de orientación personalizada y resolver todas tus dudas.</p>
+                        <h3>Agenda la Fecha en tu Calendario</h3>
+                        <p><strong>4 de septiembre, 7:00 PM (Hora México)</strong> - 90 minutos de formación intensiva con demo en vivo. Asegúrate de tener Python instalado para participar activamente.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Descarga tu Material Exclusivo</h3>
+                        <p>Acceso inmediato a la "Guía del Programador hacia la IA" y templates premium. Todo disponible en el grupo VIP una vez que te unas.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Botón principal de WhatsApp -->
+            <!-- BOTÓN WHATSAPP -->
             <div class="whatsapp-section">
                 <a href="https://chat.whatsapp.com/Dh8bRstWYHKDmm84vxyNZq" 
                    class="whatsapp-btn"
                    target="_blank"
                    rel="noopener noreferrer">
                     <span class="whatsapp-icon">📱</span>
-                    Unirse al Grupo VIP Ahora
+                    Unirse al Grupo VIP
                 </a>
             </div>
 
-            <!-- Beneficios que obtienes -->
+            <!-- BENEFICIOS INSTANTÁNEOS -->
             <div class="benefits-section">
-                <h2 class="benefits-title">Lo Que Obtienes Inmediatamente</h2>
+                <h2 class="benefits-title">Beneficios Inmediatos</h2>
                 
                 <div class="benefits-grid">
-                    <div class="benefit-card fade-in-up">
-                        <div class="benefit-icon">🎯</div>
-                        <h3>Acceso Inmediato</h3>
-                        <p>Acceso instantáneo a recursos exclusivos, materiales de preparación y la comunidad de estudiantes más activa en IA.</p>
-                    </div>
-
-                    <div class="benefit-card fade-in-up">
-                        <div class="benefit-icon">👥</div>
-                        <h3>Networking Premium</h3>
-                        <p>Conecta con profesionales, mentores y compañeros que compartirán tu mismo objetivo de dominar la inteligencia artificial.</p>
-                    </div>
-
-                    <div class="benefit-card fade-in-up">
-                        <div class="benefit-icon">📚</div>
-                        <h3>Biblioteca Exclusiva</h3>
-                        <p>Acceso a nuestra biblioteca digital con más de 200 recursos, templates, y herramientas valoradas en +$500.</p>
-                    </div>
-
-                    <div class="benefit-card fade-in-up">
+                    <div class="benefit-card fade-in">
                         <div class="benefit-icon">⚡</div>
-                        <h3>Soporte 24/7</h3>
-                        <p>Nuestro equipo de mentores estará disponible para resolver tus dudas y guiarte durante todo el proceso de aprendizaje.</p>
+                        <h3>Acceso VIP Instantáneo</h3>
+                        <p>Únete al círculo interno de profesionales serios. Networking premium, recursos exclusivos y conexiones directas con la industria de IA.</p>
                     </div>
 
-                    <div class="benefit-card fade-in-up">
+                    <div class="benefit-card fade-in">
                         <div class="benefit-icon">🎁</div>
-                        <h3>Bonus Especiales</h3>
-                        <p>Como estudiante VIP, recibirás bonos exclusivos incluyendo masterclasses adicionales y sesiones de career coaching.</p>
+                        <h3>Kit de Herramientas Premium</h3>
+                        <p>Plantillas de código, datasets curados, notebooks de Jupyter y herramientas que te ahorrarán semanas de trabajo de investigación.</p>
                     </div>
 
-                    <div class="benefit-card fade-in-up">
-                        <div class="benefit-icon">🏆</div>
-                        <h3>Certificación Garantizada</h3>
-                        <p>Tu certificación internacional está garantizada al completar el programa, respaldada por nuestra reputación en la industria.</p>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">🤝</div>
+                        <h3>Comunidad de Elite</h3>
+                        <p>Conecta con desarrolladores que han transformado sus carreras. Oportunidades laborales exclusivas compartidas solo en el grupo VIP.</p>
+                    </div>
+
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">💎</div>
+                        <h3>Acceso Prioritario</h3>
+                        <p>Como asistente confirmado a la masterclass, tendrás acceso prioritario a información sobre el diplomado completo y sus opciones de financiamiento.</p>
+                    </div>
+
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">📚</div>
+                        <h3>Recursos Complementarios</h3>
+                        <p>Acceso a nuestra biblioteca digital con recursos cuidadosamente curados: guías, artículos especializados y material de apoyo para tu aprendizaje.</p>
+                    </div>
+
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">🎯</div>
+                        <h3>Garantía de Resultados</h3>
+                        <p>Nuestro compromiso con tu éxito: empleabilidad garantizada o acompañamiento personalizado hasta conseguir tu objetivo profesional.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Información importante -->
-            <div class="info-section fade-in-up">
-                <h3 class="info-title">Información Importante</h3>
+            <!-- INFORMACIÓN IMPORTANTE -->
+            <div class="info-section fade-in">
+                <h3 class="info-title">Información Importante - Guarda Esta Confirmación</h3>
                 <div class="info-content">
                     <p>
-                        <strong>Fecha de Inicio:</strong> El programa comenzará el próximo lunes. 
-                        Recibirás todas las instrucciones detalladas en tu email de confirmación.
+                        <strong>📅 Fecha y Hora:</strong> 4 de septiembre de 2025, 7:00 PM (Hora México)<br>
+                        <strong>⏱️ Duración:</strong> 90 minutos de contenido + 30 minutos de Q&A personalizado
                     </p>
-                    <br>
                     <p>
-                        <strong>Soporte Técnico:</strong> Si tienes alguna pregunta o problema técnico, 
-                        nuestro equipo está disponible 24/7 a través del grupo de WhatsApp.
+                        <strong>💻 Requisitos Técnicos:</strong> Conexión a internet estable, Python 3.8+ instalado (opcional para seguir el demo), y bloc de notas para tomar apuntes.
                     </p>
-                    <br>
                     <p>
-                        <strong>Garantía Total:</strong> Recuerda que tu inversión está protegida con nuestra 
-                        garantía de satisfacción de 30 días y garantía de empleo de 12 meses.
+                        <strong>🎯 Qué Incluye:</strong> Demo de programación en vivo, roadmap personalizado hacia especialización en IA, análisis del mercado laboral mexicano y presentación del diplomado con oferta exclusiva.
+                    </p>
+                    <p>
+                        <strong>📧 Acceso:</strong> El enlace de la masterclass llegará a tu email 2 horas antes del evento. También estará disponible en el grupo VIP de WhatsApp.
                     </p>
                 </div>
             </div>
 
-            <!-- Llamada final a la acción -->
-            <div class="whatsapp-section">
-                <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--white-soft);">
-                    <strong>👆 No olvides unirte al grupo VIP para comenzar tu transformación</strong>
+            <!-- LLAMADA FINAL -->
+            <div class="final-cta">
+                <p class="final-cta-text">
+                    👆 Paso fundamental: Únete al grupo VIP para completar tu registro
                 </p>
                 <a href="https://chat.whatsapp.com/Dh8bRstWYHKDmm84vxyNZq" 
                    class="whatsapp-btn"
@@ -721,27 +870,26 @@
             </div>
         </div>
 
-        <!-- Footer -->
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-content">
-                <div class="footer-brand">Futuro Digital - Educación Tecnológica Premium</div>
+                <div class="footer-brand">Futuro Digital by Síntesis</div>
                 <p>© 2024 Futuro Digital. Todos los derechos reservados.</p>
-                <p>Tu éxito es nuestro compromiso</p>
+                <p>25+ años transformando carreras tecnológicas • Tu éxito es nuestro compromiso</p>
             </div>
         </footer>
     </div>
 
     <script>
-        // Animaciones al cargar
+        // Animaciones al cargar la página
         window.addEventListener('load', function() {
             document.body.style.opacity = '1';
             
             // Animar elementos en secuencia
-            const elements = document.querySelectorAll('.fade-in-up');
+            const elements = document.querySelectorAll('.fade-in');
             elements.forEach((el, index) => {
                 setTimeout(() => {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
+                    el.classList.add('visible');
                 }, index * 200);
             });
         });
@@ -749,79 +897,77 @@
         // Tracking de clicks en WhatsApp
         document.querySelectorAll('.whatsapp-btn').forEach(btn => {
             btn.addEventListener('click', function() {
-                console.log('Usuario accedió al grupo VIP de WhatsApp');
+                console.log('Usuario accedió al grupo VIP desde página de confirmación');
                 
                 // Efecto visual de confirmación
-                this.style.transform = 'scale(0.95)';
+                this.style.transform = 'scale(0.98)';
                 setTimeout(() => {
                     this.style.transform = '';
                 }, 150);
             });
         });
 
-        // Efectos de hover mejorados
+        // Efectos sutiles para cards
         document.querySelectorAll('.benefit-card, .step-item').forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px) scale(1.02)';
+                this.style.transform = 'translateY(-6px)';
             });
             
             card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
+                this.style.transform = 'translateY(0)';
             });
         });
 
-        // Parallax suave en móvil
-        if (window.innerWidth > 768) {
+        // Parallax suave para elementos de fondo
+        if (window.innerWidth > 1024) {
             window.addEventListener('scroll', function() {
                 const scrolled = window.pageYOffset;
-                const particles = document.querySelector('.particles');
+                const celebration = document.querySelector('.celebration-grid');
+                const pattern = document.querySelector('.success-pattern');
                 
-                if (particles && scrolled < 1000) {
-                    particles.style.transform = `translateY(${scrolled * 0.1}px)`;
+                if (celebration && scrolled < 1000) {
+                    celebration.style.transform = `translateY(${scrolled * 0.1}px)`;
+                }
+                
+                if (pattern && scrolled < 1000) {
+                    pattern.style.transform = `translateY(${scrolled * 0.05}px)`;
                 }
             }, { passive: true });
         }
 
+        // Intersection Observer para animaciones más suaves
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
         // Optimización para móviles
         if (window.innerWidth <= 768) {
-            const style = document.createElement('style');
-            style.innerHTML = `
-                .particles {
-                    opacity: 0.3;
-                    animation-duration: 20s !important;
-                }
-                * {
-                    animation-duration: 0.5s !important;
-                    transition-duration: 0.3s !important;
-                }
-            `;
-            document.head.appendChild(style);
+            document.documentElement.style.setProperty('--animation-duration', '0.4s');
         }
 
-        // Prevenir pérdida de focus en el botón principal
-        const mainBtn = document.querySelector('.whatsapp-btn');
+        // Efecto especial en el logo cada ciertos segundos
+        const logoMark = document.querySelector('.logo-mark');
         setInterval(() => {
-            if (mainBtn && !mainBtn.classList.contains('attention')) {
-                mainBtn.classList.add('attention');
+            if (logoMark) {
+                logoMark.style.transform = 'scale(1.1)';
                 setTimeout(() => {
-                    mainBtn.classList.remove('attention');
-                }, 2000);
+                    logoMark.style.transform = 'scale(1)';
+                }, 300);
             }
         }, 8000);
     </script>
-
-    <!-- Estilos adicionales para la atención -->
-    <style>
-        .whatsapp-btn.attention {
-            animation: whatsappAttention 2s ease-in-out;
-        }
-
-        @keyframes whatsappAttention {
-            0%, 100% { transform: scale(1); }
-            25% { transform: scale(1.05); }
-            50% { transform: scale(1.1); }
-            75% { transform: scale(1.05); }
-        }
-    </style>
 </body>
 </html>
