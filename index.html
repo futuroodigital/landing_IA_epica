@@ -18,6 +18,10 @@
             --gold-dark: #B8860B;
             --accent-blue: #2563EB;
             --accent-green: #10B981;
+            --cta-orange: #FF6B35;
+            --cta-red: #FF1744;
+            --cta-purple: #8B5CF6;
+            --cta-pink: #F97316;
             --neutral-50: #FAFAFA;
             --neutral-100: #F5F5F5;
             --neutral-200: #E5E5E5;
@@ -31,6 +35,8 @@
             --neutral-950: #0A0A0A;
             --white: #FFFFFF;
             
+            --gradient-cta: linear-gradient(135deg, var(--cta-orange) 0%, var(--cta-red) 100%);
+            --gradient-cta-hover: linear-gradient(135deg, var(--cta-red) 0%, var(--cta-purple) 100%);
             --gradient-primary: linear-gradient(135deg, var(--primary-gold) 0%, var(--gold-light) 100%);
             --gradient-surface: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
             --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
@@ -143,12 +149,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: var(--neutral-900);
             position: relative;
             box-shadow: var(--shadow-glow);
+            overflow: hidden;
+        }
+
+        .logo-mark img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
         }
 
         .logo-mark::after {
@@ -336,18 +345,24 @@
             align-items: center;
             gap: 0.75rem;
             padding: 1rem 2rem;
-            background: var(--gradient-primary);
-            color: var(--neutral-900);
+            background: var(--gradient-cta);
+            color: var(--white);
             text-decoration: none;
             border-radius: var(--border-radius-lg);
             font-weight: 700;
             font-size: 1rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-lg), var(--shadow-glow);
+            box-shadow: 
+                var(--shadow-lg), 
+                0 0 20px rgba(255, 107, 53, 0.4),
+                0 0 40px rgba(255, 23, 68, 0.2);
             border: none;
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: ctaPulse 3s ease-in-out infinite;
         }
 
         .btn-primary::before {
@@ -366,8 +381,12 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl), var(--shadow-glow);
+            background: var(--gradient-cta-hover);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                var(--shadow-2xl), 
+                0 0 30px rgba(255, 107, 53, 0.6),
+                0 0 60px rgba(255, 23, 68, 0.3);
         }
 
         /* PRICING HIGHLIGHT */
@@ -423,6 +442,183 @@
             display: inline-block;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+        }
+
+        /* VIDEO SECTION ESTRELLA */
+        .video-hero-section {
+            padding: 6rem 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            position: relative;
+        }
+
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .video-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 2rem;
+            color: var(--cta-orange);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(12px);
+            animation: videoBadgePulse 3s ease-in-out infinite;
+        }
+
+        .video-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .video-subtitle {
+            font-size: 1.25rem;
+            color: var(--neutral-300);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-player {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            border-radius: var(--border-radius-2xl);
+            overflow: hidden;
+            box-shadow: 
+                var(--shadow-2xl),
+                0 0 50px rgba(255, 107, 53, 0.2);
+            background: var(--neutral-900);
+            aspect-ratio: 16/9;
+        }
+
+        .video-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: var(--border-radius-2xl);
+        }
+
+        .video-cta-section {
+            margin-top: 3rem;
+        }
+
+        .btn-video-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 2.5rem;
+            background: var(--gradient-cta);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--border-radius-2xl);
+            font-size: 1.125rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 
+                var(--shadow-xl),
+                0 0 30px rgba(255, 107, 53, 0.5),
+                0 0 60px rgba(255, 23, 68, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: ctaGigaPulse 4s ease-in-out infinite;
+        }
+
+        .btn-video-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-video-cta:hover::before {
+            left: 100%;
+        }
+
+        .btn-video-cta:hover {
+            background: var(--gradient-cta-hover);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 
+                var(--shadow-2xl),
+                0 0 40px rgba(255, 107, 53, 0.7),
+                0 0 80px rgba(255, 23, 68, 0.4);
+        }
+
+        .video-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .video-stat {
+            text-align: center;
+        }
+
+        .video-stat-number {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--cta-orange);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-stat-label {
+            font-size: 0.875rem;
+            color: var(--neutral-400);
+            font-weight: 500;
+        }
+
+        @keyframes videoBadgePulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+            }
+        }
+
+        @keyframes ctaGigaPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 
+                    var(--shadow-xl),
+                    0 0 30px rgba(255, 107, 53, 0.5),
+                    0 0 60px rgba(255, 23, 68, 0.3);
+            }
+            50% { 
+                transform: scale(1.02);
+                box-shadow: 
+                    var(--shadow-2xl),
+                    0 0 40px rgba(255, 107, 53, 0.7),
+                    0 0 80px rgba(255, 23, 68, 0.5);
+            }
         }
 
         /* MASTERCLASS SECTION */
@@ -604,6 +800,57 @@
             display: inline-block;
         }
 
+        /* PRICING SECTION */
+        .pricing-section {
+            padding: 8rem 2rem;
+            background: var(--neutral-900);
+        }
+
+        .pricing-highlight {
+            background: var(--gradient-card);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-2xl);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .price-label {
+            font-size: 0.875rem;
+            color: var(--neutral-400);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .price-current {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-note {
+            font-size: 0.875rem;
+            color: var(--neutral-400);
+        }
+
+        .value-badge {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-top: 1rem;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
         /* FORM SECTION */
         .form-section {
             padding: 6rem 2rem;
@@ -676,8 +923,8 @@
         .btn-form {
             width: 100%;
             padding: 1rem;
-            background: var(--gradient-primary);
-            color: var(--neutral-900);
+            background: var(--gradient-cta);
+            color: var(--white);
             border: none;
             border-radius: var(--border-radius-md);
             font-weight: 700;
@@ -685,11 +932,19 @@
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             margin-top: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 
+                var(--shadow-lg),
+                0 0 20px rgba(255, 107, 53, 0.4);
         }
 
         .btn-form:hover {
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-lg);
+            background: var(--gradient-cta-hover);
+            transform: translateY(-2px);
+            box-shadow: 
+                var(--shadow-xl),
+                0 0 30px rgba(255, 107, 53, 0.6);
         }
 
         /* FOOTER */
@@ -773,17 +1028,35 @@
                 gap: 1rem;
             }
 
+            .form-card {
+                padding: 2rem;
+            }
+
+            .video-stats {
+                gap: 2rem;
+            }
+
+            .video-stat-number {
+                font-size: 1.5rem;
+            }
+
+            .btn-video-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .logo-mark img {
+                width: 32px;
+                height: 32px;
+            }
+
             .pricing-highlight {
-                margin: 2rem 1rem;
+                margin: 2rem 0;
                 padding: 1.5rem;
             }
 
             .price-current {
                 font-size: 2.5rem;
-            }
-
-            .form-card {
-                padding: 2rem;
             }
         }
 
@@ -794,6 +1067,22 @@
             }
             50% { 
                 background-position: 100% 50%;
+            }
+        }
+
+        @keyframes ctaPulse {
+            0%, 100% { 
+                box-shadow: 
+                    var(--shadow-lg), 
+                    0 0 20px rgba(255, 107, 53, 0.4),
+                    0 0 40px rgba(255, 23, 68, 0.2);
+            }
+            50% { 
+                box-shadow: 
+                    var(--shadow-xl), 
+                    0 0 30px rgba(255, 107, 53, 0.6),
+                    0 0 60px rgba(255, 23, 68, 0.4);
+                transform: scale(1.02);
             }
         }
 
@@ -847,7 +1136,9 @@
     <header class="header-premium" id="header">
         <div class="nav-container">
             <div class="logo-premium">
-                <div class="logo-mark">FD</div>
+                <div class="logo-mark">
+                    <img src="futuro_digital_logo_correcto.png" alt="Futuro Digital Logo">
+                </div>
                 <div class="brand-text">
                     <div class="brand-name">Futuro Digital</div>
                     <div class="brand-tagline">by Síntesis • 25+ años</div>
@@ -894,21 +1185,65 @@
                 </div>
             </div>
 
-            <div class="pricing-highlight">
-                <div class="price-label">Inversión Completa</div>
-                <div class="price-current">$16,800</div>
-                <div class="price-note">MXN + IVA • Financiamiento disponible</div>
-                <div class="value-badge">120 horas de formación premium</div>
-            </div>
-
             <div class="cta-section">
-                <a href="#masterclass" class="btn-primary">
+                <a href="#video" class="btn-primary">
                     <span>🎯</span>
-                    Acceder a Masterclass Gratuita
+                    Conocer el Programa
                 </a>
             </div>
         </div>
     </section>
+
+    <!-- VIDEO HERO SECTION -->
+    <section class="video-hero-section" id="video">
+        <div class="video-container">
+            <div class="video-badge">
+                <span>🎥</span>
+                MASTERCLASS GRATUITA • DEMO EN VIVO • ACCESO INMEDIATO
+            </div>
+            
+            <h2 class="video-title">
+                Conoce el Programa Completo
+            </h2>
+            
+            <p class="video-subtitle">
+                Descubre cómo nuestro diplomado te transformará de usuario de IA a desarrollador experto en 5 minutos.
+            </p>
+
+            <div class="video-player">
+                <iframe 
+                    class="video-iframe"
+                    src="https://www.youtube.com/embed/zJCC1U_QoAg"
+                    title="Conoce el Programa Completo - Diplomado en IA"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="video-cta-section">
+                <a href="#masterclass" class="btn-video-cta">
+                    <span>🚀</span>
+                    Ver Detalles del Programa
+                </a>
+            </div>
+
+            <div class="video-stats">
+                <div class="video-stat">
+                    <span class="video-stat-number">Demo</span>
+                    <span class="video-stat-label">Programa Completo</span>
+                </div>
+                <div class="video-stat">
+                    <span class="video-stat-number">4 Sept</span>
+                    <span class="video-stat-label">7:00 PM México</span>
+                </div>
+                <div class="video-stat">
+                    <span class="video-stat-number">Gratis</span>
+                    <span class="video-stat-label">Acceso Completo</span>
+                </div>
+            </div>
+        </div>
 
     <!-- MASTERCLASS SECTION -->
     <section class="masterclass-section" id="masterclass">
@@ -916,7 +1251,7 @@
             <div class="section-header">
                 <h2 class="section-title">Masterclass Gratuita</h2>
                 <p class="section-subtitle">
-                    "Desarrolla tu Primera IA" - 90 minutos de formación intensiva con demo en vivo
+                    Conoce nuestro programa completo y cómo te transformaremos en especialista IA
                 </p>
             </div>
 
@@ -976,7 +1311,7 @@
                     Reservar Mi Lugar Gratuito
                 </a>
                 <p style="margin-top: 1rem; color: var(--neutral-400); font-size: 0.875rem;">
-                    4 de septiembre, 7:00 PM (Hora México) • 90 minutos + Q&A
+                    4 de septiembre, 7:00 PM (Hora México) • Masterclass + Q&A
                 </p>
             </div>
         </div>
@@ -1037,6 +1372,32 @@
                     </p>
                     <div class="outcome-badge">Data Scientist Senior</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="pricing-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Inversión en Tu Futuro Profesional</h2>
+                <p class="section-subtitle">
+                    Todo incluido: 120 horas de formación intensiva, mentoría personalizada y garantía de empleabilidad
+                </p>
+            </div>
+
+            <div class="pricing-highlight" style="max-width: 600px; margin: 3rem auto;">
+                <div class="price-label">Inversión Completa</div>
+                <div class="price-current">$16,800</div>
+                <div class="price-note">MXN + IVA • Financiamiento disponible</div>
+                <div class="value-badge">120 horas de formación premium</div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#registro" class="btn-primary" style="padding: 1.25rem 2.5rem; font-size: 1.125rem;">
+                    <span>🚀</span>
+                    Reservar Mi Lugar Ahora
+                </a>
             </div>
         </div>
     </section>
