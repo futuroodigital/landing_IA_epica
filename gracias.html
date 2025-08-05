@@ -141,8 +141,8 @@
         }
 
         .logo-mark {
-            width: 48px;
-            height: 48px;
+            width: 80px;
+            height: 80px;
             background: var(--gradient-success);
             border-radius: var(--border-radius-lg);
             display: flex;
@@ -154,8 +154,8 @@
         }
 
         .logo-mark img {
-            width: 40px;
-            height: 40px;
+            width: 70px;
+            height: 70px;
             object-fit: contain;
         }
 
@@ -202,8 +202,8 @@
 
         /* ICONO DE ÉXITO ELEGANTE */
         .success-icon {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             background: var(--gradient-success);
             border-radius: 50%;
             display: flex;
@@ -221,8 +221,8 @@
         }
 
         .success-icon img {
-            width: 70px;
-            height: 70px;
+            width: 90px;
+            height: 90px;
             object-fit: contain;
             filter: brightness(0) invert(1);
         }
@@ -583,24 +583,36 @@
         }
 
         /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .logo-mark {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .logo-mark img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
         @media (max-width: 768px) {
             .main-container {
                 padding: 6rem 1rem 2rem;
             }
 
             .success-icon {
-                width: 100px;
-                height: 100px;
+                width: 120px;
+                height: 120px;
             }
 
             .success-icon img {
-                width: 60px;
-                height: 60px;
+                width: 80px;
+                height: 80px;
             }
 
             .logo-mark img {
-                width: 32px;
-                height: 32px;
+                width: 50px;
+                height: 50px;
             }
 
             .next-steps {
