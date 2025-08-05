@@ -19,6 +19,10 @@
             --accent-blue: #2563EB;
             --accent-green: #10B981;
             --success-green: #059669;
+            --cta-orange: #FF6B35;
+            --cta-red: #FF1744;
+            --cta-purple: #8B5CF6;
+            --whatsapp-green: #25D366;
             --neutral-50: #FAFAFA;
             --neutral-100: #F5F5F5;
             --neutral-200: #E5E5E5;
@@ -34,6 +38,8 @@
             
             --gradient-primary: linear-gradient(135deg, var(--primary-gold) 0%, var(--gold-light) 100%);
             --gradient-success: linear-gradient(135deg, var(--accent-green) 0%, var(--success-green) 100%);
+            --gradient-whatsapp: linear-gradient(135deg, var(--whatsapp-green) 0%, var(--cta-orange) 100%);
+            --gradient-whatsapp-hover: linear-gradient(135deg, var(--cta-orange) 0%, var(--cta-red) 100%);
             --gradient-surface: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
             --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
             
@@ -142,12 +148,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: var(--white);
             box-shadow: var(--shadow-success-glow);
             animation: logoSuccessPulse 4s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        .logo-mark img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
         }
 
         .brand-text {
@@ -200,8 +209,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3.5rem;
-            color: var(--white);
             margin: 0 auto 3rem auto;
             box-shadow: 
                 var(--shadow-2xl),
@@ -210,6 +217,14 @@
                 0 0 0 40px rgba(16, 185, 129, 0.02);
             animation: successIconPulse 4s ease-in-out infinite;
             position: relative;
+            overflow: hidden;
+        }
+
+        .success-icon img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
         }
 
         .success-icon::after {
@@ -401,10 +416,12 @@
         }
 
         .whatsapp-btn:hover {
-            transform: translateY(-3px);
+            background: var(--gradient-whatsapp-hover);
+            transform: translateY(-4px) scale(1.05);
             box-shadow: 
                 var(--shadow-2xl),
-                0 0 40px rgba(37, 211, 102, 0.4);
+                0 0 40px rgba(37, 211, 102, 0.6),
+                0 0 70px rgba(255, 107, 53, 0.5);
         }
 
         .whatsapp-icon {
@@ -574,7 +591,16 @@
             .success-icon {
                 width: 100px;
                 height: 100px;
-                font-size: 3rem;
+            }
+
+            .success-icon img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logo-mark img {
+                width: 32px;
+                height: 32px;
             }
 
             .next-steps {
@@ -717,7 +743,9 @@
     <header class="header-premium">
         <div class="nav-container">
             <div class="logo-premium">
-                <div class="logo-mark">FD</div>
+                <div class="logo-mark">
+                    <img src="futuro_digital_logo_correcto.png" alt="Futuro Digital Logo">
+                </div>
                 <div class="brand-text">
                     <div class="brand-name">Futuro Digital</div>
                     <div class="brand-tagline">by Síntesis • 25+ años</div>
@@ -731,7 +759,7 @@
         <div class="content-wrapper">
             <!-- ICONO DE ÉXITO -->
             <div class="success-icon">
-                ✓
+                <img src="ChatGPT Image 2 ago 2025, 05_02_33 p.m..png" alt="WhatsApp Logo">
             </div>
 
             <!-- TÍTULO PRINCIPAL -->
@@ -741,7 +769,7 @@
 
             <!-- SUBTÍTULO -->
             <p class="subtitle">
-                Excelente decisión. Tu lugar en la <span class="highlight-success">Masterclass "Desarrolla tu Primera IA"</span> está asegurado. Ahora únete a nuestro grupo VIP para acceder a contenido exclusivo.
+                Excelente decisión. Tu lugar en la <span class="highlight-success">Masterclass "Conoce el Programa Completo"</span> está asegurado. Ahora únete a nuestro grupo VIP para acceder a contenido exclusivo.
             </p>
 
             <!-- PRÓXIMOS PASOS -->
@@ -759,21 +787,13 @@
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>Revisa tu Email de Confirmación</h3>
-                        <p>En los próximos 15 minutos recibirás tu kit de bienvenida completo: enlace de acceso, agenda detallada, recursos descargables y tu código de descuento especial.</p>
+                        <h3>Agenda la Fecha en tu Calendario</h3>
+                        <p><strong>4 de septiembre, 7:00 PM (Hora México)</strong> - Masterclass completa con demo en vivo. Asegúrate de tener Python instalado para participar activamente.</p>
                     </div>
                 </div>
 
                 <div class="step-item">
                     <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Agenda la Fecha en tu Calendario</h3>
-                        <p><strong>4 de septiembre, 7:00 PM (Hora México)</strong> - 90 minutos de formación intensiva con demo en vivo. Asegúrate de tener Python instalado para participar activamente.</p>
-                    </div>
-                </div>
-
-                <div class="step-item">
-                    <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>Descarga tu Material Exclusivo</h3>
                         <p>Acceso inmediato a la "Guía del Programador hacia la IA" y templates premium. Todo disponible en el grupo VIP una vez que te unas.</p>
@@ -841,7 +861,7 @@
                 <div class="info-content">
                     <p>
                         <strong>📅 Fecha y Hora:</strong> 4 de septiembre de 2025, 7:00 PM (Hora México)<br>
-                        <strong>⏱️ Duración:</strong> 90 minutos de contenido + 30 minutos de Q&A personalizado
+                        <strong>⏱️ Duración:</strong> Masterclass completa + Q&A personalizado
                     </p>
                     <p>
                         <strong>💻 Requisitos Técnicos:</strong> Conexión a internet estable, Python 3.8+ instalado (opcional para seguir el demo), y bloc de notas para tomar apuntes.
