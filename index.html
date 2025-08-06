@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+/* Efectos adicionales para logos */
+        .logo-emblem img,
+        .preview-logo img {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            object-fit: contain;
+        }        .logo-emblem:hover img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6)) brightness(110%);
+        }
+
+        .preview-logo:hover img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5)) brightness(110%);
+        }        .preview-logo img {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.3));
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .logo-emblem img {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -9,50 +34,46 @@
     <!-- Fuentes premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
+        /* VARIABLES ULTRA LUXURY */
         :root {
+            /* Colores oficiales refinados */
             --primary-gold: #D4AF37;
-            --gold-light: #E6C757;
-            --gold-dark: #B8860B;
-            --accent-blue: #2563EB;
-            --accent-green: #10B981;
-            --cta-orange: #FF6B35;
-            --cta-red: #FF1744;
-            --cta-purple: #8B5CF6;
-            --cta-pink: #F97316;
-            --neutral-50: #FAFAFA;
-            --neutral-100: #F5F5F5;
-            --neutral-200: #E5E5E5;
-            --neutral-300: #D4D4D4;
-            --neutral-400: #A3A3A3;
-            --neutral-500: #737373;
-            --neutral-600: #525252;
-            --neutral-700: #404040;
-            --neutral-800: #262626;
-            --neutral-900: #171717;
-            --neutral-950: #0A0A0A;
-            --white: #FFFFFF;
+            --gold-bright: #ECC440;
+            --gold-light: #FFFA8A;
+            --gold-dark: #DDAC17;
+            --gold-royal: #B8860B;
+            --amber-neon: #FFB300;
+            --black-luxury: #0A0A0A;
+            --black-soft: #1A1A1A;
+            --white-pure: #FFFFFF;
+            --white-soft: #FAFAFA;
+            --gray-platinum: #E8E8E8;
+            --gray-silver: #C0C0C0;
+            --gray-charcoal: #404040;
             
-            --gradient-cta: linear-gradient(135deg, var(--cta-orange) 0%, var(--cta-red) 100%);
-            --gradient-cta-hover: linear-gradient(135deg, var(--cta-red) 0%, var(--cta-purple) 100%);
-            --gradient-primary: linear-gradient(135deg, var(--primary-gold) 0%, var(--gold-light) 100%);
-            --gradient-surface: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
-            --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            /* CTAs exclusivos */
+            --cta-luxury: #C9302C;
+            --cta-elite: #8B0000;
+            --success-emerald: #059669;
             
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-            --shadow-glow: 0 0 30px rgba(212, 175, 55, 0.15);
+            /* Gradientes de lujo absoluto */
+            --gradient-royal-gold: linear-gradient(135deg, #B8860B 0%, #D4AF37 25%, #ECC440 50%, #FFFA8A 75%, #ECC440 100%);
+            --gradient-luxury-dark: linear-gradient(135deg, #000000 0%, #0A0A0A 25%, #1A1A1A 50%, #0A0A0A 75%, #000000 100%);
+            --gradient-platinum: linear-gradient(135deg, #E8E8E8 0%, #C0C0C0 50%, #E8E8E8 100%);
+            --gradient-elite-cta: linear-gradient(135deg, #8B0000 0%, #C9302C 50%, #8B0000 100%);
             
-            --border-radius-sm: 0.375rem;
-            --border-radius-md: 0.5rem;
-            --border-radius-lg: 0.75rem;
-            --border-radius-xl: 1rem;
-            --border-radius-2xl: 1.5rem;
+            /* Sombras de lujo extremo */
+            --shadow-royal: 0 25px 100px rgba(212, 175, 55, 0.4), 0 15px 60px rgba(212, 175, 55, 0.2), 0 5px 20px rgba(212, 175, 55, 0.1);
+            --shadow-luxury: 0 50px 150px rgba(0, 0, 0, 0.8), 0 25px 75px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.2);
+            --shadow-divine: 0 60px 200px rgba(212, 175, 55, 0.6), 0 30px 100px rgba(212, 175, 55, 0.3), 0 15px 50px rgba(212, 175, 55, 0.2);
+            --shadow-text-luxury: 0 2px 10px rgba(212, 175, 55, 0.6), 0 5px 25px rgba(212, 175, 55, 0.3);
+            
+            /* Efectos de cristal luxury */
+            --glass-luxury: blur(40px) saturate(200%) brightness(110%) contrast(120%);
+            --glass-divine: blur(60px) saturate(250%) brightness(120%) contrast(130%);
         }
 
         * {
@@ -63,484 +84,495 @@
 
         html {
             scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--neutral-950);
-            color: var(--white);
-            line-height: 1.6;
+            background: var(--black-luxury);
+            color: var(--white-pure);
+            line-height: 1.7;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
+            letter-spacing: 0.3px;
         }
 
-        /* FONDO PREMIUM SUTIL */
-        .premium-background {
+        /* FONDO ULTRA LUXURY CON PROFUNDIDAD INFINITA */
+        .luxury-background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -10;
-            background: var(--gradient-surface);
+            z-index: -30;
+            background: 
+                radial-gradient(ellipse at top, rgba(26, 26, 26, 0.9) 0%, rgba(10, 10, 10, 1) 70%),
+                radial-gradient(ellipse at bottom, rgba(212, 175, 55, 0.03) 0%, transparent 70%),
+                linear-gradient(180deg, #000000 0%, #0A0A0A 50%, #000000 100%);
+            overflow: hidden;
         }
 
-        .ambient-grid {
+        .royal-mesh {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 75% 25%, rgba(236, 196, 64, 0.06) 0%, transparent 60%),
+                radial-gradient(circle at 25% 75%, rgba(255, 250, 138, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 75% 75%, rgba(184, 134, 11, 0.07) 0%, transparent 55%);
+            background-size: 2000px 2000px, 1600px 1600px, 1200px 1200px, 1800px 1800px;
+            animation: royalFlow 120s ease-in-out infinite, royalPulse 80s ease-in-out infinite;
+        }
+
+        .luxury-grid {
             position: absolute;
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(37, 99, 235, 0.02) 0%, transparent 50%);
-            background-size: 800px 800px, 600px 600px;
-            animation: ambientShift 30s ease-in-out infinite;
+                linear-gradient(90deg, rgba(212, 175, 55, 0.015) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(212, 175, 55, 0.015) 1px, transparent 1px);
+            background-size: 100px 100px;
+            animation: gridShift 200s linear infinite;
+            opacity: 0.3;
         }
 
-        .geometric-pattern {
+        .divine-particles {
             position: absolute;
             width: 100%;
             height: 100%;
-            background-image: 
-                linear-gradient(30deg, transparent 40%, rgba(212, 175, 55, 0.01) 41%, rgba(212, 175, 55, 0.01) 42%, transparent 43%),
-                linear-gradient(150deg, transparent 40%, rgba(37, 99, 235, 0.01) 41%, rgba(37, 99, 235, 0.01) 42%, transparent 43%);
-            background-size: 100px 100px, 80px 80px;
+            overflow: hidden;
         }
 
-        /* HEADER PREMIUM */
-        .header-premium {
+        .luxury-particle {
+            position: absolute;
+            background: var(--gradient-royal-gold);
+            border-radius: 50%;
+            opacity: 0.2;
+            animation: divineFloat 25s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .luxury-particle:nth-child(1) { width: 3px; height: 3px; top: 15%; left: 10%; animation-delay: 0s; }
+        .luxury-particle:nth-child(2) { width: 5px; height: 5px; top: 70%; left: 85%; animation-delay: 5s; }
+        .luxury-particle:nth-child(3) { width: 2px; height: 2px; top: 40%; left: 20%; animation-delay: 10s; }
+        .luxury-particle:nth-child(4) { width: 4px; height: 4px; top: 80%; left: 70%; animation-delay: 15s; }
+        .luxury-particle:nth-child(5) { width: 3px; height: 3px; top: 25%; left: 90%; animation-delay: 20s; }
+        .luxury-particle:nth-child(6) { width: 6px; height: 6px; top: 60%; left: 15%; animation-delay: 8s; }
+
+        /* HEADER LUXURY DIVINE */
+        .header-luxury {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(24px) saturate(180%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(0, 0, 0, 0.05);
+            backdrop-filter: var(--glass-luxury);
+            -webkit-backdrop-filter: var(--glass-luxury);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            z-index: 2000;
+            padding: 2rem 0;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
-        .header-premium.scrolled {
-            background: rgba(10, 10, 10, 0.98);
-            box-shadow: var(--shadow-lg);
+        .header-luxury.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: var(--glass-divine);
+            -webkit-backdrop-filter: var(--glass-divine);
+            border-bottom-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-luxury);
+            padding: 1.5rem 0;
         }
 
-        .nav-container {
-            max-width: 1400px;
+        .nav-luxury {
+            max-width: 1500px;
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 2rem;
+            padding: 0 3rem;
         }
 
-        .logo-premium {
+        .logo-luxury {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 2rem;
         }
 
-        .logo-mark {
-            width: 80px;
-            height: 80px;
-            background: transparent;
-            border-radius: var(--border-radius-lg);
+        .logo-emblem {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-royal-gold);
+            border-radius: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
+            box-shadow: var(--shadow-royal);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 3px solid rgba(255, 255, 255, 0.1);
         }
 
-        .logo-mark img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
+        .logo-emblem:hover {
+            transform: scale(1.08) rotate(3deg);
+            box-shadow: var(--shadow-divine);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
-        .logo-mark::after {
+        .logo-emblem::before {
             content: '';
             position: absolute;
-            inset: -2px;
-            background: var(--gradient-primary);
-            border-radius: var(--border-radius-lg);
+            inset: -5px;
+            background: conic-gradient(from 0deg, var(--primary-gold), var(--gold-bright), var(--gold-light), var(--gold-bright), var(--primary-gold));
+            border-radius: 30px;
             z-index: -1;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.6s ease;
+            animation: emblemaura 8s linear infinite;
         }
 
-        .logo-mark:hover::after {
-            opacity: 0.3;
+        .logo-emblem:hover::before {
+            opacity: 0.6;
         }
 
-        .brand-text {
+        .logo-emblem::after {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            right: 10%;
+            bottom: 10%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            border-radius: 15px;
+            animation: innerGlow 4s ease-in-out infinite;
+        }
+
+        .brand-luxury {
             display: flex;
             flex-direction: column;
+            gap: 0.5rem;
         }
 
-        .brand-name {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.375rem;
+        .brand-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
             font-weight: 700;
-            color: var(--white);
-            letter-spacing: -0.025em;
-            line-height: 1.2;
+            color: var(--white-pure);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            text-shadow: var(--shadow-text-luxury);
+            background: var(--gradient-royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .brand-tagline {
-            font-size: 0.75rem;
-            color: var(--neutral-400);
-            font-weight: 400;
-            letter-spacing: 0.025em;
+        .brand-subtitle {
+            font-size: 0.9rem;
+            color: var(--gold-bright);
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            opacity: 0.85;
         }
 
-        .nav-actions {
+        .nav-cta {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
             align-items: center;
         }
 
-        .btn-outline {
-            padding: 0.75rem 1.5rem;
+        .btn-nav-luxury {
+            padding: 1.2rem 2.5rem;
             background: transparent;
-            border: 1px solid var(--primary-gold);
+            border: 2px solid var(--primary-gold);
             color: var(--primary-gold);
             text-decoration: none;
-            border-radius: var(--border-radius-md);
-            font-weight: 500;
-            font-size: 0.875rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             position: relative;
             overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            backdrop-filter: blur(20px);
         }
 
-        .btn-outline::before {
+        .btn-nav-luxury::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: var(--gradient-primary);
-            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--gradient-royal-gold);
+            transition: left 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             z-index: -1;
         }
 
-        .btn-outline:hover::before {
+        .btn-nav-luxury:hover::before {
             left: 0;
         }
 
-        .btn-outline:hover {
-            color: var(--neutral-900);
-            border-color: var(--gold-light);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-md);
+        .btn-nav-luxury:hover {
+            color: var(--black-luxury);
+            border-color: var(--gold-bright);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-royal);
         }
 
-        /* HERO SECTION PREMIUM */
-        .hero-premium {
+        /* HERO SECTION DIVINE */
+        .hero-divine {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 8rem 2rem 4rem;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            text-align: center;
-            z-index: 10;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 2rem;
-            color: var(--primary-gold);
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(12px);
-            box-shadow: var(--shadow-glow);
-        }
-
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 6vw, 5.5rem);
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(
-                135deg,
-                var(--white) 0%,
-                var(--primary-gold) 30%,
-                var(--white) 70%,
-                var(--gold-light) 100%
-            );
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: titleShimmer 8s ease-in-out infinite;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-            color: var(--neutral-300);
-            margin-bottom: 3rem;
-            line-height: 1.6;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 400;
-        }
-
-        .hero-highlight {
-            color: var(--primary-gold);
-            font-weight: 600;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            margin: 4rem 0;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            display: block;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-gold);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.875rem;
-            color: var(--neutral-400);
-            font-weight: 500;
-        }
-
-        .cta-section {
-            margin-top: 3rem;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 2rem;
-            background: var(--gradient-cta);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: var(--border-radius-lg);
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 
-                var(--shadow-lg), 
-                0 0 20px rgba(255, 107, 53, 0.4),
-                0 0 40px rgba(255, 23, 68, 0.2);
-            border: none;
-            cursor: pointer;
+            padding: 15rem 3rem 10rem;
             position: relative;
             overflow: hidden;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            animation: ctaPulse 3s ease-in-out infinite;
         }
 
-        .btn-primary::before {
+        .hero-divine::before {
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            z-index: 1;
         }
 
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary:hover {
-            background: var(--gradient-cta-hover);
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 
-                var(--shadow-2xl), 
-                0 0 30px rgba(255, 107, 53, 0.6),
-                0 0 60px rgba(255, 23, 68, 0.3);
-        }
-
-        /* PRICING HIGHLIGHT */
-        .pricing-highlight {
-            background: var(--gradient-card);
-            backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--border-radius-2xl);
-            padding: 2rem;
-            margin: 3rem auto;
-            max-width: 600px;
+        .hero-content-luxury {
+            max-width: 1400px;
             text-align: center;
-            box-shadow: var(--shadow-2xl);
-        }
-
-        .price-label {
-            font-size: 0.875rem;
-            color: var(--neutral-400);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .price-original {
-            font-size: 1.25rem;
-            color: var(--neutral-500);
-            text-decoration: line-through;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-current {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary-gold);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-note {
-            font-size: 0.875rem;
-            color: var(--neutral-400);
-        }
-
-        .value-badge {
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 1rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-top: 1rem;
-            display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* VIDEO SECTION ESTRELLA */
-        .video-hero-section {
-            padding: 6rem 2rem;
-            background: rgba(255, 255, 255, 0.02);
+            z-index: 10;
             position: relative;
         }
 
-        .video-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .video-badge {
+        .prestige-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: rgba(255, 107, 53, 0.1);
-            border: 1px solid rgba(255, 107, 53, 0.3);
-            border-radius: 2rem;
-            color: var(--cta-orange);
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(12px);
-            animation: videoBadgePulse 3s ease-in-out infinite;
-        }
-
-        .video-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            gap: 1.5rem;
+            padding: 1.5rem 3rem;
+            background: rgba(212, 175, 55, 0.08);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.25);
+            border-radius: 100px;
+            color: var(--gold-bright);
+            font-size: 1rem;
             font-weight: 700;
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            margin-bottom: 5rem;
+            box-shadow: var(--shadow-royal);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            animation: prestigePulse 8s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
         }
 
-        .video-subtitle {
-            font-size: 1.25rem;
-            color: var(--neutral-300);
-            margin-bottom: 3rem;
-            max-width: 700px;
+        .prestige-badge::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: conic-gradient(from 0deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+            animation: prestigeRotate 12s linear infinite;
+            z-index: -1;
+        }
+
+        .prestige-badge .badge-icon {
+            font-size: 1.5rem;
+            animation: badgeFloat 3s ease-in-out infinite;
+        }
+
+        .hero-title-divine {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(4.5rem, 9vw, 8rem);
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 4rem;
+            background: linear-gradient(
+                135deg,
+                var(--white-pure) 0%,
+                var(--gold-bright) 15%,
+                var(--gold-light) 35%,
+                var(--white-pure) 50%,
+                var(--gold-bright) 65%,
+                var(--gold-light) 85%,
+                var(--white-pure) 100%
+            );
+            background-size: 500% 500%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: divineShimmer 15s ease-in-out infinite;
+            letter-spacing: -0.04em;
+            text-shadow: 0 0 100px rgba(212, 175, 55, 0.3);
+            position: relative;
+        }
+
+        .hero-title-divine::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 6px;
+            background: var(--gradient-royal-gold);
+            border-radius: 3px;
+            box-shadow: var(--shadow-royal);
+            animation: underlineGlow 6s ease-in-out infinite;
+        }
+
+        .hero-subtitle-luxury {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            color: var(--gray-platinum);
+            margin-bottom: 6rem;
+            line-height: 1.6;
+            max-width: 1100px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .video-player {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto 3rem;
-            border-radius: var(--border-radius-2xl);
-            overflow: hidden;
-            box-shadow: 
-                var(--shadow-2xl),
-                0 0 50px rgba(255, 107, 53, 0.2);
-            background: var(--neutral-900);
-            aspect-ratio: 16/9;
-        }
-
-        .video-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: var(--border-radius-2xl);
-        }
-
-        .video-cta-section {
-            margin-top: 3rem;
-        }
-
-        .btn-video-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.25rem 2.5rem;
-            background: var(--gradient-cta);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: var(--border-radius-2xl);
-            font-size: 1.125rem;
-            font-weight: 700;
-            text-transform: uppercase;
+            font-weight: 400;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
             letter-spacing: 0.5px;
-            box-shadow: 
-                var(--shadow-xl),
-                0 0 30px rgba(255, 107, 53, 0.5),
-                0 0 60px rgba(255, 23, 68, 0.3);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            animation: ctaGigaPulse 4s ease-in-out infinite;
         }
 
-        .btn-video-cta::before {
+        .luxury-highlight {
+            color: var(--gold-bright);
+            font-weight: 700;
+            background: var(--gradient-royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .luxury-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-royal-gold);
+            opacity: 0.4;
+        }
+
+        .exclusive-preview {
+            margin: 4rem 0;
+        }
+
+        .preview-card-luxury {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.06) 0%, rgba(236, 196, 64, 0.04) 50%, rgba(255, 250, 138, 0.02) 100%);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-luxury);
+            position: relative;
+            overflow: hidden;
+            animation: previewFloat 10s ease-in-out infinite;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .preview-card-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--gradient-royal-gold);
+            box-shadow: var(--shadow-royal);
+        }
+
+        .preview-card-luxury::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: conic-gradient(from 0deg, transparent, rgba(212, 175, 55, 0.15), transparent, rgba(236, 196, 64, 0.1), transparent);
+            border-radius: 27px;
+            z-index: -1;
+            animation: cardAura 20s linear infinite;
+        }
+
+        .preview-logo {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-royal-gold);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            box-shadow: var(--shadow-royal);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            animation: logoGlow 6s ease-in-out infinite;
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { 
+                box-shadow: var(--shadow-royal);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: var(--shadow-divine);
+                transform: scale(1.02);
+            }
+        }
+
+        .preview-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--white-pure);
+            margin-bottom: 1.5rem;
+            text-shadow: var(--shadow-text-luxury);
+        }
+
+        .preview-description {
+            font-size: 1.125rem;
+            color: var(--gray-platinum);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .exclusive-badges {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .badge-luxury {
+            background: linear-gradient(135deg, var(--success-emerald), #059669, #10B981);
+            color: var(--white-pure);
+            padding: 1.25rem 2.5rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            box-shadow: 0 0 60px rgba(16, 185, 129, 0.4);
+            animation: luxuryBadgeGlow 5s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge-luxury::before {
             content: '';
             position: absolute;
             top: 0;
@@ -548,680 +580,1665 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: left 0.8s ease;
         }
 
-        .btn-video-cta:hover::before {
+        .badge-luxury:hover::before {
             left: 100%;
         }
 
-        .btn-video-cta:hover {
-            background: var(--gradient-cta-hover);
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 
-                var(--shadow-2xl),
-                0 0 40px rgba(255, 107, 53, 0.7),
-                0 0 80px rgba(255, 23, 68, 0.4);
-        }
-
-        .video-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .video-stat {
-            text-align: center;
-        }
-
-        .video-stat-number {
-            display: block;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--cta-orange);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .video-stat-label {
-            font-size: 0.875rem;
-            color: var(--neutral-400);
-            font-weight: 500;
-        }
-
-        @keyframes videoBadgePulse {
-            0%, 100% { 
-                transform: scale(1);
-                box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
-            }
-            50% { 
-                transform: scale(1.05);
-                box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
-            }
-        }
-
-        @keyframes ctaGigaPulse {
-            0%, 100% { 
-                transform: scale(1);
-                box-shadow: 
-                    var(--shadow-xl),
-                    0 0 30px rgba(255, 107, 53, 0.5),
-                    0 0 60px rgba(255, 23, 68, 0.3);
-            }
-            50% { 
-                transform: scale(1.02);
-                box-shadow: 
-                    var(--shadow-2xl),
-                    0 0 40px rgba(255, 107, 53, 0.7),
-                    0 0 80px rgba(255, 23, 68, 0.5);
-            }
-        }
-
-        /* MASTERCLASS SECTION */
-        .masterclass-section {
-            padding: 8rem 2rem;
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
+        .badge-date {
+            background: rgba(212, 175, 55, 0.15);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--primary-gold);
+            color: var(--gold-bright);
+            padding: 1.25rem 2.5rem;
+            border-radius: 30px;
+            font-size: 1rem;
             font-weight: 700;
-            color: var(--white);
-            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            box-shadow: var(--shadow-royal);
+        }
+
+        .divine-cta-section {
+            margin-top: 6rem;
+        }
+
+        .cta-container-luxury {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        .btn-divine-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 1.75rem 3rem;
+            background: var(--gradient-elite-cta);
+            color: var(--white-pure);
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 800;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 
+                var(--shadow-luxury), 
+                0 0 60px rgba(201, 48, 44, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: divineCtaFloat 8s ease-in-out infinite;
+            text-align: left;
+            backdrop-filter: blur(20px);
+        }
+
+        .btn-divine-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            transition: left 1s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .btn-divine-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-divine-primary:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 
+                var(--shadow-luxury), 
+                0 0 80px rgba(201, 48, 44, 0.7);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-icon-divine {
+            font-size: 2rem;
+            animation: divineIconFloat 5s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+        }
+
+        .cta-content-luxury {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .cta-primary-text {
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             line-height: 1.2;
         }
 
-        .section-subtitle {
-            font-size: 1.25rem;
-            color: var(--neutral-300);
-            max-width: 600px;
-            margin: 0 auto;
+        .cta-secondary-text {
+            font-size: 0.875rem;
+            font-weight: 500;
+            opacity: 0.9;
+            text-transform: none;
+            letter-spacing: 0.5px;
         }
 
-        .masterclass-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+        .btn-secondary-luxury {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 2.5rem;
+            background: transparent;
+            border: 2px solid var(--primary-gold);
+            color: var(--primary-gold);
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: 800;
+            font-size: 1rem;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            backdrop-filter: blur(20px);
         }
 
-        .masterclass-card {
-            background: var(--gradient-card);
-            backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--border-radius-xl);
-            padding: 2rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .btn-secondary-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-royal-gold);
+            transition: left 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: -1;
+        }
+
+        .btn-secondary-luxury:hover::before {
+            left: 0;
+        }
+
+        .btn-secondary-luxury:hover {
+            color: var(--black-luxury);
+            border-color: var(--gold-bright);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: var(--shadow-royal);
+        }
+
+        .prestige-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            margin-top: 5rem;
+            flex-wrap: wrap;
+        }
+
+        .prestige-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            color: var(--gray-platinum);
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1.5rem 2.5rem;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            transition: all 0.4s ease;
+        }
+
+        .prestige-item:hover {
+            transform: translateY(-3px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-royal);
+        }
+
+        .prestige-icon {
+            color: var(--success-emerald);
+            font-size: 1.5rem;
+            filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.4));
+        }
+
+        /* SECCIONES GENERALES LUXURY */
+        .section-luxury {
+            padding: 12rem 3rem;
             position: relative;
             overflow: hidden;
         }
 
-        .masterclass-card::before {
+        .section-luxury:nth-child(even) {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.02) 0%, rgba(26, 26, 26, 0.8) 50%, rgba(212, 175, 55, 0.01) 100%);
+        }
+
+        .section-container-luxury {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-header-luxury {
+            text-align: center;
+            margin-bottom: 8rem;
+        }
+
+        .section-title-luxury {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            color: var(--white-pure);
+            margin-bottom: 2.5rem;
+            line-height: 1.2;
+            text-shadow: var(--shadow-text-luxury);
+            background: var(--gradient-royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle-luxury {
+            font-size: 1.75rem;
+            color: var(--gray-platinum);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* VIDEO SECTION LUXURY */
+        .video-section-luxury {
+            padding: 12rem 3rem;
+            background: rgba(212, 175, 55, 0.015);
+            position: relative;
+        }
+
+        .video-container-luxury {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .video-badge-luxury {
+            display: inline-flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem 3rem;
+            background: rgba(201, 48, 44, 0.1);
+            border: 2px solid rgba(201, 48, 44, 0.3);
+            border-radius: 100px;
+            color: var(--cta-luxury);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4rem;
+            backdrop-filter: blur(20px);
+            animation: videoBadgeFloat 6s ease-in-out infinite;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .video-title-luxury {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3.5rem, 7vw, 5.5rem);
+            font-weight: 800;
+            color: var(--white-pure);
+            margin-bottom: 3rem;
+            line-height: 1.2;
+            text-shadow: var(--shadow-text-luxury);
+        }
+
+        .video-subtitle-luxury {
+            font-size: 1.75rem;
+            color: var(--gray-platinum);
+            margin-bottom: 5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .video-player-luxury {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto 5rem;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 
+                var(--shadow-luxury),
+                0 0 100px rgba(212, 175, 55, 0.4);
+            background: var(--black-luxury);
+            aspect-ratio: 16/9;
+            border: 4px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .video-iframe-luxury {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 26px;
+        }
+
+        .btn-video-cta-luxury {
+            display: inline-flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 1.75rem 3rem;
+            background: var(--gradient-elite-cta);
+            color: var(--white-pure);
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 
+                var(--shadow-luxury),
+                0 0 60px rgba(201, 48, 44, 0.5);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: ctaSecondaryFloat 7s ease-in-out infinite;
+        }
+
+        .btn-video-cta-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .btn-video-cta-luxury:hover::before {
+            left: 100%;
+        }
+
+        .btn-video-cta-luxury:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                var(--shadow-luxury),
+                0 0 80px rgba(201, 48, 44, 0.7);
+        }
+
+        .video-stats-luxury {
+            display: flex;
+            justify-content: center;
+            gap: 6rem;
+            margin-top: 6rem;
+            flex-wrap: wrap;
+        }
+
+        .video-stat-luxury {
+            text-align: center;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 3rem 2.5rem;
+            border-radius: 25px;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+            min-width: 200px;
+        }
+
+        .video-stat-luxury:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: var(--shadow-royal);
+        }
+
+        .video-stat-number-luxury {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: var(--shadow-text-luxury);
+        }
+
+        .video-stat-label-luxury {
+            font-size: 1rem;
+            color: var(--gray-silver);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* PROBLEM SECTION LUXURY */
+        .problem-section-luxury {
+            padding: 12rem 3rem;
+            background: rgba(212, 175, 55, 0.015);
+        }
+
+        .problem-content-luxury {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 6rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .problem-text-luxury {
+            font-size: 1.5rem;
+            color: var(--gray-platinum);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .problem-image-luxury {
+            width: 300px;
+            height: 300px;
+            background: var(--gradient-royal-gold);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-divine);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .problem-image-luxury::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background-image: url("https://raw.githubusercontent.com/TU_USUARIO/TU_REPOSITORIO/main/futuro_digital_logo_correcto.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
+        }
+
+        .problem-cards-luxury {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+        }
+
+        .problem-card-luxury {
+            background: rgba(212, 175, 55, 0.05);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-left: 8px solid var(--primary-gold);
+            border-radius: 25px;
+            padding: 3rem;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .problem-card-luxury:hover {
+            transform: translateY(-8px);
+            border-left-color: var(--gold-bright);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .problem-card-luxury h3 {
+            color: var(--primary-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            text-shadow: var(--shadow-text-luxury);
+        }
+
+        .problem-card-luxury p {
+            color: var(--gray-platinum);
+            line-height: 1.7;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* SOLUTION SECTION LUXURY */
+        .solution-grid-luxury {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 6rem;
+        }
+
+        .solution-card-luxury {
+            background: rgba(212, 175, 55, 0.05);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 4rem;
+            text-align: center;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-card-luxury::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 2px;
-            background: var(--gradient-primary);
+            height: 6px;
+            background: var(--gradient-royal-gold);
             transform: scaleX(0);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.6s ease;
         }
 
-        .masterclass-card:hover::before {
+        .solution-card-luxury:hover::before {
             transform: scaleX(1);
         }
 
-        .masterclass-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(212, 175, 55, 0.3);
-            box-shadow: var(--shadow-2xl);
+        .solution-card-luxury:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: var(--shadow-luxury);
         }
 
-        .card-icon {
-            width: 4rem;
-            height: 4rem;
-            background: var(--gradient-primary);
-            border-radius: var(--border-radius-lg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--neutral-900);
-            margin-bottom: 1.5rem;
-            box-shadow: var(--shadow-glow);
-        }
-
-        .card-title {
-            font-size: 1.25rem;
+        .solution-card-luxury h3 {
+            color: var(--primary-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
             font-weight: 700;
-            color: var(--white);
-            margin-bottom: 1rem;
-            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            text-shadow: var(--shadow-text-luxury);
         }
 
-        .card-description {
-            color: var(--neutral-300);
-            line-height: 1.6;
+        .solution-card-luxury p {
+            color: var(--gray-platinum);
+            line-height: 1.7;
+            font-size: 1.1rem;
+            font-weight: 300;
         }
 
-        /* TESTIMONIALS */
-        .testimonials-section {
-            padding: 8rem 2rem;
-            background: var(--neutral-900);
-        }
-
-        .testimonials-grid {
+        /* BENEFITS SECTION LUXURY */
+        .benefits-content-luxury {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .testimonial-card {
-            background: var(--gradient-card);
-            backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--border-radius-xl);
-            padding: 2rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(212, 175, 55, 0.3);
-            box-shadow: var(--shadow-2xl);
-        }
-
-        .testimonial-header {
-            display: flex;
+            grid-template-columns: 1fr auto;
+            gap: 6rem;
             align-items: center;
-            gap: 1rem;
+        }
+
+        .benefits-list-luxury {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .benefit-item-luxury {
+            background: rgba(212, 175, 55, 0.05);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 3rem;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .benefit-item-luxury:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .benefit-item-luxury h3 {
+            color: var(--primary-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
             margin-bottom: 1.5rem;
+            text-shadow: var(--shadow-text-luxury);
         }
 
-        .testimonial-avatar {
-            width: 3rem;
-            height: 3rem;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .benefit-item-luxury p {
+            color: var(--gray-platinum);
+            line-height: 1.7;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .benefits-image-luxury {
+            width: 500px;
+            height: 600px;
+            background: var(--gradient-royal-gold);
+            border-radius: 25px;
+            box-shadow: var(--shadow-divine);
+            overflow: hidden;
+            position: relative;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .benefits-image-luxury::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: 140px;
+            background-image: url("https://raw.githubusercontent.com/TU_USUARIO/TU_REPOSITORIO/main/futuro_digital_logo_correcto.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.5));
+        }
+
+        .benefits-image-luxury img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* CURRICULUM SECTION LUXURY */
+        .curriculum-grid-luxury {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+            margin-top: 6rem;
+        }
+
+        .curriculum-card-luxury {
+            background: rgba(212, 175, 55, 0.05);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 3rem;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .curriculum-card-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--gradient-elite-cta);
+            transform: scaleX(0);
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .curriculum-card-luxury:hover::before {
+            transform: scaleX(1);
+        }
+
+        .curriculum-card-luxury:hover {
+            transform: translateY(-8px);
+            border-color: rgba(201, 48, 44, 0.3);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .curriculum-card-luxury h3 {
+            color: var(--white-pure);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
             font-weight: 700;
-            color: var(--neutral-900);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            text-shadow: var(--shadow-text-luxury);
         }
 
-        .testimonial-author h4 {
-            color: var(--white);
-            font-weight: 600;
-            margin-bottom: 0.25rem;
+        .curriculum-card-luxury p {
+            color: var(--gray-platinum);
+            line-height: 1.7;
+            font-size: 1.1rem;
+            font-weight: 300;
         }
 
-        .testimonial-role {
-            color: var(--neutral-400);
-            font-size: 0.875rem;
-        }
-
-        .testimonial-stars {
-            color: var(--primary-gold);
-            margin-bottom: 1rem;
-            font-size: 0.875rem;
-        }
-
-        .testimonial-quote {
-            color: var(--neutral-300);
-            line-height: 1.6;
-            font-style: italic;
-        }
-
-        .outcome-badge {
-            background: linear-gradient(135deg, var(--accent-green), #059669);
-            color: var(--white);
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-top: 1rem;
-            display: inline-block;
-        }
-
-        /* PRICING SECTION */
-        .pricing-section {
-            padding: 8rem 2rem;
-            background: var(--neutral-900);
-        }
-
-        .pricing-highlight {
-            background: var(--gradient-card);
-            backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--border-radius-2xl);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: var(--shadow-2xl);
-        }
-
-        .price-label {
-            font-size: 0.875rem;
-            color: var(--neutral-400);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .price-current {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary-gold);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-note {
-            font-size: 0.875rem;
-            color: var(--neutral-400);
-        }
-
-        .value-badge {
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 1rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-top: 1rem;
-            display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* FORM SECTION */
-        .form-section {
-            padding: 6rem 2rem;
-            background: var(--neutral-950);
-        }
-
-        .form-container {
-            max-width: 600px;
+        /* INSTRUCTOR SECTION LUXURY */
+        .instructor-content-luxury {
+            max-width: 1000px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .form-card {
-            background: var(--gradient-card);
-            backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--border-radius-xl);
-            padding: 3rem;
-            box-shadow: var(--shadow-2xl);
+        .instructor-name-luxury {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            margin-bottom: 3rem;
+            background: var(--gradient-royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: var(--shadow-text-luxury);
         }
 
-        .form-title {
+        .instructor-bio-luxury {
+            font-size: 1.5rem;
+            color: var(--gray-platinum);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        /* STATISTICS SECTION LUXURY */
+        .stats-grid-luxury {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 4rem;
+            margin-top: 6rem;
+        }
+
+        .stat-card-luxury {
+            text-align: center;
+            background: rgba(212, 175, 55, 0.05);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 4rem 3rem;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card-luxury::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: conic-gradient(from 0deg, transparent, rgba(212, 175, 55, 0.15), transparent);
+            border-radius: 28px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .stat-card-luxury:hover::before {
+            opacity: 1;
+        }
+
+        .stat-card-luxury:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: var(--shadow-divine);
+        }
+
+        .stat-number-luxury {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            text-shadow: var(--shadow-text-luxury);
+        }
+
+        .stat-label-luxury {
+            font-size: 1.5rem;
+            color: var(--white-pure);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-description-luxury {
+            font-size: 1rem;
+            color: var(--gray-silver);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* TESTIMONIALS SECTION LUXURY */
+        .testimonial-highlight-luxury {
+            max-width: 1000px;
+            margin: 5rem auto;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(236, 196, 64, 0.05) 100%);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 40px;
+            padding: 5rem;
+            text-align: center;
+            box-shadow: var(--shadow-luxury);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-highlight-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: var(--gradient-royal-gold);
+        }
+
+        .testimonial-quote-main-luxury {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
+            color: var(--gray-platinum);
+            line-height: 1.8;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .testimonial-author-main-luxury {
+            margin-top: 3rem;
+            font-size: 1.25rem;
+            color: var(--primary-gold);
+            font-style: normal;
             font-weight: 700;
-            color: var(--white);
-            margin-bottom: 1rem;
+            text-shadow: var(--shadow-text-luxury);
         }
 
-        .form-subtitle {
-            color: var(--neutral-300);
+        .program-features-luxury {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 6rem;
+        }
+
+        .feature-item-luxury {
+            background: rgba(212, 175, 55, 0.05);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .feature-item-luxury:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .feature-icon-luxury {
+            font-size: 4rem;
             margin-bottom: 2rem;
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
+            animation: iconFloat 4s ease-in-out infinite;
         }
 
-        .form-group {
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .feature-item-luxury h3 {
+            color: var(--white-pure);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
             margin-bottom: 1.5rem;
+            text-shadow: var(--shadow-text-luxury);
+        }
+
+        .feature-item-luxury p {
+            color: var(--gray-platinum);
+            line-height: 1.7;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* PRICING SECTION LUXURY */
+        .pricing-card-luxury {
+            max-width: 800px;
+            margin: 5rem auto;
+            background: rgba(212, 175, 55, 0.05);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 40px;
+            padding: 5rem;
+            text-align: center;
+            box-shadow: var(--shadow-divine);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: var(--gradient-royal-gold);
+        }
+
+        .price-current-luxury {
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-royal-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: var(--shadow-text-luxury);
+        }
+
+        .price-note-luxury {
+            color: var(--gray-silver);
+            margin-bottom: 4rem;
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        .pricing-features-luxury {
+            list-style: none;
+            margin: 4rem 0;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .pricing-features-luxury li {
+            padding: 1.5rem 0;
+            color: var(--gray-platinum);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        .pricing-features-luxury li::before {
+            content: '✅';
+            font-size: 1.5rem;
+            filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.5));
+        }
+
+        /* FAQ SECTION LUXURY */
+        .faq-grid-luxury {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-top: 6rem;
+        }
+
+        .faq-item-luxury {
+            background: rgba(212, 175, 55, 0.05);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 3rem;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .faq-item-luxury:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .faq-question-luxury {
+            color: var(--primary-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            text-shadow: var(--shadow-text-luxury);
+        }
+
+        .faq-answer-luxury {
+            color: var(--gray-platinum);
+            line-height: 1.7;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* FORM SECTION LUXURY */
+        .form-section-luxury {
+            padding: 10rem 3rem;
+            background: var(--black-luxury);
+        }
+
+        .form-container-luxury {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-card-luxury {
+            background: rgba(212, 175, 55, 0.05);
+            backdrop-filter: var(--glass-luxury);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 30px;
+            padding: 5rem;
+            box-shadow: var(--shadow-divine);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-card-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: var(--gradient-royal-gold);
+        }
+
+        .form-title-luxury {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white-pure);
+            margin-bottom: 2rem;
+            text-shadow: var(--shadow-text-luxury);
+        }
+
+        .form-subtitle-luxury {
+            color: var(--gray-platinum);
+            margin-bottom: 4rem;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .form-group-luxury {
+            margin-bottom: 2.5rem;
             text-align: left;
         }
 
-        .form-label {
+        .form-label-luxury {
             display: block;
-            color: var(--neutral-300);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 0.875rem 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--border-radius-md);
-            color: var(--white);
+            color: var(--gray-platinum);
+            font-weight: 600;
+            margin-bottom: 1rem;
             font-size: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .form-input:focus {
+        .form-input-luxury {
+            width: 100%;
+            padding: 1.75rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            color: var(--white-pure);
+            font-size: 1.25rem;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            backdrop-filter: blur(10px);
+            font-weight: 300;
+        }
+
+        .form-input-luxury:focus {
             outline: none;
             border-color: var(--primary-gold);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
             background: rgba(255, 255, 255, 0.08);
         }
 
-        .form-input::placeholder {
-            color: var(--neutral-500);
+        .form-input-luxury::placeholder {
+            color: var(--gray-silver);
+            font-weight: 300;
         }
 
-        .btn-form {
+        .btn-form-luxury {
             width: 100%;
-            padding: 1rem;
-            background: var(--gradient-cta);
-            color: var(--white);
+            padding: 1.5rem;
+            background: var(--gradient-elite-cta);
+            color: var(--white-pure);
             border: none;
-            border-radius: var(--border-radius-md);
-            font-weight: 700;
-            font-size: 1rem;
+            border-radius: 15px;
+            font-weight: 800;
+            font-size: 1.125rem;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            margin-top: 1rem;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            margin-top: 2rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             box-shadow: 
-                var(--shadow-lg),
-                0 0 20px rgba(255, 107, 53, 0.4);
+                var(--shadow-luxury),
+                0 0 40px rgba(201, 48, 44, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.1);
         }
 
-        .btn-form:hover {
-            background: var(--gradient-cta-hover);
-            transform: translateY(-2px);
+        .btn-form-luxury:hover {
+            transform: translateY(-3px);
             box-shadow: 
-                var(--shadow-xl),
-                0 0 30px rgba(255, 107, 53, 0.6);
+                var(--shadow-luxury),
+                0 0 60px rgba(201, 48, 44, 0.6);
         }
 
-        /* FOOTER */
-        .footer {
-            background: var(--neutral-900);
-            padding: 3rem 2rem 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        /* FOOTER LUXURY */
+        .footer-luxury {
+            background: var(--gradient-luxury-dark);
+            padding: 6rem 3rem 4rem;
+            border-top: 2px solid rgba(212, 175, 55, 0.2);
         }
 
-        .footer-container {
+        .footer-container-luxury {
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .footer-brand {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.25rem;
+        .footer-brand-luxury {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--primary-gold);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            text-shadow: var(--shadow-text-luxury);
         }
 
-        .footer-text {
-            color: var(--neutral-400);
-            margin-bottom: 2rem;
-            max-width: 600px;
+        .footer-text-luxury {
+            color: var(--gray-silver);
+            margin-bottom: 4rem;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            font-size: 1.25rem;
+            line-height: 1.7;
+            font-weight: 300;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+        .footer-bottom-luxury {
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding-top: 3rem;
+            color: var(--gray-silver);
+            font-size: 1rem;
+            font-weight: 300;
         }
 
-        .footer-links a {
-            color: var(--neutral-400);
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-size: 0.875rem;
+        /* ANIMACIONES DIVINE */
+        @keyframes royalFlow {
+            0%, 100% { 
+                transform: translate(0, 0) rotate(0deg) scale(1);
+                background-position: 0% 50%, 100% 50%, 50% 0%, 0% 100%;
+            }
+            25% { 
+                transform: translate(50px, -30px) rotate(1deg) scale(1.05);
+                background-position: 25% 25%, 75% 75%, 75% 25%, 25% 75%;
+            }
+            50% { 
+                transform: translate(-30px, 50px) rotate(-1deg) scale(0.95);
+                background-position: 100% 50%, 0% 50%, 50% 100%, 50% 0%;
+            }
+            75% { 
+                transform: translate(30px, 30px) rotate(0.5deg) scale(1.02);
+                background-position: 75% 75%, 25% 25%, 25% 75%, 75% 25%;
+            }
         }
 
-        .footer-links a:hover {
-            color: var(--primary-gold);
+        @keyframes royalPulse {
+            0%, 100% { opacity: 0.6; filter: blur(60px) brightness(100%); }
+            50% { opacity: 1; filter: blur(40px) brightness(120%); }
         }
 
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 2rem;
-            color: var(--neutral-500);
-            font-size: 0.875rem;
+        @keyframes gridShift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 100px); }
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .nav-actions {
+        @keyframes divineFloat {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) scale(1) rotate(0deg);
+                opacity: 0.2;
+            }
+            25% { 
+                transform: translateY(-30px) translateX(15px) scale(1.3) rotate(90deg);
+                opacity: 0.4;
+            }
+            50% { 
+                transform: translateY(-60px) translateX(-15px) scale(0.8) rotate(180deg);
+                opacity: 0.3;
+            }
+            75% { 
+                transform: translateY(-30px) translateX(20px) scale(1.1) rotate(270deg);
+                opacity: 0.35;
+            }
+        }
+
+        @keyframes emblemaura {
+            0% { transform: rotate(0deg); opacity: 0.4; }
+            50% { opacity: 0.8; }
+            100% { transform: rotate(360deg); opacity: 0.4; }
+        }
+
+        @keyframes innerGlow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        @keyframes divineShimmer {
+            0%, 100% { 
+                background-position: 0% 50%;
+                filter: brightness(100%) contrast(100%);
+            }
+            25% { 
+                background-position: 25% 25%;
+                filter: brightness(130%) contrast(120%);
+            }
+            50% { 
+                background-position: 100% 50%;
+                filter: brightness(110%) contrast(110%);
+            }
+            75% { 
+                background-position: 75% 75%;
+                filter: brightness(140%) contrast(130%);
+            }
+        }
+
+        @keyframes prestigePulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: var(--shadow-royal);
+            }
+            50% { 
+                transform: scale(1.03);
+                box-shadow: var(--shadow-divine);
+            }
+        }
+
+        @keyframes prestigeRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-5px) rotate(5deg); }
+        }
+
+        @keyframes underlineGlow {
+            0%, 100% { 
+                opacity: 0.8; 
+                box-shadow: var(--shadow-royal);
+                transform: translateX(-50%) scaleX(1);
+            }
+            50% { 
+                opacity: 1; 
+                box-shadow: var(--shadow-divine);
+                transform: translateX(-50%) scaleX(1.1);
+            }
+        }
+
+        @keyframes previewFloat {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% { 
+                transform: translateY(-10px) rotate(0.3deg);
+            }
+            66% { 
+                transform: translateY(5px) rotate(-0.2deg);
+            }
+        }
+
+        @keyframes cardAura {
+            0% { transform: rotate(0deg); opacity: 0.2; }
+            50% { opacity: 0.5; }
+            100% { transform: rotate(360deg); opacity: 0.2; }
+        }
+
+        @keyframes luxuryBadgeGlow {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 60px rgba(16, 185, 129, 0.4);
+            }
+            50% { 
+                transform: scale(1.02);
+                box-shadow: 0 0 80px rgba(16, 185, 129, 0.7);
+            }
+        }
+
+        @keyframes divineCtaFloat {
+            0%, 100% { 
+                transform: translateY(0px);
+                box-shadow: 
+                    var(--shadow-luxury), 
+                    0 0 60px rgba(201, 48, 44, 0.5);
+            }
+            50% { 
+                transform: translateY(-4px);
+                box-shadow: 
+                    var(--shadow-luxury), 
+                    0 0 80px rgba(201, 48, 44, 0.6);
+            }
+        }
+
+        @keyframes divineIconFloat {
+            0%, 100% { 
+                transform: scale(1) rotate(0deg);
+            }
+            25% { 
+                transform: scale(1.2) rotate(5deg);
+            }
+            50% { 
+                transform: scale(1.1) rotate(-3deg);
+            }
+            75% { 
+                transform: scale(1.05) rotate(2deg);
+            }
+        }
+
+        @keyframes videoBadgeFloat {
+            0%, 100% { 
+                transform: scale(1);
+            }
+            50% { 
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes ctaSecondaryFloat {
+            0%, 100% { 
+                transform: translateY(0px);
+            }
+            50% { 
+                transform: translateY(-2px);
+            }
+        }
+
+        /* RESPONSIVE LUXURY */
+        @media (max-width: 1200px) {
+            .nav-cta {
                 display: none;
             }
             
-            .logo-mark {
-                width: 70px;
-                height: 70px;
+            .logo-emblem {
+                width: 90px;
+                height: 90px;
             }
-            
-            .logo-mark img {
-                width: 60px;
-                height: 60px;
+
+            .hero-content-luxury {
+                max-width: 1000px;
+            }
+
+            .prestige-indicators {
+                gap: 3rem;
+            }
+
+            .problem-content-luxury,
+            .benefits-content-luxury {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 4rem;
+            }
+
+            .benefits-image-luxury {
+                width: 100%;
+                max-width: 500px;
+                height: 450px;
+                margin: 0 auto;
             }
         }
 
         @media (max-width: 768px) {
-            .hero-stats {
+            .nav-luxury {
+                padding: 0 2rem;
+            }
+
+            .logo-emblem {
+                width: 80px;
+                height: 80px;
+            }
+
+            .logo-emblem svg {
+                width: 60px;
+                height: 60px;
+            }
+
+            .brand-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-divine {
+                padding: 12rem 2rem 8rem;
+            }
+
+            .section-luxury {
+                padding: 8rem 2rem;
+            }
+
+            .cta-container-luxury {
                 gap: 2rem;
             }
 
-            .stat-number {
-                font-size: 2rem;
+            .btn-divine-primary {
+                padding: 1.5rem 2rem;
+                gap: 1rem;
             }
 
-            .masterclass-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .cta-primary-text {
+                font-size: 1rem;
             }
 
-            .footer-links {
+            .cta-secondary-text {
+                font-size: 0.75rem;
+            }
+
+            .cta-icon-divine {
+                font-size: 1.5rem;
+            }
+
+            .btn-secondary-luxury {
+                padding: 1.25rem 2rem;
+                font-size: 0.9rem;
+            }
+
+            .prestige-indicators {
+                gap: 2rem;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .preview-card-luxury {
+                padding: 2rem 1.5rem;
+            }
+
+            .preview-logo {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 1.5rem;
+            }
+
+            .preview-logo svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            .problem-image-luxury::before {
+                width: 80px;
+                height: 80px;
+            }
+
+            .benefits-image-luxury::before {
+                width: 100px;
+                height: 100px;
+            }
+
+            .preview-title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .preview-description {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .exclusive-badges {
                 flex-direction: column;
                 gap: 1rem;
             }
 
-            .form-card {
-                padding: 2rem;
+            .badge-luxury, .badge-date {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.8rem;
             }
 
-            .video-stats {
+            .prestige-badge {
+                padding: 1.25rem 2rem;
+                font-size: 0.9rem;
+            }
+
+            .luxury-particle {
+                display: none;
+            }
+
+            .video-stats-luxury {
                 gap: 2rem;
             }
 
-            .video-stat-number {
-                font-size: 1.5rem;
+            .stat-number-luxury {
+                font-size: 4rem;
             }
 
-            .btn-video-cta {
-                padding: 1rem 2rem;
-                font-size: 1rem;
+            .curriculum-grid-luxury,
+            .faq-grid-luxury,
+            .problem-cards-luxury,
+            .solution-grid-luxury,
+            .program-features-luxury {
+                grid-template-columns: 1fr;
             }
 
-            .logo-mark img {
-                width: 50px;
-                height: 50px;
+            .form-card-luxury {
+                padding: 3rem 2rem;
             }
 
-            .pricing-highlight {
-                margin: 2rem 0;
-                padding: 1.5rem;
+            .price-current-luxury {
+                font-size: 4.5rem;
             }
 
-            .price-current {
-                font-size: 2.5rem;
+            .benefits-image-luxury {
+                height: 350px;
+            }
+
+            .stats-grid-luxury {
+                gap: 2rem;
             }
         }
 
-        /* ANIMACIONES SUTILES */
-        @keyframes ambientShift {
-            0%, 100% { 
-                background-position: 0% 50%;
-            }
-            50% { 
-                background-position: 100% 50%;
-            }
-        }
-
-        @keyframes ctaPulse {
-            0%, 100% { 
-                box-shadow: 
-                    var(--shadow-lg), 
-                    0 0 20px rgba(255, 107, 53, 0.4),
-                    0 0 40px rgba(255, 23, 68, 0.2);
-            }
-            50% { 
-                box-shadow: 
-                    var(--shadow-xl), 
-                    0 0 30px rgba(255, 107, 53, 0.6),
-                    0 0 60px rgba(255, 23, 68, 0.4);
-                transform: scale(1.02);
-            }
-        }
-
-        @keyframes titleShimmer {
-            0%, 100% { 
-                background-position: 0% 50%;
-            }
-            50% { 
-                background-position: 100% 50%;
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* SCROLLBAR PERSONALIZADO */
+        /* SCROLLBAR DIVINE */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 14px;
         }
 
         ::-webkit-scrollbar-track {
-            background: var(--neutral-900);
+            background: var(--black-luxury);
+            border-radius: 15px;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--primary-gold), var(--gold-dark));
-            border-radius: 4px;
+            background: var(--gradient-royal-gold);
+            border-radius: 15px;
+            border: 3px solid var(--black-luxury);
+            box-shadow: var(--shadow-royal);
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, var(--gold-light), var(--primary-gold));
+            background: linear-gradient(180deg, var(--gold-light), var(--gold-bright), var(--primary-gold));
+            box-shadow: var(--shadow-divine);
+        }
+
+        /* EFECTOS DE ENTRADA LUXURY */
+        .luxury-fade-in {
+            opacity: 0;
+            transform: translateY(80px);
+            transition: opacity 1.2s cubic-bezier(0.23, 1, 0.32, 1), transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .luxury-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <!-- FONDO PREMIUM -->
-    <div class="premium-background">
-        <div class="ambient-grid"></div>
-        <div class="geometric-pattern"></div>
+    <!-- FONDO DIVINE LUXURY -->
+    <div class="luxury-background">
+        <div class="royal-mesh"></div>
+        <div class="luxury-grid"></div>
+        <div class="divine-particles">
+            <div class="luxury-particle"></div>
+            <div class="luxury-particle"></div>
+            <div class="luxury-particle"></div>
+            <div class="luxury-particle"></div>
+            <div class="luxury-particle"></div>
+            <div class="luxury-particle"></div>
+        </div>
     </div>
 
-    <!-- HEADER PREMIUM -->
-    <header class="header-premium" id="header">
-        <div class="nav-container">
-            <div class="logo-premium">
-                <div class="logo-mark">
-                    <img src="futuro_digital_logo_correcto.png" alt="Futuro Digital Logo">
+    <!-- HEADER LUXURY DIVINE -->
+    <header class="header-luxury" id="header">
+        <div class="nav-luxury">
+            <div class="logo-luxury">
+                <div class="logo-emblem">
+                    <!-- REEMPLAZA TU_USUARIO/TU_REPOSITORIO con los datos reales de tu GitHub -->
+                    <img src="https://raw.githubusercontent.com/TU_USUARIO/TU_REPOSITORIO/main/futuro_digital_logo_correcto.png" alt="Futuro Digital Logo" style="width: 70px; height: 70px; object-fit: contain;">
                 </div>
-                <div class="brand-text">
-                    <div class="brand-name">Futuro Digital</div>
-                    <div class="brand-tagline">by Síntesis • 25+ años</div>
+                <div class="brand-luxury">
+                    <div class="brand-title">Futuro Digital</div>
+                    <div class="brand-subtitle">by Síntesis • 25+ años</div>
                 </div>
             </div>
-            <div class="nav-actions">
-                <a href="#masterclass" class="btn-outline">Masterclass Gratuita</a>
+            <div class="nav-cta">
+                <a href="#registro" class="btn-nav-luxury">Masterclass Gratuita</a>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero-premium">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span>🎯</span>
-                Diplomado Intensivo • 120 Horas • Grupos Reducidos
+    <!-- HERO SECTION DIVINE -->
+    <section class="hero-divine">
+        <div class="hero-content-luxury">
+            <div class="prestige-badge">
+                <span class="badge-icon">👑</span>
+                Diplomado Exclusivo en IA • Formación Premium • 25+ Años de Prestigio
             </div>
             
-            <h1 class="hero-title">
+            <h1 class="hero-title-divine">
                 Especialízate en Inteligencia Artificial
             </h1>
             
-            <p class="hero-subtitle">
-                Programa intensivo para desarrolladores que buscan <span class="hero-highlight">especializarse en programación de sistemas de IA</span> con proyectos reales, mentoría experta y garantía de empleabilidad.
+            <p class="hero-subtitle-luxury">
+                Programa intensivo para desarrolladores que buscan <span class="luxury-highlight">especializarse en programación de sistemas de IA</span> con proyectos reales, mentoría experta y garantía de empleabilidad.
             </p>
 
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">25+</span>
-                    <span class="stat-label">Años de Experiencia</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">120h</span>
-                    <span class="stat-label">Formación Intensiva</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">≤15</span>
-                    <span class="stat-label">Estudiantes por Grupo</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Empleabilidad</span>
+            <div class="exclusive-preview">
+                <div class="preview-card-luxury">
+                    <div class="preview-logo">
+                        <!-- REEMPLAZA TU_USUARIO/TU_REPOSITORIO con los datos reales de tu GitHub -->
+                        <img src="https://raw.githubusercontent.com/TU_USUARIO/TU_REPOSITORIO/main/futuro_digital_logo_correcto.png" alt="Futuro Digital Logo" style="width: 50px; height: 50px; object-fit: contain;">
+                    </div>
+                    <h3 class="preview-title">¿Aún no estás completamente seguro?</h3>
+                    <p class="preview-description">
+                        Descubre nuestro programa en una <strong>masterclass completamente GRATUITA</strong> 
+                        donde verás en vivo cómo programar IA desde cero con técnicas profesionales.
+                    </p>
+                    <div class="exclusive-badges">
+                        <span class="badge-luxury">100% GRATUITA</span>
+                        <span class="badge-date">4 Sept • 7:00 PM México</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="cta-section">
-                <a href="#video" class="btn-primary">
-                    <span>🎯</span>
-                    Conocer el Programa
-                </a>
+            <div class="divine-cta-section">
+                <div class="cta-container-luxury">
+                    <a href="#video" class="btn-divine-primary">
+                        <span class="cta-icon-divine">🎬</span>
+                        <div class="cta-content-luxury">
+                            <div class="cta-primary-text">ACCEDER A LA MASTERCLASS EXCLUSIVA</div>
+                            <div class="cta-secondary-text">Demo profesional en vivo • 4 Sept • Acceso premium gratuito</div>
+                        </div>
+                    </a>
+                    
+                    <a href="#solution" class="btn-secondary-luxury">
+                        <span>🚀</span>
+                        Conocer Diplomado Completo
+                    </a>
+                </div>
+                
+                <div class="prestige-indicators">
+                    <div class="prestige-item">
+                        <span class="prestige-icon">✓</span>
+                        <span>Acceso inmediato premium</span>
+                    </div>
+                    <div class="prestige-item">
+                        <span class="prestige-icon">⏱</span>
+                        <span>90 minutos de contenido exclusivo</span>
+                    </div>
+                    <div class="prestige-item">
+                        <span class="prestige-icon">📚</span>
+                        <span>Material profesional descargable</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- VIDEO HERO SECTION -->
-    <section class="video-hero-section" id="video">
-        <div class="video-container">
-            <div class="video-badge">
-                <span>🎥</span>
-                MASTERCLASS GRATUITA • DEMO EN VIVO • ACCESO INMEDIATO
+    <!-- VIDEO HERO SECTION LUXURY -->
+    <section class="video-section-luxury" id="video">
+        <div class="video-container-luxury">
+            <div class="video-badge-luxury">
+                <span>🎬</span>
+                MASTERCLASS EXCLUSIVA • DEMO PROFESIONAL • ACCESO PREMIUM GRATUITO
             </div>
             
-            <h2 class="video-title">
+            <h2 class="video-title-luxury">
                 Conoce el Programa Completo
             </h2>
             
-            <p class="video-subtitle">
-                Descubre cómo nuestro diplomado te transformará de usuario de IA a desarrollador experto en 5 minutos.
+            <p class="video-subtitle-luxury">
+                Descubre cómo nuestro diplomado te transformará de usuario de IA a desarrollador experto en esta presentación exclusiva.
             </p>
 
-            <div class="video-player">
+            <div class="video-player-luxury">
                 <iframe 
-                    class="video-iframe"
+                    class="video-iframe-luxury"
                     src="https://www.youtube.com/embed/zJCC1U_QoAg"
                     title="Conoce el Programa Completo - Diplomado en IA"
                     frameborder="0"
@@ -1231,270 +2248,401 @@
                 </iframe>
             </div>
 
-            <div class="video-cta-section">
-                <a href="#masterclass" class="btn-video-cta">
-                    <span>🚀</span>
-                    Ver Detalles del Programa
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="#registro" class="btn-video-cta-luxury">
+                    <span>👑</span>
+                    Reservar Mi Lugar Exclusivo
                 </a>
             </div>
 
-            <div class="video-stats">
-                <div class="video-stat">
-                    <span class="video-stat-number">Demo</span>
-                    <span class="video-stat-label">Programa Completo</span>
+            <div class="video-stats-luxury">
+                <div class="video-stat-luxury">
+                    <span class="video-stat-number-luxury">Demo</span>
+                    <span class="video-stat-label-luxury">Programa Completo</span>
                 </div>
-                <div class="video-stat">
-                    <span class="video-stat-number">4 Sept</span>
-                    <span class="video-stat-label">7:00 PM México</span>
+                <div class="video-stat-luxury">
+                    <span class="video-stat-number-luxury">4 Sept</span>
+                    <span class="video-stat-label-luxury">7:00 PM México</span>
                 </div>
-                <div class="video-stat">
-                    <span class="video-stat-number">Gratis</span>
-                    <span class="video-stat-label">Acceso Completo</span>
-                </div>
-            </div>
-        </div>
-
-    <!-- MASTERCLASS SECTION -->
-    <section class="masterclass-section" id="masterclass">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title">Masterclass Gratuita</h2>
-                <p class="section-subtitle">
-                    Conoce nuestro programa completo y cómo te transformaremos en especialista IA
-                </p>
-            </div>
-
-            <div class="masterclass-grid">
-                <div class="masterclass-card fade-in">
-                    <div class="card-icon">🎯</div>
-                    <h3 class="card-title">Fundamentos Esenciales</h3>
-                    <p class="card-description">
-                        Los 3 pilares fundamentales para desarrollar IA desde cero. Framework conceptual que utilizan los expertos de la industria.
-                    </p>
-                </div>
-
-                <div class="masterclass-card fade-in">
-                    <div class="card-icon">🤖</div>
-                    <h3 class="card-title">Demo en Vivo</h3>
-                    <p class="card-description">
-                        Programaremos juntos una aplicación de machine learning funcional. Código real, datasets reales, resultados medibles.
-                    </p>
-                </div>
-
-                <div class="masterclass-card fade-in">
-                    <div class="card-icon">💼</div>
-                    <h3 class="card-title">Oportunidades del Mercado</h3>
-                    <p class="card-description">
-                        Análisis del panorama laboral en IA en México. Salarios, empresas que contratan y cómo posicionarte estratégicamente.
-                    </p>
-                </div>
-
-                <div class="masterclass-card fade-in">
-                    <div class="card-icon">🗺️</div>
-                    <h3 class="card-title">Ruta Personalizada</h3>
-                    <p class="card-description">
-                        Tu plan específico para convertirte en especialista IA. Cronograma realista con hitos y objetivos medibles.
-                    </p>
-                </div>
-
-                <div class="masterclass-card fade-in">
-                    <div class="card-icon">🎁</div>
-                    <h3 class="card-title">Presentación del Diplomado</h3>
-                    <p class="card-description">
-                        Contenido completo, metodología, precios y tu oferta especial exclusiva. Todo transparente, sin sorpresas.
-                    </p>
-                </div>
-
-                <div class="masterclass-card fade-in">
-                    <div class="card-icon">📚</div>
-                    <h3 class="card-title">Recursos Exclusivos</h3>
-                    <p class="card-description">
-                        Material descargable, códigos de ejemplo y acceso a nuestra biblioteca digital de recursos premium.
-                    </p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="#registro" class="btn-primary">
-                    <span>📅</span>
-                    Reservar Mi Lugar Gratuito
-                </a>
-                <p style="margin-top: 1rem; color: var(--neutral-400); font-size: 0.875rem;">
-                    4 de septiembre, 7:00 PM (Hora México) • Masterclass + Q&A
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials-section">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title">Historias de Transformación</h2>
-                <p class="section-subtitle">
-                    Resultados reales de profesionales que han completado nuestros programas
-                </p>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">AC</div>
-                        <div class="testimonial-author">
-                            <h4>Alejandro Córdoba</h4>
-                            <div class="testimonial-role">Frontend Developer → ML Engineer</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-quote">
-                        "La diferencia está en la calidad de la mentoría y los proyectos reales. Después del diplomado conseguí una posición como ML Engineer en una fintech. La metodología práctica es excepcional."
-                    </p>
-                    <div class="outcome-badge">ML Engineer</div>
-                </div>
-
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">MG</div>
-                        <div class="testimonial-author">
-                            <h4>María González</h4>
-                            <div class="testimonial-role">Backend Developer → AI Consultant</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-quote">
-                        "Los grupos pequeños hacen toda la diferencia. Puedes hacer preguntas específicas y recibir feedback personalizado. Ahora trabajo como consultora independiente especializada en IA."
-                    </p>
-                    <div class="outcome-badge">Consultora Independiente</div>
-                </div>
-
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">JR</div>
-                        <div class="testimonial-author">
-                            <h4>Jorge Ramírez</h4>
-                            <div class="testimonial-role">Python Developer → Data Scientist</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-quote">
-                        "Llegué con Python básico y muchas dudas sobre matemáticas. El equipo de mentores es extraordinario, explican conceptos complejos de manera clara. Mi carrera cambió completamente."
-                    </p>
-                    <div class="outcome-badge">Data Scientist Senior</div>
+                <div class="video-stat-luxury">
+                    <span class="video-stat-number-luxury">Premium</span>
+                    <span class="video-stat-label-luxury">Acceso Gratuito</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRICING SECTION -->
-    <section class="pricing-section">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title">Inversión en Tu Futuro Profesional</h2>
-                <p class="section-subtitle">
+    <!-- EL PROBLEMA SECTION LUXURY -->
+    <section class="section-luxury problem-section-luxury">
+        <div class="section-container-luxury">
+            <div class="section-header-luxury">
+                <h2 class="section-title-luxury">El Problema: El mercado te necesita hoy</h2>
+                <p class="section-subtitle-luxury">
+                    El mercado laboral de México demanda profesionales capaces de desarrollar e implementar sus propias soluciones, no solo de usar herramientas.
+                </p>
+            </div>
+
+            <div class="problem-content-luxury">
+                <div class="problem-text-luxury">
+                    <p>
+                        <strong>El mercado laboral de México demanda profesionales capaces de desarrollar e implementar</strong> sus propias soluciones, no solo de usar herramientas. La escasez de talento calificado en desarrollo de IA es el mayor reto para las empresas.
+                    </p>
+                </div>
+                <div class="problem-image-luxury"></div>
+            </div>
+
+            <div class="problem-cards-luxury">
+                <div class="problem-card-luxury luxury-fade-in">
+                    <h3>¿Te sientes limitado por las herramientas existentes?</h3>
+                    <p>Si ya programas pero no puedes crear soluciones personalizadas, estás perdiendo oportunidades valiosas de crecimiento profesional y personal.</p>
+                </div>
+                <div class="problem-card-luxury luxury-fade-in">
+                    <h3>¿Tus habilidades serán suficientes mañana?</h3>
+                    <p>La tecnología avanza exponencialmente. Sin conocimientos en desarrollo de IA, quedarse atrás es cuestión de tiempo y oportunidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LA SOLUCIÓN SECTION LUXURY -->
+    <section class="section-luxury" id="solution">
+        <div class="section-container-luxury">
+            <div class="section-header-luxury">
+                <h2 class="section-title-luxury">La solución que transformará tu carrera</h2>
+                <p class="section-subtitle-luxury">
+                    Un programa diseñado específicamente para desarrolladores que quieren dominar la IA
+                </p>
+            </div>
+
+            <div class="solution-grid-luxury">
+                <div class="solution-card-luxury luxury-fade-in">
+                    <h3>120 horas</h3>
+                    <p>Aprendizaje práctico intensivo con ejercicios reales y proyectos aplicados que puedes usar inmediatamente.</p>
+                </div>
+                <div class="solution-card-luxury luxury-fade-in">
+                    <h3>100% online</h3>
+                    <p>Flexibilidad para aprender desde cualquier lugar sin sacrificar la calidad de la interacción profesional.</p>
+                </div>
+                <div class="solution-card-luxury luxury-fade-in">
+                    <h3>Respaldo institucional</h3>
+                    <p>Con el aval académico y profesional de Síntesis.org, líder en educación tecnológica por más de 25 años.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS SECTION LUXURY -->
+    <section class="section-luxury">
+        <div class="section-container-luxury">
+            <div class="section-header-luxury">
+                <h2 class="section-title-luxury">Beneficios que transformarán tu carrera</h2>
+            </div>
+
+            <div class="benefits-content-luxury">
+                <div class="benefits-list-luxury">
+                    <div class="benefit-item-luxury luxury-fade-in">
+                        <h3>Control Creativo Absoluto</h3>
+                        <p>No solo usarás herramientas, sino que serás el arquitecto detrás de ellas, creando soluciones a medida para problemas específicos de tu industria.</p>
+                    </div>
+                    <div class="benefit-item-luxury luxury-fade-in">
+                        <h3>Seguridad Laboral Premium</h3>
+                        <p>Adquirirás habilidades en un campo de altísima demanda, asegurando tu relevancia profesional en la próxima década del mercado tecnológico.</p>
+                    </div>
+                    <div class="benefit-item-luxury luxury-fade-in">
+                        <h3>Impacto Real y Medible</h3>
+                        <p>Tu trabajo resolverá problemas complejos en tu industria, marcando una diferencia tangible en organizaciones y usuarios finales.</p>
+                    </div>
+                </div>
+                <div class="benefits-image-luxury"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLAN DE ESTUDIOS SECTION LUXURY -->
+    <section class="section-luxury">
+        <div class="section-container-luxury">
+            <div class="section-header-luxury">
+                <h2 class="section-title-luxury">Plan de estudios diseñado para el mundo real</h2>
+                <p class="section-subtitle-luxury">
+                    Cuatro módulos intensivos que te llevarán de principiante a especialista
+                </p>
+            </div>
+
+            <div class="curriculum-grid-luxury">
+                <div class="curriculum-card-luxury luxury-fade-in">
+                    <h3>Fundamentos de Programación para IA</h3>
+                    <p>Dominarás Python enfocado específicamente en aplicaciones de inteligencia artificial y manipulación avanzada de datos para proyectos reales.</p>
+                </div>
+
+                <div class="curriculum-card-luxury luxury-fade-in">
+                    <h3>Desarrollo de Algoritmos de Machine Learning</h3>
+                    <p>Aprenderás a construir modelos predictivos y de clasificación desde cero, entendiendo cada aspecto del proceso de desarrollo.</p>
+                </div>
+
+                <div class="curriculum-card-luxury luxury-fade-in">
+                    <h3>Deep Learning y Redes Neuronales</h3>
+                    <p>Implementarás arquitecturas complejas para resolver problemas que requieren aprendizaje profundo y análisis avanzado de patrones.</p>
+                </div>
+
+                <div class="curriculum-card-luxury luxury-fade-in">
+                    <h3>Proyecto Final de Implementación</h3>
+                    <p>Desarrollarás una solución completa que demostrará tus habilidades y enriquecerá significativamente tu portafolio profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTRUCTOR SECTION LUXURY -->
+    <section class="section-luxury">
+        <div class="section-container-luxury">
+            <div class="section-header-luxury">
+                <h2 class="section-title-luxury">Conoce a tu Instructor Experto</h2>
+            </div>
+            
+            <div class="instructor-content-luxury">
+                <h3 class="instructor-name-luxury">Ing. Walberto Roblero</h3>
+                <p class="instructor-bio-luxury">
+                    Walberto Roblero es un desarrollador senior altamente especializado en redes neuronales, con una trayectoria impresionante que incluye proyectos implementados en empresas líderes como <strong>Tesla y Amazon</strong>.
+                </p>
+                <p class="instructor-bio-luxury">
+                    Su experiencia abarca el diseño y la implementación de arquitecturas de IA complejas, optimización de modelos y desarrollo de soluciones innovadoras que resuelven problemas reales a escala industrial. Walberto tiene una probada capacidad para traducir conceptos avanzados de Machine Learning y Deep Learning en aplicaciones prácticas y eficientes.
+                </p>
+                <p class="instructor-bio-luxury">
+                    Con Walberto, aprenderás directamente de un experto que no solo ha trabajado con las últimas tecnologías, sino que ha contribuido activamente a su avance en algunos de los entornos tecnológicos más exigentes del mundo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS SECTION LUXURY -->
+    <section class="section-luxury">
+        <div class="section-container-luxury">
+            <div class="section-header-luxury">
+                <h2 class="section-title-luxury">Datos que hablan por sí solos</h2>
+            </div>
+
+            <div class="stats-grid-luxury">
+                <div class="stat-card-luxury luxury-fade-in">
+                    <span class="stat-number-luxury">365%</span>
+                    <div class="stat-label-luxury">Crecimiento en demanda</div>
+                    <p class="stat-description-luxury">La demanda de habilidades en IA en México creció un 365% en el último año, el más alto de Latinoamérica según estudios de mercado.</p>
+                </div>
+                <div class="stat-card-luxury luxury-fade-in">
+                    <span class="stat-number-luxury">$265,000</span>
+                    <div class="stat-label-luxury">Salario promedio anual</div>
+                    <p class="stat-description-luxury">Los profesionales con habilidades de desarrollo en Python en México tienen un salario promedio anual de $265,000 MXN según datos del mercado.</p>
+                </div>
+                <div class="stat-card-luxury luxury-fade-in">
+                    <span class="stat-number-luxury">100%</span>
+                    <div class="stat-label-luxury">Portafolio tangible</div>
+                    <p class="stat-description-luxury">Al finalizar, tendrás un portafolio de proyectos reales que demuestran tus habilidades técnicas a potenciales empleadores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS ESPECÍFICOS SECTION LUXURY -->
+    <section class="section-luxury">
+        <div class="section-container-luxury">
+            <div class="section-header-luxury">
+                <h2 class="section-title-luxury">Lo que dicen nuestros alumnos</h2>
+            </div>
+
+            <div class="testimonial-highlight-luxury">
+                <div class="testimonial-quote-main-luxury">
+                    <p>"Los cursos de Futuro Digital cambiaron completamente mi perspectiva profesional. La calidad de los instructores y el enfoque práctico me permitieron aplicar lo aprendido inmediatamente en mi trabajo."</p>
+                    <div class="testimonial-author-main-luxury">
+                        <strong>— Ana Martínez, Egresada del Diplomado en Ciencia de Datos</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-features-luxury">
+                <div class="feature-item-luxury luxury-fade-in">
+                    <div class="feature-icon-luxury">💬</div>
+                    <h3>Clases en vivo</h3>
+                    <p>Interacción directa con los instructores y compañeros, resolviendo dudas en tiempo real y construyendo una red profesional.</p>
+                </div>
+                <div class="feature-item-luxury luxury-fade-in">
+                    <div class="feature-icon-luxury">🛠️</div>
+                    <h3>Proyectos aplicados</h3>
+                    <p>Trabajarás en casos reales que podrás incluir en tu portafolio profesional y mostrar a potenciales empleadores.</p>
+                </div>
+                <div class="feature-item-luxury luxury-fade-in">
+                    <div class="feature-icon-luxury">👥</div>
+                    <h3>Comunidad activa</h3>
+                    <p>Acceso a una red de profesionales y egresados para networking y oportunidades laborales continuas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION LUXURY -->
+    <section class="section-luxury" id="pricing">
+        <div class="section-container-luxury">
+            <div class="section-header-luxury">
+                <h2 class="section-title-luxury">Inversión en Tu Futuro Profesional</h2>
+                <p class="section-subtitle-luxury">
                     Todo incluido: 120 horas de formación intensiva, mentoría personalizada y garantía de empleabilidad
                 </p>
             </div>
 
-            <div class="pricing-highlight" style="max-width: 600px; margin: 3rem auto;">
-                <div class="price-label">Inversión Completa</div>
-                <div class="price-current">$16,800</div>
-                <div class="price-note">MXN + IVA • Financiamiento disponible</div>
-                <div class="value-badge">120 horas de formación premium</div>
+            <div class="pricing-card-luxury">
+                <div class="price-current-luxury">$16,800</div>
+                <div class="price-note-luxury">MXN + IVA • Financiamiento disponible</div>
+                
+                <ul class="pricing-features-luxury">
+                    <li>120 horas de instrucción especializada con expertos</li>
+                    <li>Materiales y recursos exclusivos descargables</li>
+                    <li>Retroalimentación personalizada de expertos</li>
+                    <li>Acceso a comunidad de profesionales activa</li>
+                    <li>Garantía de empleabilidad y seguimiento</li>
+                    <li>Certificación avalada por Síntesis.org</li>
+                </ul>
+
+                <div style="margin-top: 4rem;">
+                    <a href="#registro" class="btn-divine-primary">
+                        <span class="cta-icon-divine">👑</span>
+                        <div class="cta-content-luxury">
+                            <div class="cta-primary-text">RESERVAR MI LUGAR PREMIUM</div>
+                            <div class="cta-secondary-text">Financiamiento disponible</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION LUXURY -->
+    <section class="section-luxury">
+        <div class="section-container-luxury">
+            <div class="section-header-luxury">
+                <h2 class="section-title-luxury">Preguntas Frecuentes</h2>
             </div>
 
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="#registro" class="btn-primary" style="padding: 1.25rem 2.5rem; font-size: 1.125rem;">
-                    <span>🚀</span>
-                    Reservar Mi Lugar Ahora
+            <div class="faq-grid-luxury">
+                <div class="faq-item-luxury luxury-fade-in">
+                    <h3 class="faq-question-luxury">¿A quién va dirigido este diplomado?</h3>
+                    <p class="faq-answer-luxury">A programadores de nivel intermedio con conocimientos de Python que desean especializarse en el desarrollo de soluciones de IA para el mercado profesional.</p>
+                </div>
+                <div class="faq-item-luxury luxury-fade-in">
+                    <h3 class="faq-question-luxury">¿Dónde se imparten las clases?</h3>
+                    <p class="faq-answer-luxury">Las clases son 100% online, con sesiones en vivo y actividades asíncronas que puedes realizar a tu ritmo desde cualquier ubicación.</p>
+                </div>
+                <div class="faq-item-luxury luxury-fade-in">
+                    <h3 class="faq-question-luxury">¿Cuánto tiempo debo dedicar semanalmente?</h3>
+                    <p class="faq-answer-luxury">Recomendamos un mínimo de 10 horas semanales, incluyendo clases en vivo y práctica independiente para maximizar el aprendizaje y resultados.</p>
+                </div>
+                <div class="faq-item-luxury luxury-fade-in">
+                    <h3 class="faq-question-luxury">¿Obtendré alguna certificación?</h3>
+                    <p class="faq-answer-luxury">Recibirás un reconocimiento profesional avalado por Síntesis.org que valida tus competencias en desarrollo de IA ante empleadores.</p>
+                </div>
+                <div class="faq-item-luxury luxury-fade-in">
+                    <h3 class="faq-question-luxury">¿Hay garantía de resultados?</h3>
+                    <p class="faq-answer-luxury">Ofrecemos garantía de empleabilidad y seguimiento post-graduación para asegurar que apliques exitosamente tus nuevas habilidades.</p>
+                </div>
+                <div class="faq-item-luxury luxury-fade-in">
+                    <h3 class="faq-question-luxury">¿Qué incluye el financiamiento?</h3>
+                    <p class="faq-answer-luxury">Ofrecemos planes de financiamiento flexibles sin intereses para hacer accesible esta inversión en tu desarrollo profesional.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 6rem;">
+                <a href="#registro" class="btn-video-cta-luxury">
+                    <span>📅</span>
+                    Reservar lugar en Masterclass gratuita
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- FORM SECTION -->
-    <section class="form-section" id="registro">
-        <div class="form-container">
-            <div class="form-card">
-                <h2 class="form-title">Acceso a Masterclass Gratuita</h2>
-                <p class="form-subtitle">
-                    Reserva tu lugar y recibe acceso inmediato a contenido exclusivo
+    <!-- FORM SECTION LUXURY -->
+    <section class="form-section-luxury" id="registro">
+        <div class="form-container-luxury">
+            <div class="form-card-luxury">
+                <h2 class="form-title-luxury">Acceso a Masterclass Exclusiva</h2>
+                <p class="form-subtitle-luxury">
+                    Reserva tu lugar y recibe acceso inmediato a contenido premium exclusivo
                 </p>
 
                 <form onsubmit="submitForm(event)">
-                    <div class="form-group">
-                        <label class="form-label">Nombre Completo</label>
-                        <input type="text" class="form-input" placeholder="Tu nombre completo" required>
+                    <div class="form-group-luxury">
+                        <label class="form-label-luxury">Nombre Completo</label>
+                        <input type="text" class="form-input-luxury" placeholder="Tu nombre completo" required>
                     </div>
                     
-                    <div class="form-group">
-                        <label class="form-label">Email Profesional</label>
-                        <input type="email" class="form-input" placeholder="tu@email.com" required>
+                    <div class="form-group-luxury">
+                        <label class="form-label-luxury">Email Profesional</label>
+                        <input type="email" class="form-input-luxury" placeholder="tu@email.com" required>
                     </div>
 
-                    <button type="submit" class="btn-form">
-                        Reservar Mi Lugar
+                    <div class="form-group-luxury">
+                        <label class="form-label-luxury">Teléfono (Opcional)</label>
+                        <input type="tel" class="form-input-luxury" placeholder="+52 555 123 4567">
+                    </div>
+
+                    <button type="submit" class="btn-form-luxury">
+                        Reservar Mi Lugar Exclusivo
                     </button>
                 </form>
 
-                <p style="margin-top: 1rem; color: var(--neutral-500); font-size: 0.875rem; text-align: center;">
-                    Al registrarte, aceptas recibir información sobre nuestros programas educativos
+                <p style="margin-top: 2rem; color: var(--gray-silver); font-size: 1rem; text-align: center; font-weight: 300;">
+                    Al registrarte, aceptas recibir información exclusiva sobre nuestros programas educativos premium
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">Futuro Digital by Síntesis</div>
-            <p class="footer-text">
-                Más de 25 años de experiencia transformando carreras profesionales a través de la educación tecnológica de vanguardia. Tu éxito es nuestro compromiso.
+    <!-- FOOTER LUXURY -->
+    <footer class="footer-luxury">
+        <div class="footer-container-luxury">
+            <div class="footer-brand-luxury">Futuro Digital by Síntesis</div>
+            <p class="footer-text-luxury">
+                Más de 25 años de experiencia transformando carreras profesionales a través de la educación tecnológica de vanguardia. Tu éxito es nuestro compromiso y nuestra pasión por la excelencia educativa.
             </p>
 
-            <div class="footer-links">
-                <a href="https://www.sinesis.org" target="_blank">Síntesis.org</a>
-                <a href="#registro">Masterclass</a>
-                <a href="#">Términos</a>
-                <a href="#">Privacidad</a>
-                <a href="#">Contacto</a>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2024 Futuro Digital by Síntesis A.C. Todos los derechos reservados.</p>
+            <div class="footer-bottom-luxury">
+                <p>© 2024 Futuro Digital by Síntesis A.C. Todos los derechos reservados. | Educación Premium en Tecnología</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Header scroll effect
+        // Header scroll effect divine luxury
+        let lastScrollY = window.scrollY;
+        
         window.addEventListener('scroll', () => {
             const header = document.getElementById('header');
-            if (window.scrollY > 100) {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 100) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
-        });
+            
+            lastScrollY = currentScrollY;
+        }, { passive: true });
 
-        // Intersection Observer para animaciones
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+        // Intersection Observer luxury
+        const luxuryObserverOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const luxuryObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, observerOptions);
+        }, luxuryObserverOptions);
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
+        document.querySelectorAll('.luxury-fade-in').forEach(el => {
+            luxuryObserver.observe(el);
         });
 
-        // Smooth scrolling
+        // Smooth scrolling divine
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1508,7 +2656,35 @@
             });
         });
 
-        // Form submission
+        // Parallax effect luxury para elementos de fondo
+        if (window.innerWidth > 1024) {
+            let ticking = false;
+            
+            function updateLuxuryParallax() {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.royal-mesh, .luxury-grid');
+                
+                parallaxElements.forEach((el, index) => {
+                    const speed = (index + 1) * 0.015;
+                    const yPos = -(scrolled * speed);
+                    const rotation = scrolled * 0.002;
+                    el.style.transform = `translateY(${yPos}px) rotate(${rotation}deg)`;
+                });
+                
+                ticking = false;
+            }
+            
+            function requestLuxuryTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateLuxuryParallax);
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', requestLuxuryTick, { passive: true });
+        }
+
+        // Form submission - CONECTA CON PÁGINA DE AGRADECIMIENTO
         function submitForm(event) {
             event.preventDefault();
             
@@ -1516,29 +2692,176 @@
             const submitButton = event.target.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
             
-            submitButton.textContent = 'Reservando...';
+            submitButton.textContent = 'Procesando...';
             submitButton.disabled = true;
             
             setTimeout(() => {
-                // Aquí redirigiríamos a la página de agradecimiento
-                window.location.href = 'gracias.html';
-            }, 1500);
+                // REDIRECCIÓN A LA PÁGINA DE AGRADECIMIENTO
+                alert('¡Registro exitoso! Te hemos enviado los detalles de acceso a tu email.');
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                event.target.reset();
+            }, 2000);
         }
 
-        // Parallax effect suave para elementos de fondo
-        if (window.innerWidth > 1024) {
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const parallax = scrolled * 0.05;
+        // Efectos luxury para CTAs
+        document.querySelectorAll('.btn-divine-primary, .btn-secondary-luxury, .btn-nav-luxury, .btn-video-cta-luxury, .btn-form-luxury').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.filter = 'brightness(115%) saturate(130%) contrast(110%)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.filter = '';
+            });
+            
+            btn.addEventListener('mousedown', function() {
+                this.style.transform = this.style.transform.replace('scale(1.03)', 'scale(0.97)') || 'scale(0.97)';
+            });
+            
+            btn.addEventListener('mouseup', function() {
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 100);
+            });
+        });
+
+        // Efectos de entrada luxury escalonados
+        document.addEventListener('DOMContentLoaded', function() {
+            const luxuryElements = document.querySelectorAll('.prestige-badge, .hero-title-divine, .hero-subtitle-luxury, .preview-card-luxury, .cta-container-luxury, .prestige-indicators');
+            
+            luxuryElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(60px) scale(0.95)';
                 
-                document.querySelector('.ambient-grid').style.transform = `translateY(${parallax}px)`;
-            }, { passive: true });
+                setTimeout(() => {
+                    el.style.transition = 'opacity 1.2s cubic-bezier(0.23, 1, 0.32, 1), transform 1.2s cubic-bezier(0.23, 1, 0.32, 1)';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0) scale(1)';
+                }, index * 300);
+            });
+        });
+
+        // Efecto de cursor luxury divine
+        if (window.innerWidth > 1024) {
+            const luxuryCursor = document.createElement('div');
+            luxuryCursor.style.cssText = `
+                position: fixed;
+                width: 30px;
+                height: 30px;
+                background: radial-gradient(circle, rgba(212, 175, 55, 0.6) 0%, rgba(236, 196, 64, 0.3) 50%, transparent 80%);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 10000;
+                mix-blend-mode: screen;
+                transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+                border: 1px solid rgba(212, 175, 55, 0.2);
+            `;
+            document.body.appendChild(luxuryCursor);
+
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.1;
+                cursorY += (mouseY - cursorY) * 0.1;
+                
+                luxuryCursor.style.left = cursorX - 15 + 'px';
+                luxuryCursor.style.top = cursorY - 15 + 'px';
+                
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            document.querySelectorAll('a, button').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    luxuryCursor.style.transform = 'scale(2.5)';
+                    luxuryCursor.style.background = 'radial-gradient(circle, rgba(236, 196, 64, 0.8) 0%, rgba(255, 250, 138, 0.4) 50%, transparent 80%)';
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    luxuryCursor.style.transform = 'scale(1)';
+                    luxuryCursor.style.background = 'radial-gradient(circle, rgba(212, 175, 55, 0.6) 0%, rgba(236, 196, 64, 0.3) 50%, transparent 80%)';
+                });
+            });
         }
 
-        // Optimización para móviles
+        // Efectos de profundidad luxury
+        document.querySelectorAll('.preview-card-luxury, .prestige-item, .problem-card-luxury, .solution-card-luxury, .benefit-item-luxury, .curriculum-card-luxury, .stat-card-luxury, .feature-item-luxury, .faq-item-luxury, .video-stat-luxury').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-12px) scale(1.02) rotateX(5deg)';
+                this.style.filter = 'brightness(105%)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+                this.style.filter = '';
+            });
+        });
+
+        // Performance optimization para móviles
         if (window.innerWidth <= 768) {
-            document.documentElement.style.setProperty('--animation-duration', '0.3s');
+            document.documentElement.style.setProperty('--animation-duration', '0.4s');
+            
+            // Reducir efectos en móviles
+            document.querySelectorAll('.luxury-particle').forEach(particle => {
+                particle.style.display = 'none';
+            });
         }
+
+        // Efectos adicionales de lujo
+        window.addEventListener('load', function() {
+            // Efecto de brillo ocasional en elementos dorados
+            setInterval(() => {
+                const goldElements = document.querySelectorAll('.logo-emblem, .prestige-badge, .btn-divine-primary');
+                const randomElement = goldElements[Math.floor(Math.random() * goldElements.length)];
+                
+                if (randomElement) {
+                    randomElement.style.filter = 'brightness(130%) saturate(150%)';
+                    setTimeout(() => {
+                        randomElement.style.filter = '';
+                    }, 500);
+                }
+            }, 8000);
+        });
+
+        // Contador animado para estadísticas
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 20);
+        }
+
+        // Activar contadores cuando entren en vista
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numberElement = entry.target.querySelector('.stat-number-luxury');
+                    if (numberElement && !numberElement.classList.contains('animated')) {
+                        numberElement.classList.add('animated');
+                        const target = parseInt(numberElement.textContent.replace(/[^0-9]/g, ''));
+                        if (!isNaN(target)) {
+                            animateCounter(numberElement, target);
+                        }
+                    }
+                }
+            });
+        });
+
+        document.querySelectorAll('.stat-card-luxury').forEach(card => {
+            statsObserver.observe(card);
+        });
     </script>
 </body>
 </html>
