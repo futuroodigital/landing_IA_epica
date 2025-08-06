@@ -2378,14 +2378,14 @@
                     <a href="#video" class="btn-divine-primary">
                         <span class="cta-icon-divine">🎬</span>
                         <div class="cta-content-luxury">
-                            <div class="cta-primary-text">ACCEDER A LA MASTERCLASS EXCLUSIVA</div>
-                            <div class="cta-secondary-text">Demo profesional en vivo • 4 Sept • Acceso premium gratuito</div>
+                            <div class="cta-primary-text">VER PROGRAMA COMPLETO AHORA</div>
+                            <div class="cta-secondary-text">Video exclusivo • Demo en vivo • Conoce todo el diplomado</div>
                         </div>
                     </a>
                     
-                    <a href="#solution" class="btn-secondary-luxury">
-                        <span>🚀</span>
-                        Conocer Diplomado Completo
+                    <a href="#pricing" class="btn-secondary-luxury">
+                        <span>💎</span>
+                        Ver Precios e Inscripción
                     </a>
                 </div>
                 
@@ -2747,9 +2747,9 @@
     <section class="form-section-luxury" id="registro">
         <div class="form-container-luxury">
             <div class="form-card-luxury">
-                <h2 class="form-title-luxury">Acceso a Masterclass Exclusiva</h2>
+                <h2 class="form-title-luxury">Reserva Tu Lugar en el Diplomado</h2>
                 <p class="form-subtitle-luxury">
-                    Reserva tu lugar y recibe acceso inmediato a contenido premium exclusivo
+                    Completa el formulario y recibe información completa sobre fechas, financiamiento y acceso premium
                 </p>
 
                 <form onsubmit="submitForm(event)">
@@ -2889,7 +2889,7 @@
             window.addEventListener('scroll', requestLuxuryTick, { passive: true });
         }
 
-        // Form submission - CONECTA CON PÁGINA DE AGRADECIMIENTO
+        // Form submission - REDIRIGE A PÁGINA DE AGRADECIMIENTO
         function submitForm(event) {
             event.preventDefault();
             
@@ -2902,11 +2902,8 @@
             
             setTimeout(() => {
                 // REDIRECCIÓN A LA PÁGINA DE AGRADECIMIENTO
-                alert('¡Registro exitoso! Te hemos enviado los detalles de acceso a tu email.');
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-                event.target.reset();
-            }, 2000);
+                window.location.href = 'gracias.html';
+            }, 1500);
         }
 
         // Efectos luxury para CTAs
